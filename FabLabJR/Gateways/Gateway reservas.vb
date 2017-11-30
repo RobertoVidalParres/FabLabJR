@@ -1,19 +1,18 @@
-﻿Public Class GatewayUsuarios
-    Private conexion As SqlConnection
-    Private comando As SqlCommand
+﻿Public Class Gateway_reservas
+    Dim conexion As SqlConnection
+    Dim comando As New SqlCommand
 
-    Private Sub New(ByRef cadenaConexion As String)
-        conexion = New SqlConnection(cadenaConexion)
-        comando = New SqlCommand
+    Public Sub New()
+        conexion = New SqlConnection(My.Settings.cadenaDeConexion)
+        comando = New SqlCommand("", conexion)
+
+        comando.Connection = conexion
     End Sub
 
-    Public Function Insertar(nombre As String, apellidos As String, fecha_nacimiento As Date, email As String, direccion As String, organizacion As String, tipo As Integer, fecha_alta As Date)
+    Public Function Insertar(fecha As Date, hora As Timer, usuario As Integer, proyecto As String) As Integer
         Dim filas As Integer
-        Dim consulta As String = String.Format("INSERT INTO Usuarios(nombre, apellidos, fecha_nacimiento, email, direccion, organizacion, tipo, fecha_alta) VALUES ")
-
-        If nombre = "" Or nombre Is Nothing Then
-            Throw New ArgumentException("El nombre no puede estar vacío")
-        End If
+        'Creamos la sentencia SQL de inserción
+        Dim consulta As String = String.Format("INSERT INTO Telefonos(fecha,hora,usuario,proyecto) VALUES ('{0}','{1}','{2}','{3}')", fecha, hora, usuario, proyecto)
 
         Try
             conexion.Open()
@@ -30,13 +29,10 @@
         Return filas
     End Function
 
-    Public Function Actualizar(id As Integer, nombre As String, apellidos As String, fecha_nacimiento As Date, email As String, direccion As String, organizacion As String, tipo As Integer, fecha_alta As Date) As Integer
+    Public Function Actualizar(id As Integer, fecha As Date, hora As Timer, usuario As Integer, proyecto As String) As Integer
         Dim filas As Integer
-        Dim consulta As String = String.Format("UPDATE Telefonos SET nombre='{0}',apellidos='{1}',fecha_nacimiento='{2}',email='{3}',direccion='{4}',organizacion='{5}',tipo='{6}',fecha_alta='{7}' WHERE id={4})", nombre, apellidos, fecha_nacimiento, email, direccion, organizacion, tipo, fecha_alta)
-
-        If id = 0 Then
-            Throw New ArgumentException("El identificador no puede ser 0")
-        End If
+        'Creamos la sentencia SQL de inserción
+        Dim consulta As String = String.Format("UPDATE Reservas SET fecha='{0}',hora='{1}',usuario='{2}',proyecto='{3}' WHERE id={4})", fecha, hora, usuario, proyecto, id)
 
         Try
             conexion.Open()
@@ -55,7 +51,7 @@
 
     Public Function Eliminar(id As Integer) As Integer
         Dim filas As Integer
-        Dim consulta As String = String.Format("DELETE FROM Usuarios WHERE id={0})", id)
+        Dim consulta As String = String.Format("DELETE FROM Reservas WHERE id={0})", id)
 
         If id = 0 Then
             Throw New ArgumentException("El identificador no puede estar vacío")
@@ -77,7 +73,7 @@
     End Function
 
     Public Function SeleccionarTodos() As DataTable
-        Dim consulta As String = String.Format("SELECT * FROM Usuarios")
+        Dim consulta As String = String.Format("SELECT * FROM Reservas")
         Dim resultado As New DataTable
         Dim lector As SqlDataReader
 
@@ -98,19 +94,16 @@
         Return resultado
     End Function
 
-    Public Function SeleccionarNombre(nombre As String) As DataTable
-        Dim consulta As String = String.Format("SELECT * FROM Usuarios WHERE nombre='{0}'", nombre)
+    Public Function SeleccionarFecha(fecha As Date) As DataTable
+        Dim consulta As String = String.Format("SELECT * FROM Telefonos WHERE fecha='{0}'", fecha)
         Dim resultado As New DataTable
         Dim lector As SqlDataReader
-
-        If nombre = "" Or nombre Is Nothing Then
-            Throw New ArgumentException("El nombre no puede estar vacío")
-        End If
 
         Try
             conexion.Open()
             comando.CommandText = consulta
             lector = comando.ExecuteReader()
+
             resultado.Load(lector)
         Catch ex As Exception
             Throw New Exception(ex.Message, ex)

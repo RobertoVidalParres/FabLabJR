@@ -81,6 +81,8 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Gateways\Gateway Maquina.vb" />
+    <Compile Include="Gateways\Gateway reservas.vb" />
+    <Compile Include="Gateways\Gateway tipos de usuario.vb" />
     <Compile Include="Gateways\Gateway usuarios.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

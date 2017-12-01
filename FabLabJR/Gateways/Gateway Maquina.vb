@@ -37,11 +37,11 @@ Public Class Gateway_Maquina
             Throw New ArgumentException("El modelo no puede estar vacio")
         End If
 
-        If IsDate(fechaCompra) Or Not IsNothing(fechaCompra) Then
+        If Not IsDate(fechaCompra) Or IsNothing(fechaCompra) Then
             Throw New ArgumentException("La fecha de compra no puede estar vacio")
         End If
 
-        If IsNumeric(tipo) Or Not IsNothing(tipo) Then
+        If Not IsNumeric(tipo) Or IsNothing(tipo) Then
             Throw New ArgumentException("El tipo no puede estar vacio")
         End If
 
@@ -196,11 +196,11 @@ Public Class Gateway_Maquina
             Throw New ArgumentException("El modelo no puede estar vacio")
         End If
 
-        If IsDate(fechaCompra) Or Not IsNothing(fechaCompra) Then
+        If Not IsDate(fechaCompra) Or IsNothing(fechaCompra) Then
             Throw New ArgumentException("La fecha de compra no puede estar vacio")
         End If
 
-        If IsNumeric(tipo) Or Not IsNothing(tipo) Then
+        If Not IsNumeric(tipo) Or IsNothing(tipo) Then
             Throw New ArgumentException("El tipo no puede estar vacio")
         End If
 

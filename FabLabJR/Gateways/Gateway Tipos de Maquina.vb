@@ -65,7 +65,7 @@ Public Class Gateway_Tipo_de_Maquina
             conexion.Open()
 
             Dim lector As SqlDataReader = comando.ExecuteReader
-            Dim resultado As DataTable
+            Dim resultado As New DataTable
 
             resultado.Load(lector)
 

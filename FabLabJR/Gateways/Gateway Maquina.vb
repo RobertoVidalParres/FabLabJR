@@ -4,6 +4,7 @@ Public Class Gateway_Maquina
     Dim conexion As SqlConnection
     Dim comando As New SqlCommand
 
+    'Inicializacion de la conexion
     Public Sub New()
         conexion = New SqlConnection(My.Settings.cadenaDeConexion)
         comando = New SqlCommand("", conexion)
@@ -11,13 +12,14 @@ Public Class Gateway_Maquina
         comando.Connection = conexion
     End Sub
 
+    'Metodo para la insercion de una nueva maquina
     Public Function Insertar(modelo As String, precioHora As Double, fechaCompra As Date, telefonoSAT As String, tipo As Integer, descripcion As String, caracteristicas As String) As Integer
 
         'Variables para la consultas y las filas afectadas por la misma
         Dim consulta As String
         Dim filas_afectadas As Integer
 
-        'Consulta con parametros
+        'Consulta con parametros para la insercion de una nueva maquina
         consulta = "INSERT INTO Maquinas (modelo,precio_hora,fecha_compra,telefono_sat,tipo,descripcion,caracteristicas) VALUES (@modelo,@precio,@fecha,@telefono,@tipo,@descripcion,@caracteristicas)"
         comando.CommandText = consulta
 
@@ -30,15 +32,18 @@ Public Class Gateway_Maquina
         comando.Parameters.Add("@descripcion", SqlDbType.Text)
         comando.Parameters.Add("@caracteristicas", SqlDbType.Text)
 
-        'Comprobacion de los datos
-        If precioHora <= 0 Then
-            Throw New ArgumentException("El precio debe ser un número positivo mayor que cero")
+        'Comprobacion de datos nulos
+        If modelo = "" Or modelo Is Nothing Then
+            Throw New ArgumentException("El modelo no puede estar vacio")
         End If
 
-        If DiferenteFechaDeCompra(modelo, fechaCompra) Then
-            Throw New ArgumentException("Ya existe una maquina del mismo modelo con la misma fecha de compra")
+        If IsDate(fechaCompra) Or Not IsNothing(fechaCompra) Then
+            Throw New ArgumentException("La fecha de compra no puede estar vacio")
         End If
 
+        If IsNumeric(tipo) Or Not IsNothing(tipo) Then
+            Throw New ArgumentException("El tipo no puede estar vacio")
+        End If
 
         'paso del parametro
         comando.Parameters("@modelo").Value = modelo
@@ -52,7 +57,6 @@ Public Class Gateway_Maquina
         'Ejecutamos la consulta
         Try
             conexion.Open()
-            comando.CommandText = consulta
             filas_afectadas = comando.ExecuteNonQuery()
         Catch ex As Exception
             Throw New Exception(ex.Message, ex)
@@ -67,17 +71,197 @@ Public Class Gateway_Maquina
 
     End Function
 
-    Public Function DiferenteFechaDeCompra(modelo As String, fechaCompra As Date) As Boolean
+    'Metodo para la seleccion de maquina para Gestion de Maquinas
+    Public Function SelectMaquinasParaGestionMaquinas() As DataTable
+        Dim consulta As String
+
+        'Consulta para la seleccion de todas las maquinas
+        consulta = "SELECT id,modelo,tipo,fecha_compra FROM Maquina"
+        comando.CommandText = consulta
+
+        'Comparacion de las fechas de la base de datos con la introducida
+
+        'Ejecutamos la consulta
+        Try
+            conexion.Open()
+
+            Dim lector As SqlDataReader = comando.ExecuteReader
+            Dim resultado As DataTable
+
+            resultado.Load(lector)
+
+            Return resultado
+
+        Catch ex As Exception
+            Throw New Exception(ex.Message, ex)
+        Finally
+            If (conexion IsNot Nothing) Then
+                conexion.Close()
+            End If
+        End Try
+
+    End Function
+
+    'Metodo para la seleccion de todas las maquinas
+    Public Function SelectTodasMaquinas() As DataTable
 
         Dim consulta As String
 
-        'Consulta con parametros
-        consulta = "SELECT fecha_compra FROM Maquina Where modelo = @modelo"
+        'Consulta para la seleccion de todas las maquinas
+        consulta = "SELECT * FROM Maquina"
+        comando.CommandText = consulta
+
+
+        'Comparacion de las fechas de la base de datos con la introducida
+
+        'Ejecutamos la consulta
+        Try
+            conexion.Open()
+
+            Dim lector As SqlDataReader = comando.ExecuteReader
+            Dim resultado As DataTable
+
+            resultado.Load(lector)
+
+            Return resultado
+
+        Catch ex As Exception
+            Throw New Exception(ex.Message, ex)
+        Finally
+            If (conexion IsNot Nothing) Then
+                conexion.Close()
+            End If
+        End Try
+
+    End Function
+
+    'Metodo para la seleccion de las maquina por modelo
+    Public Function SelectMaquinasPorModelo(modelo As String) As DataTable
+
+        Dim consulta As String
+
+        'Consulta para la seleccion de todas las maquinas
+        consulta = "SELECT * FROM Maquina Where modelo = @modelo"
         comando.CommandText = consulta
 
         comando.Parameters.Add("@modelo", SqlDbType.VarChar)
 
-        'Falta apartado comprobacion de las fechas
+
+        'Comparacion de las fechas de la base de datos con la introducida
+
+        'Ejecutamos la consulta
+        Try
+            conexion.Open()
+
+            Dim lector As SqlDataReader = comando.ExecuteReader
+            Dim resultado As DataTable
+
+            resultado.Load(lector)
+
+            Return resultado
+
+        Catch ex As Exception
+            Throw New Exception(ex.Message, ex)
+        Finally
+            If (conexion IsNot Nothing) Then
+                conexion.Close()
+            End If
+        End Try
 
     End Function
+
+    'Metodo para la actualizacion de una maquina
+    Public Function ActualizarMaquina(id As Integer, modelo As String, precioHora As Double, fechaCompra As Date, telefonoSAT As String, tipo As Integer, descripcion As String, caracteristicas As String) As Integer
+
+        'Variables para la consultas y las filas afectadas por la misma
+        Dim consulta As String
+        Dim filas_afectadas As Integer
+
+        'Consulta con parametros para actualizar una maquina
+        consulta = "UPDATE Maquinas SET modelo = @modelo AND precio = @precio AND fehca = @fecha AND telefono = @telefono AND tipo = @tipo AND descripcion = @descripcion AND caracteristicas = @caracteristicas) WHERE id = @id"
+        comando.CommandText = consulta
+
+        'Indicacion del tipo de parametro
+        comando.Parameters.Add("@id", SqlDbType.Int)
+        comando.Parameters.Add("@modelo", SqlDbType.VarChar)
+        comando.Parameters.Add("@precio", SqlDbType.Money)
+        comando.Parameters.Add("@fecha", SqlDbType.Date)
+        comando.Parameters.Add("@telefono", SqlDbType.VarChar)
+        comando.Parameters.Add("@tipo", SqlDbType.Int)
+        comando.Parameters.Add("@descripcion", SqlDbType.Text)
+        comando.Parameters.Add("@caracteristicas", SqlDbType.Text)
+
+        'Comprobacion de datos nulos
+        If modelo = "" Or modelo Is Nothing Then
+            Throw New ArgumentException("El modelo no puede estar vacio")
+        End If
+
+        If IsDate(fechaCompra) Or Not IsNothing(fechaCompra) Then
+            Throw New ArgumentException("La fecha de compra no puede estar vacio")
+        End If
+
+        If IsNumeric(tipo) Or Not IsNothing(tipo) Then
+            Throw New ArgumentException("El tipo no puede estar vacio")
+        End If
+
+        'paso del parametro
+        comando.Parameters("@id").Value = id
+        comando.Parameters("@modelo").Value = modelo
+        comando.Parameters("@precio").Value = precioHora
+        comando.Parameters("@fecha").Value = fechaCompra
+        comando.Parameters("@telefono").Value = telefonoSAT
+        comando.Parameters("@tipo").Value = tipo
+        comando.Parameters("@descripcion").Value = descripcion
+        comando.Parameters("@caracteristicas").Value = caracteristicas
+
+        'Ejecutamos la consulta
+        Try
+            conexion.Open()
+            filas_afectadas = comando.ExecuteNonQuery()
+        Catch ex As Exception
+            Throw New Exception(ex.Message, ex)
+        Finally
+            If (conexion IsNot Nothing) Then
+                conexion.Close()
+            End If
+        End Try
+
+        'Devolvemos el número de filas afectadas
+        Return filas_afectadas
+    End Function
+
+    'Metodo para la eliminicación de una maquina
+    Public Function EliminarMaquina(id As Integer) As Integer
+
+        'Variables para la consultas y las filas afectadas por la misma
+        Dim consulta As String
+        Dim filas_afectadas As Integer
+
+        'Consulta con parametros para eliminar una maquina
+        consulta = "DELETE FROM Maquina WHERE id = @id"
+        comando.CommandText = consulta
+
+        'Indicacion del tipo de parametro
+        comando.Parameters.Add("@id", SqlDbType.Int)
+
+        'paso del parametro
+        comando.Parameters("@id").Value = id
+
+        'Ejecutamos la consulta
+        Try
+            conexion.Open()
+            filas_afectadas = comando.ExecuteNonQuery()
+        Catch ex As Exception
+            Throw New Exception(ex.Message, ex)
+        Finally
+            If (conexion IsNot Nothing) Then
+                conexion.Close()
+            End If
+        End Try
+
+        'Devolvemos el número de filas afectadas
+        Return filas_afectadas
+
+    End Function
+
 End Class

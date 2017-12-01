@@ -86,6 +86,7 @@ Public Class Gateway_Maquina
             conexion.Open()
 
             Dim lector As SqlDataReader = comando.ExecuteReader
+
             Dim resultado As New DataTable
 
             resultado.Load(lector)
@@ -144,8 +145,17 @@ Public Class Gateway_Maquina
         consulta = "SELECT * FROM Maquinas Where modelo = @modelo"
         comando.CommandText = consulta
 
+        'Indicacion del tipo de parametro
         comando.Parameters.Add("@modelo", SqlDbType.VarChar)
 
+        'Comprobacion de datos nulos
+        If modelo = "" Or modelo Is Nothing Then
+            Throw New ArgumentException("El modelo no puede estar vacio")
+        End If
+
+
+        'paso del parametro
+        comando.Parameters("@modelo").Value = modelo
 
         'Comparacion de las fechas de la base de datos con la introducida
 
@@ -178,7 +188,7 @@ Public Class Gateway_Maquina
         Dim filas_afectadas As Integer
 
         'Consulta con parametros para actualizar una maquina
-        consulta = "UPDATE Maquinas SET modelo = @modelo AND precio = @precio AND fehca = @fecha AND telefono = @telefono AND tipo = @tipo AND descripcion = @descripcion AND caracteristicas = @caracteristicas) WHERE id = @id"
+        consulta = "UPDATE Maquinas SET modelo = @modelo,precio_hora = @precio,fecha_compra = @fecha,telefono_sat = @telefono,tipo = @tipo,descripcion = @descripcion,caracteristicas = @caracteristicas WHERE id = @id"
         comando.CommandText = consulta
 
         'Indicacion del tipo de parametro
@@ -238,7 +248,7 @@ Public Class Gateway_Maquina
         Dim filas_afectadas As Integer
 
         'Consulta con parametros para eliminar una maquina
-        consulta = "DELETE FROM Maquina WHERE id = @id"
+        consulta = "DELETE FROM Maquinas WHERE id = @id"
         comando.CommandText = consulta
 
         'Indicacion del tipo de parametro

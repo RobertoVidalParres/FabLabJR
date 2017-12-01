@@ -76,7 +76,7 @@ Public Class Gateway_Maquina
         Dim consulta As String
 
         'Consulta para la seleccion de todas las maquinas
-        consulta = "SELECT id,modelo,tipo,fecha_compra FROM Maquina"
+        consulta = "SELECT id,modelo,tipo,fecha_compra FROM Maquinas"
         comando.CommandText = consulta
 
         'Comparacion de las fechas de la base de datos con la introducida
@@ -86,7 +86,7 @@ Public Class Gateway_Maquina
             conexion.Open()
 
             Dim lector As SqlDataReader = comando.ExecuteReader
-            Dim resultado As DataTable
+            Dim resultado As New DataTable
 
             resultado.Load(lector)
 
@@ -108,7 +108,7 @@ Public Class Gateway_Maquina
         Dim consulta As String
 
         'Consulta para la seleccion de todas las maquinas
-        consulta = "SELECT * FROM Maquina"
+        consulta = "SELECT * FROM Maquinas"
         comando.CommandText = consulta
 
 
@@ -119,7 +119,7 @@ Public Class Gateway_Maquina
             conexion.Open()
 
             Dim lector As SqlDataReader = comando.ExecuteReader
-            Dim resultado As DataTable
+            Dim resultado As New DataTable
 
             resultado.Load(lector)
 
@@ -141,7 +141,7 @@ Public Class Gateway_Maquina
         Dim consulta As String
 
         'Consulta para la seleccion de todas las maquinas
-        consulta = "SELECT * FROM Maquina Where modelo = @modelo"
+        consulta = "SELECT * FROM Maquinas Where modelo = @modelo"
         comando.CommandText = consulta
 
         comando.Parameters.Add("@modelo", SqlDbType.VarChar)
@@ -154,7 +154,7 @@ Public Class Gateway_Maquina
             conexion.Open()
 
             Dim lector As SqlDataReader = comando.ExecuteReader
-            Dim resultado As DataTable
+            Dim resultado As New DataTable
 
             resultado.Load(lector)
 

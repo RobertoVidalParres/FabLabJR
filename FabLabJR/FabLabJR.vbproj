@@ -134,8 +134,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Imagenes\" />
     <Folder Include="Negocio\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagenes\plus-TratarMaquina.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

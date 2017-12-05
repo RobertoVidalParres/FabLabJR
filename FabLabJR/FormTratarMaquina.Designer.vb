@@ -38,9 +38,10 @@ Partial Class FormTratarMaquina
         Me.PrecioHoraLabel = New System.Windows.Forms.Label()
         Me.TelefonoSatLabel = New System.Windows.Forms.Label()
         Me.ModeloLabelNuevaMaquina = New System.Windows.Forms.Label()
-        Me.AñadirTipoButton = New System.Windows.Forms.Button()
         Me.AceptarButton = New System.Windows.Forms.Button()
         Me.CancelarButton = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ImagenesFlowLayoutPanel
@@ -174,14 +175,6 @@ Partial Class FormTratarMaquina
         Me.ModeloLabelNuevaMaquina.TabIndex = 18
         Me.ModeloLabelNuevaMaquina.Text = "Modelo"
         '
-        'AñadirTipoButton
-        '
-        Me.AñadirTipoButton.Location = New System.Drawing.Point(458, 64)
-        Me.AñadirTipoButton.Name = "AñadirTipoButton"
-        Me.AñadirTipoButton.Size = New System.Drawing.Size(31, 23)
-        Me.AñadirTipoButton.TabIndex = 35
-        Me.AñadirTipoButton.UseVisualStyleBackColor = True
-        '
         'AceptarButton
         '
         Me.AceptarButton.Location = New System.Drawing.Point(653, 402)
@@ -200,14 +193,23 @@ Partial Class FormTratarMaquina
         Me.CancelarButton.Text = "Cancelar"
         Me.CancelarButton.UseVisualStyleBackColor = True
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.FabLabJR.My.Resources.Resources.plus_TratarMaquina
+        Me.PictureBox1.Location = New System.Drawing.Point(458, 66)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(28, 28)
+        Me.PictureBox1.TabIndex = 38
+        Me.PictureBox1.TabStop = False
+        '
         'FormTratarMaquina
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(830, 437)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.CancelarButton)
         Me.Controls.Add(Me.AceptarButton)
-        Me.Controls.Add(Me.AñadirTipoButton)
         Me.Controls.Add(Me.ImagenesFlowLayoutPanel)
         Me.Controls.Add(Me.CaracteristicasTextBox)
         Me.Controls.Add(Me.DescripcionTextBox)
@@ -226,6 +228,7 @@ Partial Class FormTratarMaquina
         Me.Controls.Add(Me.ModeloLabelNuevaMaquina)
         Me.Name = "FormTratarMaquina"
         Me.Text = "FormTratarMaquina"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -247,7 +250,7 @@ Partial Class FormTratarMaquina
     Friend WithEvents PrecioHoraLabel As Label
     Friend WithEvents TelefonoSatLabel As Label
     Friend WithEvents ModeloLabelNuevaMaquina As Label
-    Friend WithEvents AñadirTipoButton As Button
     Friend WithEvents AceptarButton As Button
     Friend WithEvents CancelarButton As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

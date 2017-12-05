@@ -22,235 +22,235 @@ Partial Class FormTratarMaquina
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.ImagenesFlowLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
-        Me.CaracteristicasTextBox = New System.Windows.Forms.TextBox()
-        Me.DescripcionTextBox = New System.Windows.Forms.TextBox()
-        Me.TipoComboBox = New System.Windows.Forms.ComboBox()
-        Me.FechaCompraDateTimePicker = New System.Windows.Forms.DateTimePicker()
-        Me.TelefonoSatMaskedTextBox = New System.Windows.Forms.MaskedTextBox()
-        Me.PrecioHoraTextBox = New System.Windows.Forms.TextBox()
-        Me.ModeloTextBox = New System.Windows.Forms.TextBox()
-        Me.ImagenesLabel = New System.Windows.Forms.Label()
-        Me.CaracteristicasLabel = New System.Windows.Forms.Label()
-        Me.DescripcionLabel = New System.Windows.Forms.Label()
-        Me.FechaCompraLabel = New System.Windows.Forms.Label()
-        Me.TipoLabel = New System.Windows.Forms.Label()
-        Me.PrecioHoraLabel = New System.Windows.Forms.Label()
-        Me.TelefonoSatLabel = New System.Windows.Forms.Label()
-        Me.ModeloLabelNuevaMaquina = New System.Windows.Forms.Label()
-        Me.AceptarButton = New System.Windows.Forms.Button()
-        Me.CancelarButton = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ImagenesMaquinaFlowLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
+        Me.CaracteristicasMaquinaTextBox = New System.Windows.Forms.TextBox()
+        Me.DescripcionMaquinaTextBox = New System.Windows.Forms.TextBox()
+        Me.TipoMaquinaComboBox = New System.Windows.Forms.ComboBox()
+        Me.FechaCompraMaquinaDateTimePicker = New System.Windows.Forms.DateTimePicker()
+        Me.TelefonoSatMaquinaMaskedTextBox = New System.Windows.Forms.MaskedTextBox()
+        Me.PrecioHoraMaquinaTextBox = New System.Windows.Forms.TextBox()
+        Me.ModeloMaquinaTextBox = New System.Windows.Forms.TextBox()
+        Me.ImagenesMaquinaLabel = New System.Windows.Forms.Label()
+        Me.CaracteristicasMaquinaLabel = New System.Windows.Forms.Label()
+        Me.DescripcionMaquinaLabel = New System.Windows.Forms.Label()
+        Me.FechaCompraMaquinaLabel = New System.Windows.Forms.Label()
+        Me.TipoMaquinaLabel = New System.Windows.Forms.Label()
+        Me.PrecioHoraMaquinaLabel = New System.Windows.Forms.Label()
+        Me.TelefonoSatMaquinaLabel = New System.Windows.Forms.Label()
+        Me.ModeloMaquinaLabel = New System.Windows.Forms.Label()
+        Me.AceptarMaquinaButton = New System.Windows.Forms.Button()
+        Me.CancelarMaquinaButton = New System.Windows.Forms.Button()
+        Me.TipoMaquinaPictureBox = New System.Windows.Forms.PictureBox()
+        CType(Me.TipoMaquinaPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'ImagenesFlowLayoutPanel
+        'ImagenesMaquinaFlowLayoutPanel
         '
-        Me.ImagenesFlowLayoutPanel.Location = New System.Drawing.Point(27, 280)
-        Me.ImagenesFlowLayoutPanel.Name = "ImagenesFlowLayoutPanel"
-        Me.ImagenesFlowLayoutPanel.Size = New System.Drawing.Size(685, 100)
-        Me.ImagenesFlowLayoutPanel.TabIndex = 33
+        Me.ImagenesMaquinaFlowLayoutPanel.Location = New System.Drawing.Point(27, 280)
+        Me.ImagenesMaquinaFlowLayoutPanel.Name = "ImagenesMaquinaFlowLayoutPanel"
+        Me.ImagenesMaquinaFlowLayoutPanel.Size = New System.Drawing.Size(685, 100)
+        Me.ImagenesMaquinaFlowLayoutPanel.TabIndex = 33
         '
-        'CaracteristicasTextBox
+        'CaracteristicasMaquinaTextBox
         '
-        Me.CaracteristicasTextBox.Location = New System.Drawing.Point(382, 138)
-        Me.CaracteristicasTextBox.Multiline = True
-        Me.CaracteristicasTextBox.Name = "CaracteristicasTextBox"
-        Me.CaracteristicasTextBox.Size = New System.Drawing.Size(330, 99)
-        Me.CaracteristicasTextBox.TabIndex = 32
+        Me.CaracteristicasMaquinaTextBox.Location = New System.Drawing.Point(382, 138)
+        Me.CaracteristicasMaquinaTextBox.Multiline = True
+        Me.CaracteristicasMaquinaTextBox.Name = "CaracteristicasMaquinaTextBox"
+        Me.CaracteristicasMaquinaTextBox.Size = New System.Drawing.Size(330, 99)
+        Me.CaracteristicasMaquinaTextBox.TabIndex = 32
         '
-        'DescripcionTextBox
+        'DescripcionMaquinaTextBox
         '
-        Me.DescripcionTextBox.Location = New System.Drawing.Point(27, 138)
-        Me.DescripcionTextBox.Multiline = True
-        Me.DescripcionTextBox.Name = "DescripcionTextBox"
-        Me.DescripcionTextBox.Size = New System.Drawing.Size(330, 99)
-        Me.DescripcionTextBox.TabIndex = 31
+        Me.DescripcionMaquinaTextBox.Location = New System.Drawing.Point(27, 138)
+        Me.DescripcionMaquinaTextBox.Multiline = True
+        Me.DescripcionMaquinaTextBox.Name = "DescripcionMaquinaTextBox"
+        Me.DescripcionMaquinaTextBox.Size = New System.Drawing.Size(330, 99)
+        Me.DescripcionMaquinaTextBox.TabIndex = 31
         '
-        'TipoComboBox
+        'TipoMaquinaComboBox
         '
-        Me.TipoComboBox.FormattingEnabled = True
-        Me.TipoComboBox.Location = New System.Drawing.Point(346, 66)
-        Me.TipoComboBox.Name = "TipoComboBox"
-        Me.TipoComboBox.Size = New System.Drawing.Size(100, 21)
-        Me.TipoComboBox.TabIndex = 30
+        Me.TipoMaquinaComboBox.FormattingEnabled = True
+        Me.TipoMaquinaComboBox.Location = New System.Drawing.Point(346, 66)
+        Me.TipoMaquinaComboBox.Name = "TipoMaquinaComboBox"
+        Me.TipoMaquinaComboBox.Size = New System.Drawing.Size(100, 21)
+        Me.TipoMaquinaComboBox.TabIndex = 30
         '
-        'FechaCompraDateTimePicker
+        'FechaCompraMaquinaDateTimePicker
         '
-        Me.FechaCompraDateTimePicker.Location = New System.Drawing.Point(563, 35)
-        Me.FechaCompraDateTimePicker.Name = "FechaCompraDateTimePicker"
-        Me.FechaCompraDateTimePicker.Size = New System.Drawing.Size(198, 20)
-        Me.FechaCompraDateTimePicker.TabIndex = 29
+        Me.FechaCompraMaquinaDateTimePicker.Location = New System.Drawing.Point(563, 35)
+        Me.FechaCompraMaquinaDateTimePicker.Name = "FechaCompraMaquinaDateTimePicker"
+        Me.FechaCompraMaquinaDateTimePicker.Size = New System.Drawing.Size(198, 20)
+        Me.FechaCompraMaquinaDateTimePicker.TabIndex = 29
         '
-        'TelefonoSatMaskedTextBox
+        'TelefonoSatMaquinaMaskedTextBox
         '
-        Me.TelefonoSatMaskedTextBox.Location = New System.Drawing.Point(126, 66)
-        Me.TelefonoSatMaskedTextBox.Name = "TelefonoSatMaskedTextBox"
-        Me.TelefonoSatMaskedTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.TelefonoSatMaskedTextBox.TabIndex = 28
+        Me.TelefonoSatMaquinaMaskedTextBox.Location = New System.Drawing.Point(126, 66)
+        Me.TelefonoSatMaquinaMaskedTextBox.Name = "TelefonoSatMaquinaMaskedTextBox"
+        Me.TelefonoSatMaquinaMaskedTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.TelefonoSatMaquinaMaskedTextBox.TabIndex = 28
         '
-        'PrecioHoraTextBox
+        'PrecioHoraMaquinaTextBox
         '
-        Me.PrecioHoraTextBox.Location = New System.Drawing.Point(346, 35)
-        Me.PrecioHoraTextBox.Name = "PrecioHoraTextBox"
-        Me.PrecioHoraTextBox.Size = New System.Drawing.Size(62, 20)
-        Me.PrecioHoraTextBox.TabIndex = 27
+        Me.PrecioHoraMaquinaTextBox.Location = New System.Drawing.Point(346, 35)
+        Me.PrecioHoraMaquinaTextBox.Name = "PrecioHoraMaquinaTextBox"
+        Me.PrecioHoraMaquinaTextBox.Size = New System.Drawing.Size(62, 20)
+        Me.PrecioHoraMaquinaTextBox.TabIndex = 27
         '
-        'ModeloTextBox
+        'ModeloMaquinaTextBox
         '
-        Me.ModeloTextBox.Location = New System.Drawing.Point(126, 32)
-        Me.ModeloTextBox.Name = "ModeloTextBox"
-        Me.ModeloTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.ModeloTextBox.TabIndex = 26
+        Me.ModeloMaquinaTextBox.Location = New System.Drawing.Point(126, 32)
+        Me.ModeloMaquinaTextBox.Name = "ModeloMaquinaTextBox"
+        Me.ModeloMaquinaTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.ModeloMaquinaTextBox.TabIndex = 26
         '
-        'ImagenesLabel
+        'ImagenesMaquinaLabel
         '
-        Me.ImagenesLabel.AutoSize = True
-        Me.ImagenesLabel.Location = New System.Drawing.Point(24, 255)
-        Me.ImagenesLabel.Name = "ImagenesLabel"
-        Me.ImagenesLabel.Size = New System.Drawing.Size(53, 13)
-        Me.ImagenesLabel.TabIndex = 25
-        Me.ImagenesLabel.Text = "Imágenes"
+        Me.ImagenesMaquinaLabel.AutoSize = True
+        Me.ImagenesMaquinaLabel.Location = New System.Drawing.Point(24, 255)
+        Me.ImagenesMaquinaLabel.Name = "ImagenesMaquinaLabel"
+        Me.ImagenesMaquinaLabel.Size = New System.Drawing.Size(53, 13)
+        Me.ImagenesMaquinaLabel.TabIndex = 25
+        Me.ImagenesMaquinaLabel.Text = "Imágenes"
         '
-        'CaracteristicasLabel
+        'CaracteristicasMaquinaLabel
         '
-        Me.CaracteristicasLabel.AutoSize = True
-        Me.CaracteristicasLabel.Location = New System.Drawing.Point(379, 112)
-        Me.CaracteristicasLabel.Name = "CaracteristicasLabel"
-        Me.CaracteristicasLabel.Size = New System.Drawing.Size(121, 13)
-        Me.CaracteristicasLabel.TabIndex = 24
-        Me.CaracteristicasLabel.Text = "Características técnicas"
+        Me.CaracteristicasMaquinaLabel.AutoSize = True
+        Me.CaracteristicasMaquinaLabel.Location = New System.Drawing.Point(379, 112)
+        Me.CaracteristicasMaquinaLabel.Name = "CaracteristicasMaquinaLabel"
+        Me.CaracteristicasMaquinaLabel.Size = New System.Drawing.Size(121, 13)
+        Me.CaracteristicasMaquinaLabel.TabIndex = 24
+        Me.CaracteristicasMaquinaLabel.Text = "Características técnicas"
         '
-        'DescripcionLabel
+        'DescripcionMaquinaLabel
         '
-        Me.DescripcionLabel.AutoSize = True
-        Me.DescripcionLabel.Location = New System.Drawing.Point(24, 112)
-        Me.DescripcionLabel.Name = "DescripcionLabel"
-        Me.DescripcionLabel.Size = New System.Drawing.Size(63, 13)
-        Me.DescripcionLabel.TabIndex = 23
-        Me.DescripcionLabel.Text = "Descripción"
+        Me.DescripcionMaquinaLabel.AutoSize = True
+        Me.DescripcionMaquinaLabel.Location = New System.Drawing.Point(24, 112)
+        Me.DescripcionMaquinaLabel.Name = "DescripcionMaquinaLabel"
+        Me.DescripcionMaquinaLabel.Size = New System.Drawing.Size(63, 13)
+        Me.DescripcionMaquinaLabel.TabIndex = 23
+        Me.DescripcionMaquinaLabel.Text = "Descripción"
         '
-        'FechaCompraLabel
+        'FechaCompraMaquinaLabel
         '
-        Me.FechaCompraLabel.AutoSize = True
-        Me.FechaCompraLabel.Location = New System.Drawing.Point(455, 38)
-        Me.FechaCompraLabel.Name = "FechaCompraLabel"
-        Me.FechaCompraLabel.Size = New System.Drawing.Size(90, 13)
-        Me.FechaCompraLabel.TabIndex = 22
-        Me.FechaCompraLabel.Text = "Fecha de compra"
+        Me.FechaCompraMaquinaLabel.AutoSize = True
+        Me.FechaCompraMaquinaLabel.Location = New System.Drawing.Point(455, 38)
+        Me.FechaCompraMaquinaLabel.Name = "FechaCompraMaquinaLabel"
+        Me.FechaCompraMaquinaLabel.Size = New System.Drawing.Size(90, 13)
+        Me.FechaCompraMaquinaLabel.TabIndex = 22
+        Me.FechaCompraMaquinaLabel.Text = "Fecha de compra"
         '
-        'TipoLabel
+        'TipoMaquinaLabel
         '
-        Me.TipoLabel.AutoSize = True
-        Me.TipoLabel.Location = New System.Drawing.Point(254, 69)
-        Me.TipoLabel.Name = "TipoLabel"
-        Me.TipoLabel.Size = New System.Drawing.Size(28, 13)
-        Me.TipoLabel.TabIndex = 21
-        Me.TipoLabel.Text = "Tipo"
+        Me.TipoMaquinaLabel.AutoSize = True
+        Me.TipoMaquinaLabel.Location = New System.Drawing.Point(254, 69)
+        Me.TipoMaquinaLabel.Name = "TipoMaquinaLabel"
+        Me.TipoMaquinaLabel.Size = New System.Drawing.Size(28, 13)
+        Me.TipoMaquinaLabel.TabIndex = 21
+        Me.TipoMaquinaLabel.Text = "Tipo"
         '
-        'PrecioHoraLabel
+        'PrecioHoraMaquinaLabel
         '
-        Me.PrecioHoraLabel.AutoSize = True
-        Me.PrecioHoraLabel.Location = New System.Drawing.Point(254, 35)
-        Me.PrecioHoraLabel.Name = "PrecioHoraLabel"
-        Me.PrecioHoraLabel.Size = New System.Drawing.Size(63, 13)
-        Me.PrecioHoraLabel.TabIndex = 20
-        Me.PrecioHoraLabel.Text = "Precio/hora"
+        Me.PrecioHoraMaquinaLabel.AutoSize = True
+        Me.PrecioHoraMaquinaLabel.Location = New System.Drawing.Point(254, 35)
+        Me.PrecioHoraMaquinaLabel.Name = "PrecioHoraMaquinaLabel"
+        Me.PrecioHoraMaquinaLabel.Size = New System.Drawing.Size(63, 13)
+        Me.PrecioHoraMaquinaLabel.TabIndex = 20
+        Me.PrecioHoraMaquinaLabel.Text = "Precio/hora"
         '
-        'TelefonoSatLabel
+        'TelefonoSatMaquinaLabel
         '
-        Me.TelefonoSatLabel.AutoSize = True
-        Me.TelefonoSatLabel.Location = New System.Drawing.Point(24, 69)
-        Me.TelefonoSatLabel.Name = "TelefonoSatLabel"
-        Me.TelefonoSatLabel.Size = New System.Drawing.Size(73, 13)
-        Me.TelefonoSatLabel.TabIndex = 19
-        Me.TelefonoSatLabel.Text = "Teléfono SAT"
+        Me.TelefonoSatMaquinaLabel.AutoSize = True
+        Me.TelefonoSatMaquinaLabel.Location = New System.Drawing.Point(24, 69)
+        Me.TelefonoSatMaquinaLabel.Name = "TelefonoSatMaquinaLabel"
+        Me.TelefonoSatMaquinaLabel.Size = New System.Drawing.Size(73, 13)
+        Me.TelefonoSatMaquinaLabel.TabIndex = 19
+        Me.TelefonoSatMaquinaLabel.Text = "Teléfono SAT"
         '
-        'ModeloLabelNuevaMaquina
+        'ModeloMaquinaLabel
         '
-        Me.ModeloLabelNuevaMaquina.AutoSize = True
-        Me.ModeloLabelNuevaMaquina.Location = New System.Drawing.Point(24, 35)
-        Me.ModeloLabelNuevaMaquina.Name = "ModeloLabelNuevaMaquina"
-        Me.ModeloLabelNuevaMaquina.Size = New System.Drawing.Size(42, 13)
-        Me.ModeloLabelNuevaMaquina.TabIndex = 18
-        Me.ModeloLabelNuevaMaquina.Text = "Modelo"
+        Me.ModeloMaquinaLabel.AutoSize = True
+        Me.ModeloMaquinaLabel.Location = New System.Drawing.Point(24, 35)
+        Me.ModeloMaquinaLabel.Name = "ModeloMaquinaLabel"
+        Me.ModeloMaquinaLabel.Size = New System.Drawing.Size(42, 13)
+        Me.ModeloMaquinaLabel.TabIndex = 18
+        Me.ModeloMaquinaLabel.Text = "Modelo"
         '
-        'AceptarButton
+        'AceptarMaquinaButton
         '
-        Me.AceptarButton.Location = New System.Drawing.Point(653, 402)
-        Me.AceptarButton.Name = "AceptarButton"
-        Me.AceptarButton.Size = New System.Drawing.Size(75, 23)
-        Me.AceptarButton.TabIndex = 36
-        Me.AceptarButton.Text = "Aceptar"
-        Me.AceptarButton.UseVisualStyleBackColor = True
+        Me.AceptarMaquinaButton.Location = New System.Drawing.Point(653, 402)
+        Me.AceptarMaquinaButton.Name = "AceptarMaquinaButton"
+        Me.AceptarMaquinaButton.Size = New System.Drawing.Size(75, 23)
+        Me.AceptarMaquinaButton.TabIndex = 36
+        Me.AceptarMaquinaButton.Text = "Aceptar"
+        Me.AceptarMaquinaButton.UseVisualStyleBackColor = True
         '
-        'CancelarButton
+        'CancelarMaquinaButton
         '
-        Me.CancelarButton.Location = New System.Drawing.Point(743, 402)
-        Me.CancelarButton.Name = "CancelarButton"
-        Me.CancelarButton.Size = New System.Drawing.Size(75, 23)
-        Me.CancelarButton.TabIndex = 37
-        Me.CancelarButton.Text = "Cancelar"
-        Me.CancelarButton.UseVisualStyleBackColor = True
+        Me.CancelarMaquinaButton.Location = New System.Drawing.Point(743, 402)
+        Me.CancelarMaquinaButton.Name = "CancelarMaquinaButton"
+        Me.CancelarMaquinaButton.Size = New System.Drawing.Size(75, 23)
+        Me.CancelarMaquinaButton.TabIndex = 37
+        Me.CancelarMaquinaButton.Text = "Cancelar"
+        Me.CancelarMaquinaButton.UseVisualStyleBackColor = True
         '
-        'PictureBox1
+        'TipoMaquinaPictureBox
         '
-        Me.PictureBox1.Image = Global.FabLabJR.My.Resources.Resources.plus_TratarMaquina
-        Me.PictureBox1.Location = New System.Drawing.Point(458, 66)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(28, 28)
-        Me.PictureBox1.TabIndex = 38
-        Me.PictureBox1.TabStop = False
+        Me.TipoMaquinaPictureBox.Image = Global.FabLabJR.My.Resources.Resources.plus_TratarMaquina
+        Me.TipoMaquinaPictureBox.Location = New System.Drawing.Point(458, 66)
+        Me.TipoMaquinaPictureBox.Name = "TipoMaquinaPictureBox"
+        Me.TipoMaquinaPictureBox.Size = New System.Drawing.Size(28, 28)
+        Me.TipoMaquinaPictureBox.TabIndex = 38
+        Me.TipoMaquinaPictureBox.TabStop = False
         '
         'FormTratarMaquina
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(830, 437)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.CancelarButton)
-        Me.Controls.Add(Me.AceptarButton)
-        Me.Controls.Add(Me.ImagenesFlowLayoutPanel)
-        Me.Controls.Add(Me.CaracteristicasTextBox)
-        Me.Controls.Add(Me.DescripcionTextBox)
-        Me.Controls.Add(Me.TipoComboBox)
-        Me.Controls.Add(Me.FechaCompraDateTimePicker)
-        Me.Controls.Add(Me.TelefonoSatMaskedTextBox)
-        Me.Controls.Add(Me.PrecioHoraTextBox)
-        Me.Controls.Add(Me.ModeloTextBox)
-        Me.Controls.Add(Me.ImagenesLabel)
-        Me.Controls.Add(Me.CaracteristicasLabel)
-        Me.Controls.Add(Me.DescripcionLabel)
-        Me.Controls.Add(Me.FechaCompraLabel)
-        Me.Controls.Add(Me.TipoLabel)
-        Me.Controls.Add(Me.PrecioHoraLabel)
-        Me.Controls.Add(Me.TelefonoSatLabel)
-        Me.Controls.Add(Me.ModeloLabelNuevaMaquina)
+        Me.Controls.Add(Me.TipoMaquinaPictureBox)
+        Me.Controls.Add(Me.CancelarMaquinaButton)
+        Me.Controls.Add(Me.AceptarMaquinaButton)
+        Me.Controls.Add(Me.ImagenesMaquinaFlowLayoutPanel)
+        Me.Controls.Add(Me.CaracteristicasMaquinaTextBox)
+        Me.Controls.Add(Me.DescripcionMaquinaTextBox)
+        Me.Controls.Add(Me.TipoMaquinaComboBox)
+        Me.Controls.Add(Me.FechaCompraMaquinaDateTimePicker)
+        Me.Controls.Add(Me.TelefonoSatMaquinaMaskedTextBox)
+        Me.Controls.Add(Me.PrecioHoraMaquinaTextBox)
+        Me.Controls.Add(Me.ModeloMaquinaTextBox)
+        Me.Controls.Add(Me.ImagenesMaquinaLabel)
+        Me.Controls.Add(Me.CaracteristicasMaquinaLabel)
+        Me.Controls.Add(Me.DescripcionMaquinaLabel)
+        Me.Controls.Add(Me.FechaCompraMaquinaLabel)
+        Me.Controls.Add(Me.TipoMaquinaLabel)
+        Me.Controls.Add(Me.PrecioHoraMaquinaLabel)
+        Me.Controls.Add(Me.TelefonoSatMaquinaLabel)
+        Me.Controls.Add(Me.ModeloMaquinaLabel)
         Me.Name = "FormTratarMaquina"
         Me.Text = "FormTratarMaquina"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TipoMaquinaPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents ImagenesFlowLayoutPanel As FlowLayoutPanel
-    Friend WithEvents CaracteristicasTextBox As TextBox
-    Friend WithEvents DescripcionTextBox As TextBox
-    Friend WithEvents TipoComboBox As ComboBox
-    Friend WithEvents FechaCompraDateTimePicker As DateTimePicker
-    Friend WithEvents TelefonoSatMaskedTextBox As MaskedTextBox
-    Friend WithEvents PrecioHoraTextBox As TextBox
-    Friend WithEvents ModeloTextBox As TextBox
-    Friend WithEvents ImagenesLabel As Label
-    Friend WithEvents CaracteristicasLabel As Label
-    Friend WithEvents DescripcionLabel As Label
-    Friend WithEvents FechaCompraLabel As Label
-    Friend WithEvents TipoLabel As Label
-    Friend WithEvents PrecioHoraLabel As Label
-    Friend WithEvents TelefonoSatLabel As Label
-    Friend WithEvents ModeloLabelNuevaMaquina As Label
-    Friend WithEvents AceptarButton As Button
-    Friend WithEvents CancelarButton As Button
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents ImagenesMaquinaFlowLayoutPanel As FlowLayoutPanel
+    Friend WithEvents CaracteristicasMaquinaTextBox As TextBox
+    Friend WithEvents DescripcionMaquinaTextBox As TextBox
+    Friend WithEvents TipoMaquinaComboBox As ComboBox
+    Friend WithEvents FechaCompraMaquinaDateTimePicker As DateTimePicker
+    Friend WithEvents TelefonoSatMaquinaMaskedTextBox As MaskedTextBox
+    Friend WithEvents PrecioHoraMaquinaTextBox As TextBox
+    Friend WithEvents ModeloMaquinaTextBox As TextBox
+    Friend WithEvents ImagenesMaquinaLabel As Label
+    Friend WithEvents CaracteristicasMaquinaLabel As Label
+    Friend WithEvents DescripcionMaquinaLabel As Label
+    Friend WithEvents FechaCompraMaquinaLabel As Label
+    Friend WithEvents TipoMaquinaLabel As Label
+    Friend WithEvents PrecioHoraMaquinaLabel As Label
+    Friend WithEvents TelefonoSatMaquinaLabel As Label
+    Friend WithEvents ModeloMaquinaLabel As Label
+    Friend WithEvents AceptarMaquinaButton As Button
+    Friend WithEvents CancelarMaquinaButton As Button
+    Friend WithEvents TipoMaquinaPictureBox As PictureBox
 End Class

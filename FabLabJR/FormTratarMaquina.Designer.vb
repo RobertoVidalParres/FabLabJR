@@ -38,18 +38,21 @@ Partial Class FormTratarMaquina
         Me.PrecioHoraLabel = New System.Windows.Forms.Label()
         Me.TelefonoSatLabel = New System.Windows.Forms.Label()
         Me.ModeloLabelNuevaMaquina = New System.Windows.Forms.Label()
+        Me.AñadirTipoButton = New System.Windows.Forms.Button()
+        Me.AceptarButton = New System.Windows.Forms.Button()
+        Me.CancelarButton = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'ImagenesFlowLayoutPanel
         '
-        Me.ImagenesFlowLayoutPanel.Location = New System.Drawing.Point(27, 312)
+        Me.ImagenesFlowLayoutPanel.Location = New System.Drawing.Point(27, 280)
         Me.ImagenesFlowLayoutPanel.Name = "ImagenesFlowLayoutPanel"
         Me.ImagenesFlowLayoutPanel.Size = New System.Drawing.Size(685, 100)
         Me.ImagenesFlowLayoutPanel.TabIndex = 33
         '
         'CaracteristicasTextBox
         '
-        Me.CaracteristicasTextBox.Location = New System.Drawing.Point(382, 159)
+        Me.CaracteristicasTextBox.Location = New System.Drawing.Point(382, 138)
         Me.CaracteristicasTextBox.Multiline = True
         Me.CaracteristicasTextBox.Name = "CaracteristicasTextBox"
         Me.CaracteristicasTextBox.Size = New System.Drawing.Size(330, 99)
@@ -57,7 +60,7 @@ Partial Class FormTratarMaquina
         '
         'DescripcionTextBox
         '
-        Me.DescripcionTextBox.Location = New System.Drawing.Point(27, 159)
+        Me.DescripcionTextBox.Location = New System.Drawing.Point(27, 138)
         Me.DescripcionTextBox.Multiline = True
         Me.DescripcionTextBox.Name = "DescripcionTextBox"
         Me.DescripcionTextBox.Size = New System.Drawing.Size(330, 99)
@@ -66,7 +69,7 @@ Partial Class FormTratarMaquina
         'TipoComboBox
         '
         Me.TipoComboBox.FormattingEnabled = True
-        Me.TipoComboBox.Location = New System.Drawing.Point(346, 81)
+        Me.TipoComboBox.Location = New System.Drawing.Point(346, 66)
         Me.TipoComboBox.Name = "TipoComboBox"
         Me.TipoComboBox.Size = New System.Drawing.Size(100, 21)
         Me.TipoComboBox.TabIndex = 30
@@ -80,7 +83,7 @@ Partial Class FormTratarMaquina
         '
         'TelefonoSatMaskedTextBox
         '
-        Me.TelefonoSatMaskedTextBox.Location = New System.Drawing.Point(126, 81)
+        Me.TelefonoSatMaskedTextBox.Location = New System.Drawing.Point(126, 66)
         Me.TelefonoSatMaskedTextBox.Name = "TelefonoSatMaskedTextBox"
         Me.TelefonoSatMaskedTextBox.Size = New System.Drawing.Size(100, 20)
         Me.TelefonoSatMaskedTextBox.TabIndex = 28
@@ -102,7 +105,7 @@ Partial Class FormTratarMaquina
         'ImagenesLabel
         '
         Me.ImagenesLabel.AutoSize = True
-        Me.ImagenesLabel.Location = New System.Drawing.Point(24, 276)
+        Me.ImagenesLabel.Location = New System.Drawing.Point(24, 255)
         Me.ImagenesLabel.Name = "ImagenesLabel"
         Me.ImagenesLabel.Size = New System.Drawing.Size(53, 13)
         Me.ImagenesLabel.TabIndex = 25
@@ -111,7 +114,7 @@ Partial Class FormTratarMaquina
         'CaracteristicasLabel
         '
         Me.CaracteristicasLabel.AutoSize = True
-        Me.CaracteristicasLabel.Location = New System.Drawing.Point(379, 134)
+        Me.CaracteristicasLabel.Location = New System.Drawing.Point(379, 112)
         Me.CaracteristicasLabel.Name = "CaracteristicasLabel"
         Me.CaracteristicasLabel.Size = New System.Drawing.Size(121, 13)
         Me.CaracteristicasLabel.TabIndex = 24
@@ -120,7 +123,7 @@ Partial Class FormTratarMaquina
         'DescripcionLabel
         '
         Me.DescripcionLabel.AutoSize = True
-        Me.DescripcionLabel.Location = New System.Drawing.Point(24, 134)
+        Me.DescripcionLabel.Location = New System.Drawing.Point(24, 112)
         Me.DescripcionLabel.Name = "DescripcionLabel"
         Me.DescripcionLabel.Size = New System.Drawing.Size(63, 13)
         Me.DescripcionLabel.TabIndex = 23
@@ -138,7 +141,7 @@ Partial Class FormTratarMaquina
         'TipoLabel
         '
         Me.TipoLabel.AutoSize = True
-        Me.TipoLabel.Location = New System.Drawing.Point(254, 84)
+        Me.TipoLabel.Location = New System.Drawing.Point(254, 69)
         Me.TipoLabel.Name = "TipoLabel"
         Me.TipoLabel.Size = New System.Drawing.Size(28, 13)
         Me.TipoLabel.TabIndex = 21
@@ -156,7 +159,7 @@ Partial Class FormTratarMaquina
         'TelefonoSatLabel
         '
         Me.TelefonoSatLabel.AutoSize = True
-        Me.TelefonoSatLabel.Location = New System.Drawing.Point(24, 84)
+        Me.TelefonoSatLabel.Location = New System.Drawing.Point(24, 69)
         Me.TelefonoSatLabel.Name = "TelefonoSatLabel"
         Me.TelefonoSatLabel.Size = New System.Drawing.Size(73, 13)
         Me.TelefonoSatLabel.TabIndex = 19
@@ -171,11 +174,40 @@ Partial Class FormTratarMaquina
         Me.ModeloLabelNuevaMaquina.TabIndex = 18
         Me.ModeloLabelNuevaMaquina.Text = "Modelo"
         '
+        'AñadirTipoButton
+        '
+        Me.AñadirTipoButton.Location = New System.Drawing.Point(458, 64)
+        Me.AñadirTipoButton.Name = "AñadirTipoButton"
+        Me.AñadirTipoButton.Size = New System.Drawing.Size(31, 23)
+        Me.AñadirTipoButton.TabIndex = 35
+        Me.AñadirTipoButton.UseVisualStyleBackColor = True
+        '
+        'AceptarButton
+        '
+        Me.AceptarButton.Location = New System.Drawing.Point(653, 402)
+        Me.AceptarButton.Name = "AceptarButton"
+        Me.AceptarButton.Size = New System.Drawing.Size(75, 23)
+        Me.AceptarButton.TabIndex = 36
+        Me.AceptarButton.Text = "Aceptar"
+        Me.AceptarButton.UseVisualStyleBackColor = True
+        '
+        'CancelarButton
+        '
+        Me.CancelarButton.Location = New System.Drawing.Point(743, 402)
+        Me.CancelarButton.Name = "CancelarButton"
+        Me.CancelarButton.Size = New System.Drawing.Size(75, 23)
+        Me.CancelarButton.TabIndex = 37
+        Me.CancelarButton.Text = "Cancelar"
+        Me.CancelarButton.UseVisualStyleBackColor = True
+        '
         'FormTratarMaquina
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(830, 437)
+        Me.Controls.Add(Me.CancelarButton)
+        Me.Controls.Add(Me.AceptarButton)
+        Me.Controls.Add(Me.AñadirTipoButton)
         Me.Controls.Add(Me.ImagenesFlowLayoutPanel)
         Me.Controls.Add(Me.CaracteristicasTextBox)
         Me.Controls.Add(Me.DescripcionTextBox)
@@ -215,4 +247,7 @@ Partial Class FormTratarMaquina
     Friend WithEvents PrecioHoraLabel As Label
     Friend WithEvents TelefonoSatLabel As Label
     Friend WithEvents ModeloLabelNuevaMaquina As Label
+    Friend WithEvents AñadirTipoButton As Button
+    Friend WithEvents AceptarButton As Button
+    Friend WithEvents CancelarButton As Button
 End Class

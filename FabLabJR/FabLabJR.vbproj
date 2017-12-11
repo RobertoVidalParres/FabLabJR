@@ -51,6 +51,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Data.SqlXml" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -84,6 +85,12 @@
     </Compile>
     <Compile Include="Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGestionUsuarios.Designer.vb">
+      <DependentUpon>FormGestionUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormGestionUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormTratarMaquina.Designer.vb">
@@ -120,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGestionUsuarios.resx">
+      <DependentUpon>FormGestionUsuarios.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTratarMaquina.resx">
       <DependentUpon>FormTratarMaquina.vb</DependentUpon>

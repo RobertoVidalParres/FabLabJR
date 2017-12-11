@@ -206,7 +206,7 @@ Partial Class FormTratarMaquina
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(830, 437)
+        Me.ClientSize = New System.Drawing.Size(841, 451)
         Me.Controls.Add(Me.TipoMaquinaPictureBox)
         Me.Controls.Add(Me.CancelarMaquinaButton)
         Me.Controls.Add(Me.AceptarMaquinaButton)

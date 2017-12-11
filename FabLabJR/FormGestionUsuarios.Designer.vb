@@ -29,6 +29,7 @@ Partial Class FormGestionUsuarios
         Me.EliminarGestionUsuarioButton = New System.Windows.Forms.Button()
         Me.TablaGestionUsuarioDataGridView = New System.Windows.Forms.DataGridView()
         Me.BuscarGestionUsuarioLabel = New System.Windows.Forms.Label()
+        Me.BuscarGestionUsuarioButton = New System.Windows.Forms.Button()
         CType(Me.TablaGestionUsuarioDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -92,11 +93,21 @@ Partial Class FormGestionUsuarios
         Me.BuscarGestionUsuarioLabel.TabIndex = 6
         Me.BuscarGestionUsuarioLabel.Text = "Buscar:"
         '
+        'BuscarGestionUsuarioButton
+        '
+        Me.BuscarGestionUsuarioButton.Location = New System.Drawing.Point(318, 52)
+        Me.BuscarGestionUsuarioButton.Name = "BuscarGestionUsuarioButton"
+        Me.BuscarGestionUsuarioButton.Size = New System.Drawing.Size(75, 23)
+        Me.BuscarGestionUsuarioButton.TabIndex = 7
+        Me.BuscarGestionUsuarioButton.Text = "Buscar"
+        Me.BuscarGestionUsuarioButton.UseVisualStyleBackColor = True
+        '
         'FormGestionUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(795, 475)
+        Me.Controls.Add(Me.BuscarGestionUsuarioButton)
         Me.Controls.Add(Me.BuscarGestionUsuarioLabel)
         Me.Controls.Add(Me.TablaGestionUsuarioDataGridView)
         Me.Controls.Add(Me.EliminarGestionUsuarioButton)
@@ -119,4 +130,5 @@ Partial Class FormGestionUsuarios
     Friend WithEvents EliminarGestionUsuarioButton As Button
     Friend WithEvents TablaGestionUsuarioDataGridView As DataGridView
     Friend WithEvents BuscarGestionUsuarioLabel As Label
+    Friend WithEvents BuscarGestionUsuarioButton As Button
 End Class

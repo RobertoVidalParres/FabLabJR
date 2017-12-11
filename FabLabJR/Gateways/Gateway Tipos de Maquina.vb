@@ -50,7 +50,7 @@ Public Class Gateway_Tipo_de_Maquina
     End Function
 
     'Metodo para la seleccion de todos los tipos de maquina de la base de datos
-    Public Function SelectTiposMaquina() As DataTable
+    Public Function SelectTiposMaquina() As SqlDataReader
         Dim consulta As String
 
         'Consulta para la seleccion de todas las maquinas
@@ -65,11 +65,8 @@ Public Class Gateway_Tipo_de_Maquina
             conexion.Open()
 
             Dim lector As SqlDataReader = comando.ExecuteReader
-            Dim resultado As New DataTable
 
-            resultado.Load(lector)
-
-            Return resultado
+            Return lector
 
         Catch ex As Exception
             Throw New Exception(ex.Message, ex)

@@ -13,6 +13,14 @@
         If (meLLama = "Consultar") Then
             RellenarDatos()
             DeshabilitarControles()
+        ElseIf (meLLama = "Insertar") Then
+            Dim lista As List(Of String)
+            lista = GestionarMaquina.ObtenerTiposDeMaquina()
+
+            For Each item As String In lista
+                TipoMaquinaComboBox.Items.Add(item)
+            Next
+
         ElseIf (meLLama = "Actualizar") Then
             RellenarDatos()
         End If

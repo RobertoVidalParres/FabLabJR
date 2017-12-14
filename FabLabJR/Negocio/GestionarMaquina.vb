@@ -145,4 +145,12 @@ Module GestionarMaquina
 
         Return gateway.SelectMaquinasPorModelo(modelo)
     End Function
+
+    Public Function AñadirTipoMaquina(tipo As String) As Integer
+        Dim gateway As Gateway_Tipo_de_Maquina = New Gateway_Tipo_de_Maquina
+        Dim filasModificadas As Integer
+        filasModificadas = gateway.InsertarTipo(tipo)
+
+        Return filasModificadas
+    End Function
 End Module

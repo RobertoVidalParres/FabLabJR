@@ -102,4 +102,8 @@
             End If
         End If
     End Sub
+
+    Private Sub TipoMaquinaPictureBox_Click(sender As Object, e As EventArgs) Handles TipoMaquinaPictureBox.Click
+        GestionarMaquina.AñadirTipoMaquina(TipoMaquinaComboBox.Text.Trim())
+    End Sub
 End Class

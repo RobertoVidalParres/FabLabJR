@@ -23,15 +23,19 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.UsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MaquinasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NuevaMaquinaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GestionMaquinaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VentanaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AcercaDeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NuevaMaquinaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.GestionMaquinaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.NuevoUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GestionUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OrganizarVentanasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MinimizarTodasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -44,24 +48,9 @@ Partial Class Form1
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
         '
-        'ToolStrip1
-        '
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(918, 25)
-        Me.ToolStrip1.TabIndex = 2
-        Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'StatusStrip1
-        '
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 447)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(918, 22)
-        Me.StatusStrip1.TabIndex = 3
-        Me.StatusStrip1.Text = "StatusStrip1"
-        '
         'UsuariosToolStripMenuItem
         '
+        Me.UsuariosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevoUsuarioToolStripMenuItem, Me.GestionUsuarioToolStripMenuItem})
         Me.UsuariosToolStripMenuItem.Name = "UsuariosToolStripMenuItem"
         Me.UsuariosToolStripMenuItem.Size = New System.Drawing.Size(64, 20)
         Me.UsuariosToolStripMenuItem.Text = "Usuarios"
@@ -73,8 +62,21 @@ Partial Class Form1
         Me.MaquinasToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
         Me.MaquinasToolStripMenuItem.Text = "Máquinas"
         '
+        'NuevaMaquinaToolStripMenuItem
+        '
+        Me.NuevaMaquinaToolStripMenuItem.Name = "NuevaMaquinaToolStripMenuItem"
+        Me.NuevaMaquinaToolStripMenuItem.Size = New System.Drawing.Size(185, 22)
+        Me.NuevaMaquinaToolStripMenuItem.Text = "Nueva Máquina"
+        '
+        'GestionMaquinaToolStripMenuItem
+        '
+        Me.GestionMaquinaToolStripMenuItem.Name = "GestionMaquinaToolStripMenuItem"
+        Me.GestionMaquinaToolStripMenuItem.Size = New System.Drawing.Size(185, 22)
+        Me.GestionMaquinaToolStripMenuItem.Text = "Gestión de Máquinas"
+        '
         'VentanaToolStripMenuItem
         '
+        Me.VentanaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.OrganizarVentanasToolStripMenuItem, Me.MinimizarTodasToolStripMenuItem})
         Me.VentanaToolStripMenuItem.Name = "VentanaToolStripMenuItem"
         Me.VentanaToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
         Me.VentanaToolStripMenuItem.Text = "Ventana"
@@ -92,17 +94,45 @@ Partial Class Form1
         Me.AcercaDeToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.AcercaDeToolStripMenuItem.Text = "Acerca de"
         '
-        'NuevaMaquinaToolStripMenuItem
+        'ToolStrip1
         '
-        Me.NuevaMaquinaToolStripMenuItem.Name = "NuevaMaquinaToolStripMenuItem"
-        Me.NuevaMaquinaToolStripMenuItem.Size = New System.Drawing.Size(185, 22)
-        Me.NuevaMaquinaToolStripMenuItem.Text = "Nueva Máquina"
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(918, 25)
+        Me.ToolStrip1.TabIndex = 2
+        Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'GestionMaquinaToolStripMenuItem
+        'StatusStrip1
         '
-        Me.GestionMaquinaToolStripMenuItem.Name = "GestionMaquinaToolStripMenuItem"
-        Me.GestionMaquinaToolStripMenuItem.Size = New System.Drawing.Size(185, 22)
-        Me.GestionMaquinaToolStripMenuItem.Text = "Gestión de Máquinas"
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 447)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(918, 22)
+        Me.StatusStrip1.TabIndex = 3
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'NuevoUsuarioToolStripMenuItem
+        '
+        Me.NuevoUsuarioToolStripMenuItem.Name = "NuevoUsuarioToolStripMenuItem"
+        Me.NuevoUsuarioToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.NuevoUsuarioToolStripMenuItem.Text = "Nuevo Usuario"
+        '
+        'GestionUsuarioToolStripMenuItem
+        '
+        Me.GestionUsuarioToolStripMenuItem.Name = "GestionUsuarioToolStripMenuItem"
+        Me.GestionUsuarioToolStripMenuItem.Size = New System.Drawing.Size(177, 22)
+        Me.GestionUsuarioToolStripMenuItem.Text = "Gestión de usuarios"
+        '
+        'OrganizarVentanasToolStripMenuItem
+        '
+        Me.OrganizarVentanasToolStripMenuItem.Name = "OrganizarVentanasToolStripMenuItem"
+        Me.OrganizarVentanasToolStripMenuItem.Size = New System.Drawing.Size(260, 22)
+        Me.OrganizarVentanasToolStripMenuItem.Text = "Organizar ventanas"
+        '
+        'MinimizarTodasToolStripMenuItem
+        '
+        Me.MinimizarTodasToolStripMenuItem.Name = "MinimizarTodasToolStripMenuItem"
+        Me.MinimizarTodasToolStripMenuItem.Size = New System.Drawing.Size(260, 22)
+        Me.MinimizarTodasToolStripMenuItem.Text = "MinimizarTodasToolStripMenuItem"
         '
         'Form1
         '
@@ -133,4 +163,8 @@ Partial Class Form1
     Friend WithEvents AcercaDeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NuevaMaquinaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GestionMaquinaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents NuevoUsuarioToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents GestionUsuarioToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OrganizarVentanasToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MinimizarTodasToolStripMenuItem As ToolStripMenuItem
 End Class

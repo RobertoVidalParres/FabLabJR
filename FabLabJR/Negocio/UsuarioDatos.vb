@@ -15,4 +15,20 @@ Module UsuariosDatos
         Dim gateWayUsuarios As New GatewayUsuarios(My.Settings.cadenaDeConexion)
         gateWayUsuarios.Insertar(nombre, apellidos, fechaNacimiento, telefono, email, direccionPostal, organizacion, tipo, Date.Now)
     End Sub
+
+    'Metodo que llama al gateway Usuarios y devuelve un datatable para el GridView del formulario Gestion Usuarios
+    Public Function ObtenerTablaGestionUsuario() As DataTable
+        Dim gateway As GatewayUsuarios = New GatewayUsuarios(My.Settings.cadenaDeConexion)
+        Dim tabla As DataTable = New DataTable
+
+        tabla = gateway.SeleccionarTodos
+
+        Return tabla
+    End Function
+
+    Public Function ObtenerTablaGestionUsuarioPorNombre(nombre As String) As DataTable
+        Dim gateway As GatewayUsuarios = New GatewayUsuarios(My.Settings.cadenaDeConexion)
+
+        Return gateway.SeleccionarNombre(nombre)
+    End Function
 End Module

@@ -104,7 +104,7 @@ Public Class Gateway_Maquina
     End Function
 
     'Metodo para la seleccion de todas las maquinas
-    Public Function SelectTodasMaquinas() As SqlDataReader
+    Public Function SelectTodasMaquinas() As DataTable
 
         Dim consulta As String
 
@@ -121,7 +121,11 @@ Public Class Gateway_Maquina
 
             Dim lector As SqlDataReader = comando.ExecuteReader
 
-            Return lector
+            Dim resultado As New DataTable
+
+            resultado.Load(lector)
+
+            Return resultado
 
         Catch ex As Exception
             Throw New Exception(ex.Message, ex)

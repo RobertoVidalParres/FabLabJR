@@ -82,7 +82,7 @@ Module GestionarMaquina
         'Creacion del gateway de Maquina
         Dim gateway As Gateway_Maquina = New Gateway_Maquina
         'Variables creadas para la comprobacion que no existe una maquina con el mismo modelo y misma fecha de compra
-        Dim tabla As SqlDataReader
+        Dim tabla As DataTable
         Dim modelos As String
         Dim fechas As Date
 
@@ -90,18 +90,17 @@ Module GestionarMaquina
         tabla = gateway.SelectTodasMaquinas()
 
         'Bucle para comprobar que no existe una maquina con el mismo modelo y misma fecha de compra
-        If (tabla.HasRows) Then
-            Do While tabla.Read()
-                modelos = tabla.Item("modelo").ToString
-                fechas = Date.Parse(tabla.Item("fecha_compra").ToString)
 
-                If (modelo = modelos And fechaCompra = fechas) Then
-                    resultado = False
-                    Throw New ArgumentException("Ya existe una maquina del mismo modelo con la misma fecha de compra")
-                End If
+        For index = 0 To tabla.Rows.Count - 1
+            modelos = tabla.Rows(index).Item("modelo").ToString
+            fechas = Date.Parse(tabla.Rows(index).Item("fecha_compra").ToString)
+        Next
 
-            Loop
+        If (modelo = modelos And fechaCompra = fechas) Then
+            resultado = False
+            Throw New ArgumentException("Ya existe una maquina del mismo modelo con la misma fecha de compra")
         End If
+
 
         Return resultado
     End Function

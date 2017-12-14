@@ -3,7 +3,7 @@
         MaquinasDataGridView.DataSource = GestionarMaquina.ObtenerTablaGestionMaquina
     End Sub
 
-    Private Sub BuscadorTextbox_TextChanged(sender As Object, e As EventArgs) Handles BuscadorTextbox.TextChanged
-        MaquinasDataGridView.DataSource = GestionarMaquina.ObtenerTablaGestionMaquinaPorModelo("Roland")
+    Private Sub BuscarMaquinaButton_Click(sender As Object, e As EventArgs) Handles BuscarMaquinaButton.Click
+        MaquinasDataGridView.DataSource = GestionarMaquina.ObtenerTablaGestionMaquinaPorModelo(BuscadorTextbox.Text.Trim())
     End Sub
 End Class

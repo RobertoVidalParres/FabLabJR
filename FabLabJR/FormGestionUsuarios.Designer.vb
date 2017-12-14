@@ -88,11 +88,11 @@ Partial Class FormGestionUsuarios
         'BuscarGestionUsuarioLabel
         '
         Me.BuscarGestionUsuarioLabel.AutoSize = True
-        Me.BuscarGestionUsuarioLabel.Location = New System.Drawing.Point(30, 22)
+        Me.BuscarGestionUsuarioLabel.Location = New System.Drawing.Point(30, 30)
         Me.BuscarGestionUsuarioLabel.Name = "BuscarGestionUsuarioLabel"
-        Me.BuscarGestionUsuarioLabel.Size = New System.Drawing.Size(43, 13)
+        Me.BuscarGestionUsuarioLabel.Size = New System.Drawing.Size(167, 13)
         Me.BuscarGestionUsuarioLabel.TabIndex = 6
-        Me.BuscarGestionUsuarioLabel.Text = "Buscar:"
+        Me.BuscarGestionUsuarioLabel.Text = "Buscador por Nombre de Usuario:"
         '
         'BuscarGestionUsuarioButton
         '

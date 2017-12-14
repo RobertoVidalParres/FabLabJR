@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class NuevoUsuario
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()>
+    <System.Diagnostics.DebuggerNonUserCode()> _
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,263 +20,262 @@ Partial Class NuevoUsuario
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()>
+    <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.NombreLabel = New System.Windows.Forms.Label()
-        Me.TelefonoLabel = New System.Windows.Forms.Label()
-        Me.OrganizacionLabel = New System.Windows.Forms.Label()
-        Me.nombreTextBox = New System.Windows.Forms.TextBox()
-        Me.telefonoTextBox = New System.Windows.Forms.TextBox()
-        Me.organizacionTextBox = New System.Windows.Forms.TextBox()
+        Me.AñadirTipoUsuarioButton = New System.Windows.Forms.Button()
+        Me.AñadirTipoUsuarioTextBox = New System.Windows.Forms.TextBox()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.cancelarButton = New System.Windows.Forms.Button()
+        Me.aceptarButton = New System.Windows.Forms.Button()
+        Me.AñadirPictureBox = New System.Windows.Forms.PictureBox()
+        Me.tipoComboBox = New System.Windows.Forms.ComboBox()
+        Me.examinarButton = New System.Windows.Forms.Button()
+        Me.FotoLabel = New System.Windows.Forms.Label()
+        Me.ObservacionesLabel = New System.Windows.Forms.Label()
+        Me.pictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.obersacionesTextBox = New System.Windows.Forms.TextBox()
+        Me.direccionpostalTextBox = New System.Windows.Forms.TextBox()
+        Me.DirPostalLabel = New System.Windows.Forms.Label()
+        Me.FechaNacLabel = New System.Windows.Forms.Label()
         Me.emailTexBox = New System.Windows.Forms.TextBox()
         Me.apellidosTextBox = New System.Windows.Forms.TextBox()
         Me.TipoLabel = New System.Windows.Forms.Label()
         Me.EmailLabel = New System.Windows.Forms.Label()
         Me.ApellidosLabel = New System.Windows.Forms.Label()
-        Me.direccionpostalTextBox = New System.Windows.Forms.TextBox()
-        Me.DirPostalLabel = New System.Windows.Forms.Label()
-        Me.FechaNacLabel = New System.Windows.Forms.Label()
-        Me.obersacionesTextBox = New System.Windows.Forms.TextBox()
-        Me.pictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.ObservacionesLabel = New System.Windows.Forms.Label()
-        Me.FotoLabel = New System.Windows.Forms.Label()
-        Me.examinarButton = New System.Windows.Forms.Button()
-        Me.tipoComboBox = New System.Windows.Forms.ComboBox()
-        Me.AñadirPictureBox = New System.Windows.Forms.PictureBox()
-        Me.aceptarButton = New System.Windows.Forms.Button()
-        Me.cancelarButton = New System.Windows.Forms.Button()
+        Me.organizacionTextBox = New System.Windows.Forms.TextBox()
+        Me.telefonoTextBox = New System.Windows.Forms.TextBox()
+        Me.nombreTextBox = New System.Windows.Forms.TextBox()
+        Me.OrganizacionLabel = New System.Windows.Forms.Label()
+        Me.TelefonoLabel = New System.Windows.Forms.Label()
+        Me.NombreLabel = New System.Windows.Forms.Label()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.AñadirTipoUsuarioTextBox = New System.Windows.Forms.TextBox()
-        Me.AñadirTipoUsuarioButton = New System.Windows.Forms.Button()
         Me.EmailErrorProvider = New System.Windows.Forms.ErrorProvider(Me.components)
-        CType(Me.pictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AñadirPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmailErrorProvider, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'NombreLabel
+        'AñadirTipoUsuarioButton
         '
-        Me.NombreLabel.AutoSize = True
-        Me.NombreLabel.Location = New System.Drawing.Point(29, 28)
-        Me.NombreLabel.Name = "NombreLabel"
-        Me.NombreLabel.Size = New System.Drawing.Size(44, 13)
-        Me.NombreLabel.TabIndex = 0
-        Me.NombreLabel.Text = "Nombre"
+        Me.AñadirTipoUsuarioButton.Location = New System.Drawing.Point(430, 199)
+        Me.AñadirTipoUsuarioButton.Name = "AñadirTipoUsuarioButton"
+        Me.AñadirTipoUsuarioButton.Size = New System.Drawing.Size(75, 23)
+        Me.AñadirTipoUsuarioButton.TabIndex = 53
+        Me.AñadirTipoUsuarioButton.Text = "Añadir"
+        Me.AñadirTipoUsuarioButton.UseVisualStyleBackColor = True
         '
-        'TelefonoLabel
+        'AñadirTipoUsuarioTextBox
         '
-        Me.TelefonoLabel.AutoSize = True
-        Me.TelefonoLabel.Location = New System.Drawing.Point(29, 94)
-        Me.TelefonoLabel.Name = "TelefonoLabel"
-        Me.TelefonoLabel.Size = New System.Drawing.Size(49, 13)
-        Me.TelefonoLabel.TabIndex = 1
-        Me.TelefonoLabel.Text = "Teléfono"
+        Me.AñadirTipoUsuarioTextBox.Location = New System.Drawing.Point(324, 200)
+        Me.AñadirTipoUsuarioTextBox.Name = "AñadirTipoUsuarioTextBox"
+        Me.AñadirTipoUsuarioTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.AñadirTipoUsuarioTextBox.TabIndex = 42
         '
-        'OrganizacionLabel
+        'DateTimePicker1
         '
-        Me.OrganizacionLabel.AutoSize = True
-        Me.OrganizacionLabel.Location = New System.Drawing.Point(29, 169)
-        Me.OrganizacionLabel.Name = "OrganizacionLabel"
-        Me.OrganizacionLabel.Size = New System.Drawing.Size(69, 13)
-        Me.OrganizacionLabel.TabIndex = 2
-        Me.OrganizacionLabel.Text = "Organización"
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(591, 24)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(100, 20)
+        Me.DateTimePicker1.TabIndex = 33
         '
-        'nombreTextBox
+        'cancelarButton
         '
-        Me.nombreTextBox.Location = New System.Drawing.Point(104, 21)
-        Me.nombreTextBox.Name = "nombreTextBox"
-        Me.nombreTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.nombreTextBox.TabIndex = 1
+        Me.cancelarButton.Location = New System.Drawing.Point(616, 488)
+        Me.cancelarButton.Name = "cancelarButton"
+        Me.cancelarButton.Size = New System.Drawing.Size(75, 23)
+        Me.cancelarButton.TabIndex = 52
+        Me.cancelarButton.Text = "Cancelar"
+        Me.cancelarButton.UseVisualStyleBackColor = True
         '
-        'telefonoTextBox
+        'aceptarButton
         '
-        Me.telefonoTextBox.Location = New System.Drawing.Point(104, 87)
-        Me.telefonoTextBox.Name = "telefonoTextBox"
-        Me.telefonoTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.telefonoTextBox.TabIndex = 4
+        Me.aceptarButton.Location = New System.Drawing.Point(517, 489)
+        Me.aceptarButton.Name = "aceptarButton"
+        Me.aceptarButton.Size = New System.Drawing.Size(75, 23)
+        Me.aceptarButton.TabIndex = 47
+        Me.aceptarButton.Text = "Aceptar"
+        Me.aceptarButton.UseVisualStyleBackColor = True
         '
-        'organizacionTextBox
+        'AñadirPictureBox
         '
-        Me.organizacionTextBox.Location = New System.Drawing.Point(104, 162)
-        Me.organizacionTextBox.Name = "organizacionTextBox"
-        Me.organizacionTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.organizacionTextBox.TabIndex = 7
+        Me.AñadirPictureBox.Location = New System.Drawing.Point(430, 163)
+        Me.AñadirPictureBox.Name = "AñadirPictureBox"
+        Me.AñadirPictureBox.Size = New System.Drawing.Size(33, 30)
+        Me.AñadirPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.AñadirPictureBox.TabIndex = 51
+        Me.AñadirPictureBox.TabStop = False
         '
-        'emailTexBox
+        'tipoComboBox
         '
-        Me.emailTexBox.Location = New System.Drawing.Point(344, 88)
-        Me.emailTexBox.Name = "emailTexBox"
-        Me.emailTexBox.Size = New System.Drawing.Size(100, 20)
-        Me.emailTexBox.TabIndex = 5
+        Me.tipoComboBox.FormattingEnabled = True
+        Me.tipoComboBox.Location = New System.Drawing.Point(324, 167)
+        Me.tipoComboBox.Name = "tipoComboBox"
+        Me.tipoComboBox.Size = New System.Drawing.Size(100, 21)
+        Me.tipoComboBox.TabIndex = 40
         '
-        'apellidosTextBox
+        'examinarButton
         '
-        Me.apellidosTextBox.Location = New System.Drawing.Point(344, 22)
-        Me.apellidosTextBox.Name = "apellidosTextBox"
-        Me.apellidosTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.apellidosTextBox.TabIndex = 2
+        Me.examinarButton.Location = New System.Drawing.Point(43, 228)
+        Me.examinarButton.Name = "examinarButton"
+        Me.examinarButton.Size = New System.Drawing.Size(75, 23)
+        Me.examinarButton.TabIndex = 43
+        Me.examinarButton.Text = "Examinar"
+        Me.examinarButton.UseVisualStyleBackColor = True
         '
-        'TipoLabel
+        'FotoLabel
         '
-        Me.TipoLabel.AutoSize = True
-        Me.TipoLabel.Location = New System.Drawing.Point(270, 174)
-        Me.TipoLabel.Name = "TipoLabel"
-        Me.TipoLabel.Size = New System.Drawing.Size(28, 13)
-        Me.TipoLabel.TabIndex = 8
-        Me.TipoLabel.Text = "Tipo"
+        Me.FotoLabel.AutoSize = True
+        Me.FotoLabel.Location = New System.Drawing.Point(9, 238)
+        Me.FotoLabel.Name = "FotoLabel"
+        Me.FotoLabel.Size = New System.Drawing.Size(28, 13)
+        Me.FotoLabel.TabIndex = 50
+        Me.FotoLabel.Text = "Foto"
         '
-        'EmailLabel
+        'ObservacionesLabel
         '
-        Me.EmailLabel.AutoSize = True
-        Me.EmailLabel.Location = New System.Drawing.Point(270, 95)
-        Me.EmailLabel.Name = "EmailLabel"
-        Me.EmailLabel.Size = New System.Drawing.Size(35, 13)
-        Me.EmailLabel.TabIndex = 7
-        Me.EmailLabel.Text = "E-mail"
+        Me.ObservacionesLabel.AutoSize = True
+        Me.ObservacionesLabel.Location = New System.Drawing.Point(374, 238)
+        Me.ObservacionesLabel.Name = "ObservacionesLabel"
+        Me.ObservacionesLabel.Size = New System.Drawing.Size(78, 13)
+        Me.ObservacionesLabel.TabIndex = 49
+        Me.ObservacionesLabel.Text = "Observaciones"
         '
-        'ApellidosLabel
+        'pictureBox1
         '
-        Me.ApellidosLabel.AutoSize = True
-        Me.ApellidosLabel.Location = New System.Drawing.Point(270, 29)
-        Me.ApellidosLabel.Name = "ApellidosLabel"
-        Me.ApellidosLabel.Size = New System.Drawing.Size(49, 13)
-        Me.ApellidosLabel.TabIndex = 6
-        Me.ApellidosLabel.Text = "Apellidos"
+        Me.pictureBox1.Location = New System.Drawing.Point(12, 270)
+        Me.pictureBox1.Name = "pictureBox1"
+        Me.pictureBox1.Size = New System.Drawing.Size(328, 211)
+        Me.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pictureBox1.TabIndex = 48
+        Me.pictureBox1.TabStop = False
+        '
+        'obersacionesTextBox
+        '
+        Me.obersacionesTextBox.Location = New System.Drawing.Point(377, 270)
+        Me.obersacionesTextBox.Multiline = True
+        Me.obersacionesTextBox.Name = "obersacionesTextBox"
+        Me.obersacionesTextBox.Size = New System.Drawing.Size(314, 211)
+        Me.obersacionesTextBox.TabIndex = 44
         '
         'direccionpostalTextBox
         '
-        Me.direccionpostalTextBox.Location = New System.Drawing.Point(611, 94)
+        Me.direccionpostalTextBox.Location = New System.Drawing.Point(591, 95)
         Me.direccionpostalTextBox.Name = "direccionpostalTextBox"
         Me.direccionpostalTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.direccionpostalTextBox.TabIndex = 6
+        Me.direccionpostalTextBox.TabIndex = 37
         '
         'DirPostalLabel
         '
         Me.DirPostalLabel.AutoSize = True
-        Me.DirPostalLabel.Location = New System.Drawing.Point(506, 99)
+        Me.DirPostalLabel.Location = New System.Drawing.Point(486, 100)
         Me.DirPostalLabel.Name = "DirPostalLabel"
         Me.DirPostalLabel.Size = New System.Drawing.Size(83, 13)
-        Me.DirPostalLabel.TabIndex = 12
+        Me.DirPostalLabel.TabIndex = 46
         Me.DirPostalLabel.Text = "Dirección postal"
         '
         'FechaNacLabel
         '
         Me.FechaNacLabel.AutoSize = True
-        Me.FechaNacLabel.Location = New System.Drawing.Point(506, 29)
+        Me.FechaNacLabel.Location = New System.Drawing.Point(486, 30)
         Me.FechaNacLabel.Name = "FechaNacLabel"
         Me.FechaNacLabel.Size = New System.Drawing.Size(106, 13)
-        Me.FechaNacLabel.TabIndex = 11
+        Me.FechaNacLabel.TabIndex = 45
         Me.FechaNacLabel.Text = "Fecha de nacimiento"
         '
-        'obersacionesTextBox
+        'emailTexBox
         '
-        Me.obersacionesTextBox.Location = New System.Drawing.Point(397, 269)
-        Me.obersacionesTextBox.Multiline = True
-        Me.obersacionesTextBox.Name = "obersacionesTextBox"
-        Me.obersacionesTextBox.Size = New System.Drawing.Size(314, 211)
-        Me.obersacionesTextBox.TabIndex = 11
+        Me.emailTexBox.Location = New System.Drawing.Point(324, 89)
+        Me.emailTexBox.Name = "emailTexBox"
+        Me.emailTexBox.Size = New System.Drawing.Size(100, 20)
+        Me.emailTexBox.TabIndex = 35
         '
-        'pictureBox1
+        'apellidosTextBox
         '
-        Me.pictureBox1.Location = New System.Drawing.Point(32, 269)
-        Me.pictureBox1.Name = "pictureBox1"
-        Me.pictureBox1.Size = New System.Drawing.Size(328, 211)
-        Me.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pictureBox1.TabIndex = 17
-        Me.pictureBox1.TabStop = False
+        Me.apellidosTextBox.Location = New System.Drawing.Point(324, 23)
+        Me.apellidosTextBox.Name = "apellidosTextBox"
+        Me.apellidosTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.apellidosTextBox.TabIndex = 32
         '
-        'ObservacionesLabel
+        'TipoLabel
         '
-        Me.ObservacionesLabel.AutoSize = True
-        Me.ObservacionesLabel.Location = New System.Drawing.Point(394, 237)
-        Me.ObservacionesLabel.Name = "ObservacionesLabel"
-        Me.ObservacionesLabel.Size = New System.Drawing.Size(78, 13)
-        Me.ObservacionesLabel.TabIndex = 18
-        Me.ObservacionesLabel.Text = "Observaciones"
+        Me.TipoLabel.AutoSize = True
+        Me.TipoLabel.Location = New System.Drawing.Point(250, 175)
+        Me.TipoLabel.Name = "TipoLabel"
+        Me.TipoLabel.Size = New System.Drawing.Size(28, 13)
+        Me.TipoLabel.TabIndex = 41
+        Me.TipoLabel.Text = "Tipo"
         '
-        'FotoLabel
+        'EmailLabel
         '
-        Me.FotoLabel.AutoSize = True
-        Me.FotoLabel.Location = New System.Drawing.Point(29, 237)
-        Me.FotoLabel.Name = "FotoLabel"
-        Me.FotoLabel.Size = New System.Drawing.Size(28, 13)
-        Me.FotoLabel.TabIndex = 19
-        Me.FotoLabel.Text = "Foto"
+        Me.EmailLabel.AutoSize = True
+        Me.EmailLabel.Location = New System.Drawing.Point(250, 96)
+        Me.EmailLabel.Name = "EmailLabel"
+        Me.EmailLabel.Size = New System.Drawing.Size(35, 13)
+        Me.EmailLabel.TabIndex = 38
+        Me.EmailLabel.Text = "E-mail"
         '
-        'examinarButton
+        'ApellidosLabel
         '
-        Me.examinarButton.Location = New System.Drawing.Point(63, 227)
-        Me.examinarButton.Name = "examinarButton"
-        Me.examinarButton.Size = New System.Drawing.Size(75, 23)
-        Me.examinarButton.TabIndex = 10
-        Me.examinarButton.Text = "Examinar"
-        Me.examinarButton.UseVisualStyleBackColor = True
+        Me.ApellidosLabel.AutoSize = True
+        Me.ApellidosLabel.Location = New System.Drawing.Point(250, 30)
+        Me.ApellidosLabel.Name = "ApellidosLabel"
+        Me.ApellidosLabel.Size = New System.Drawing.Size(49, 13)
+        Me.ApellidosLabel.TabIndex = 36
+        Me.ApellidosLabel.Text = "Apellidos"
         '
-        'tipoComboBox
+        'organizacionTextBox
         '
-        Me.tipoComboBox.FormattingEnabled = True
-        Me.tipoComboBox.Location = New System.Drawing.Point(344, 166)
-        Me.tipoComboBox.Name = "tipoComboBox"
-        Me.tipoComboBox.Size = New System.Drawing.Size(100, 21)
-        Me.tipoComboBox.TabIndex = 8
+        Me.organizacionTextBox.Location = New System.Drawing.Point(84, 163)
+        Me.organizacionTextBox.Name = "organizacionTextBox"
+        Me.organizacionTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.organizacionTextBox.TabIndex = 39
         '
-        'AñadirPictureBox
+        'telefonoTextBox
         '
-        Me.AñadirPictureBox.Image = Global.FabLabJR.My.Resources.Resources._32360
-        Me.AñadirPictureBox.Location = New System.Drawing.Point(450, 162)
-        Me.AñadirPictureBox.Name = "AñadirPictureBox"
-        Me.AñadirPictureBox.Size = New System.Drawing.Size(33, 30)
-        Me.AñadirPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.AñadirPictureBox.TabIndex = 22
-        Me.AñadirPictureBox.TabStop = False
+        Me.telefonoTextBox.Location = New System.Drawing.Point(84, 88)
+        Me.telefonoTextBox.Name = "telefonoTextBox"
+        Me.telefonoTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.telefonoTextBox.TabIndex = 34
         '
-        'aceptarButton
+        'nombreTextBox
         '
-        Me.aceptarButton.Location = New System.Drawing.Point(537, 488)
-        Me.aceptarButton.Name = "aceptarButton"
-        Me.aceptarButton.Size = New System.Drawing.Size(75, 23)
-        Me.aceptarButton.TabIndex = 12
-        Me.aceptarButton.Text = "Aceptar"
-        Me.aceptarButton.UseVisualStyleBackColor = True
+        Me.nombreTextBox.Location = New System.Drawing.Point(84, 22)
+        Me.nombreTextBox.Name = "nombreTextBox"
+        Me.nombreTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.nombreTextBox.TabIndex = 29
         '
-        'cancelarButton
+        'OrganizacionLabel
         '
-        Me.cancelarButton.Location = New System.Drawing.Point(636, 487)
-        Me.cancelarButton.Name = "cancelarButton"
-        Me.cancelarButton.Size = New System.Drawing.Size(75, 23)
-        Me.cancelarButton.TabIndex = 24
-        Me.cancelarButton.Text = "Cancelar"
-        Me.cancelarButton.UseVisualStyleBackColor = True
+        Me.OrganizacionLabel.AutoSize = True
+        Me.OrganizacionLabel.Location = New System.Drawing.Point(9, 170)
+        Me.OrganizacionLabel.Name = "OrganizacionLabel"
+        Me.OrganizacionLabel.Size = New System.Drawing.Size(69, 13)
+        Me.OrganizacionLabel.TabIndex = 31
+        Me.OrganizacionLabel.Text = "Organización"
+        '
+        'TelefonoLabel
+        '
+        Me.TelefonoLabel.AutoSize = True
+        Me.TelefonoLabel.Location = New System.Drawing.Point(9, 95)
+        Me.TelefonoLabel.Name = "TelefonoLabel"
+        Me.TelefonoLabel.Size = New System.Drawing.Size(49, 13)
+        Me.TelefonoLabel.TabIndex = 30
+        Me.TelefonoLabel.Text = "Teléfono"
+        '
+        'NombreLabel
+        '
+        Me.NombreLabel.AutoSize = True
+        Me.NombreLabel.Location = New System.Drawing.Point(9, 29)
+        Me.NombreLabel.Name = "NombreLabel"
+        Me.NombreLabel.Size = New System.Drawing.Size(44, 13)
+        Me.NombreLabel.TabIndex = 28
+        Me.NombreLabel.Text = "Nombre"
         '
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(611, 23)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(100, 20)
-        Me.DateTimePicker1.TabIndex = 3
-        '
-        'AñadirTipoUsuarioTextBox
-        '
-        Me.AñadirTipoUsuarioTextBox.Location = New System.Drawing.Point(344, 199)
-        Me.AñadirTipoUsuarioTextBox.Name = "AñadirTipoUsuarioTextBox"
-        Me.AñadirTipoUsuarioTextBox.Size = New System.Drawing.Size(100, 20)
-        Me.AñadirTipoUsuarioTextBox.TabIndex = 9
-        '
-        'AñadirTipoUsuarioButton
-        '
-        Me.AñadirTipoUsuarioButton.Location = New System.Drawing.Point(450, 198)
-        Me.AñadirTipoUsuarioButton.Name = "AñadirTipoUsuarioButton"
-        Me.AñadirTipoUsuarioButton.Size = New System.Drawing.Size(75, 23)
-        Me.AñadirTipoUsuarioButton.TabIndex = 27
-        Me.AñadirTipoUsuarioButton.Text = "Añadir"
-        Me.AñadirTipoUsuarioButton.UseVisualStyleBackColor = True
         '
         'EmailErrorProvider
         '
@@ -286,7 +285,7 @@ Partial Class NuevoUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(751, 521)
+        Me.ClientSize = New System.Drawing.Size(707, 535)
         Me.Controls.Add(Me.AñadirTipoUsuarioButton)
         Me.Controls.Add(Me.AñadirTipoUsuarioTextBox)
         Me.Controls.Add(Me.DateTimePicker1)
@@ -315,40 +314,40 @@ Partial Class NuevoUsuario
         Me.Controls.Add(Me.NombreLabel)
         Me.Name = "NuevoUsuario"
         Me.Text = "NuevoUsuario"
-        CType(Me.pictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.AñadirPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmailErrorProvider, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents NombreLabel As Label
-    Friend WithEvents TelefonoLabel As Label
-    Friend WithEvents OrganizacionLabel As Label
-    Friend WithEvents nombreTextBox As TextBox
-    Friend WithEvents telefonoTextBox As TextBox
-    Friend WithEvents organizacionTextBox As TextBox
+    Friend WithEvents AñadirTipoUsuarioButton As Button
+    Friend WithEvents AñadirTipoUsuarioTextBox As TextBox
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents cancelarButton As Button
+    Friend WithEvents aceptarButton As Button
+    Friend WithEvents AñadirPictureBox As PictureBox
+    Friend WithEvents tipoComboBox As ComboBox
+    Friend WithEvents examinarButton As Button
+    Friend WithEvents FotoLabel As Label
+    Friend WithEvents ObservacionesLabel As Label
+    Friend WithEvents pictureBox1 As PictureBox
+    Friend WithEvents obersacionesTextBox As TextBox
+    Friend WithEvents direccionpostalTextBox As TextBox
+    Friend WithEvents DirPostalLabel As Label
+    Friend WithEvents FechaNacLabel As Label
     Friend WithEvents emailTexBox As TextBox
     Friend WithEvents apellidosTextBox As TextBox
     Friend WithEvents TipoLabel As Label
     Friend WithEvents EmailLabel As Label
     Friend WithEvents ApellidosLabel As Label
-    Friend WithEvents direccionpostalTextBox As TextBox
-    Friend WithEvents DirPostalLabel As Label
-    Friend WithEvents FechaNacLabel As Label
-    Friend WithEvents obersacionesTextBox As TextBox
-    Friend WithEvents pictureBox1 As PictureBox
-    Friend WithEvents ObservacionesLabel As Label
-    Friend WithEvents FotoLabel As Label
-    Friend WithEvents examinarButton As Button
-    Friend WithEvents tipoComboBox As ComboBox
-    Friend WithEvents AñadirPictureBox As PictureBox
-    Friend WithEvents aceptarButton As Button
-    Friend WithEvents cancelarButton As Button
+    Friend WithEvents organizacionTextBox As TextBox
+    Friend WithEvents telefonoTextBox As TextBox
+    Friend WithEvents nombreTextBox As TextBox
+    Friend WithEvents OrganizacionLabel As Label
+    Friend WithEvents TelefonoLabel As Label
+    Friend WithEvents NombreLabel As Label
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents AñadirTipoUsuarioTextBox As TextBox
-    Friend WithEvents AñadirTipoUsuarioButton As Button
     Friend WithEvents EmailErrorProvider As ErrorProvider
 End Class

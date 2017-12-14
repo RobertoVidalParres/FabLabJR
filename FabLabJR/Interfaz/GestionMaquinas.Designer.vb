@@ -22,71 +22,71 @@ Partial Class GestionMaquinas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.MaquinasDataGridView = New System.Windows.Forms.DataGridView()
-        Me.ConsultarMaquinaButton = New System.Windows.Forms.Button()
-        Me.EditarMaquinaButton = New System.Windows.Forms.Button()
-        Me.EliminarMaquinaButton = New System.Windows.Forms.Button()
-        Me.BuscadorTextbox = New System.Windows.Forms.TextBox()
         Me.NuevaMaquinaButton = New System.Windows.Forms.Button()
+        Me.BuscadorTextbox = New System.Windows.Forms.TextBox()
+        Me.EliminarMaquinaButton = New System.Windows.Forms.Button()
+        Me.EditarMaquinaButton = New System.Windows.Forms.Button()
+        Me.ConsultarMaquinaButton = New System.Windows.Forms.Button()
+        Me.MaquinasDataGridView = New System.Windows.Forms.DataGridView()
         CType(Me.MaquinasDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'NuevaMaquinaButton
+        '
+        Me.NuevaMaquinaButton.Location = New System.Drawing.Point(410, 38)
+        Me.NuevaMaquinaButton.Name = "NuevaMaquinaButton"
+        Me.NuevaMaquinaButton.Size = New System.Drawing.Size(101, 23)
+        Me.NuevaMaquinaButton.TabIndex = 11
+        Me.NuevaMaquinaButton.Text = "Nueva maquina"
+        Me.NuevaMaquinaButton.UseVisualStyleBackColor = True
+        '
+        'BuscadorTextbox
+        '
+        Me.BuscadorTextbox.Location = New System.Drawing.Point(29, 38)
+        Me.BuscadorTextbox.Name = "BuscadorTextbox"
+        Me.BuscadorTextbox.Size = New System.Drawing.Size(100, 20)
+        Me.BuscadorTextbox.TabIndex = 10
+        '
+        'EliminarMaquinaButton
+        '
+        Me.EliminarMaquinaButton.Location = New System.Drawing.Point(437, 319)
+        Me.EliminarMaquinaButton.Name = "EliminarMaquinaButton"
+        Me.EliminarMaquinaButton.Size = New System.Drawing.Size(75, 23)
+        Me.EliminarMaquinaButton.TabIndex = 9
+        Me.EliminarMaquinaButton.Text = "Eliminar"
+        Me.EliminarMaquinaButton.UseVisualStyleBackColor = True
+        '
+        'EditarMaquinaButton
+        '
+        Me.EditarMaquinaButton.Location = New System.Drawing.Point(355, 318)
+        Me.EditarMaquinaButton.Name = "EditarMaquinaButton"
+        Me.EditarMaquinaButton.Size = New System.Drawing.Size(75, 23)
+        Me.EditarMaquinaButton.TabIndex = 8
+        Me.EditarMaquinaButton.Text = "Editar"
+        Me.EditarMaquinaButton.UseVisualStyleBackColor = True
+        '
+        'ConsultarMaquinaButton
+        '
+        Me.ConsultarMaquinaButton.Location = New System.Drawing.Point(273, 318)
+        Me.ConsultarMaquinaButton.Name = "ConsultarMaquinaButton"
+        Me.ConsultarMaquinaButton.Size = New System.Drawing.Size(75, 23)
+        Me.ConsultarMaquinaButton.TabIndex = 7
+        Me.ConsultarMaquinaButton.Text = "Consultar"
+        Me.ConsultarMaquinaButton.UseVisualStyleBackColor = True
         '
         'MaquinasDataGridView
         '
         Me.MaquinasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.MaquinasDataGridView.Location = New System.Drawing.Point(12, 67)
+        Me.MaquinasDataGridView.Location = New System.Drawing.Point(28, 73)
         Me.MaquinasDataGridView.Name = "MaquinasDataGridView"
         Me.MaquinasDataGridView.Size = New System.Drawing.Size(483, 239)
-        Me.MaquinasDataGridView.TabIndex = 0
-        '
-        'ConsultarMaquinaButton
-        '
-        Me.ConsultarMaquinaButton.Location = New System.Drawing.Point(257, 312)
-        Me.ConsultarMaquinaButton.Name = "ConsultarMaquinaButton"
-        Me.ConsultarMaquinaButton.Size = New System.Drawing.Size(75, 23)
-        Me.ConsultarMaquinaButton.TabIndex = 1
-        Me.ConsultarMaquinaButton.Text = "Consultar"
-        Me.ConsultarMaquinaButton.UseVisualStyleBackColor = True
-        '
-        'EditarMaquinaButton
-        '
-        Me.EditarMaquinaButton.Location = New System.Drawing.Point(339, 312)
-        Me.EditarMaquinaButton.Name = "EditarMaquinaButton"
-        Me.EditarMaquinaButton.Size = New System.Drawing.Size(75, 23)
-        Me.EditarMaquinaButton.TabIndex = 2
-        Me.EditarMaquinaButton.Text = "Editar"
-        Me.EditarMaquinaButton.UseVisualStyleBackColor = True
-        '
-        'EliminarMaquinaButton
-        '
-        Me.EliminarMaquinaButton.Location = New System.Drawing.Point(421, 313)
-        Me.EliminarMaquinaButton.Name = "EliminarMaquinaButton"
-        Me.EliminarMaquinaButton.Size = New System.Drawing.Size(75, 23)
-        Me.EliminarMaquinaButton.TabIndex = 3
-        Me.EliminarMaquinaButton.Text = "Eliminar"
-        Me.EliminarMaquinaButton.UseVisualStyleBackColor = True
-        '
-        'BuscadorTextbox
-        '
-        Me.BuscadorTextbox.Location = New System.Drawing.Point(13, 32)
-        Me.BuscadorTextbox.Name = "BuscadorTextbox"
-        Me.BuscadorTextbox.Size = New System.Drawing.Size(100, 20)
-        Me.BuscadorTextbox.TabIndex = 4
-        '
-        'NuevaMaquinaButton
-        '
-        Me.NuevaMaquinaButton.Location = New System.Drawing.Point(394, 32)
-        Me.NuevaMaquinaButton.Name = "NuevaMaquinaButton"
-        Me.NuevaMaquinaButton.Size = New System.Drawing.Size(101, 23)
-        Me.NuevaMaquinaButton.TabIndex = 5
-        Me.NuevaMaquinaButton.Text = "Nueva maquina"
-        Me.NuevaMaquinaButton.UseVisualStyleBackColor = True
+        Me.MaquinasDataGridView.TabIndex = 6
         '
         'GestionMaquinas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(517, 362)
+        Me.ClientSize = New System.Drawing.Size(544, 358)
         Me.Controls.Add(Me.NuevaMaquinaButton)
         Me.Controls.Add(Me.BuscadorTextbox)
         Me.Controls.Add(Me.EliminarMaquinaButton)
@@ -101,10 +101,10 @@ Partial Class GestionMaquinas
 
     End Sub
 
-    Friend WithEvents MaquinasDataGridView As DataGridView
-    Friend WithEvents ConsultarMaquinaButton As Button
-    Friend WithEvents EditarMaquinaButton As Button
-    Friend WithEvents EliminarMaquinaButton As Button
-    Friend WithEvents BuscadorTextbox As TextBox
     Friend WithEvents NuevaMaquinaButton As Button
+    Friend WithEvents BuscadorTextbox As TextBox
+    Friend WithEvents EliminarMaquinaButton As Button
+    Friend WithEvents EditarMaquinaButton As Button
+    Friend WithEvents ConsultarMaquinaButton As Button
+    Friend WithEvents MaquinasDataGridView As DataGridView
 End Class

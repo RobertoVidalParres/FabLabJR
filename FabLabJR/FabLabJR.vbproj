@@ -104,6 +104,12 @@
     <Compile Include="Gateways\Gateway Tipos de Maquina.vb" />
     <Compile Include="Gateways\Gateway tipos de usuario.vb" />
     <Compile Include="Gateways\Gateway usuarios.vb" />
+    <Compile Include="Interfaz\GestionMaquinas.Designer.vb">
+      <DependentUpon>GestionMaquinas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\GestionMaquinas.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -120,6 +126,13 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Negocio\GestionarMaquina.vb" />
+    <Compile Include="Negocio\UsuarioDatos.vb" />
+    <Compile Include="NuevoUsuario.Designer.vb">
+      <DependentUpon>NuevoUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="NuevoUsuario.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AcerdaDeForm.resx">
@@ -134,11 +147,17 @@
     <EmbeddedResource Include="FormTratarMaquina.resx">
       <DependentUpon>FormTratarMaquina.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz\GestionMaquinas.resx">
+      <DependentUpon>GestionMaquinas.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoUsuario.resx">
+      <DependentUpon>NuevoUsuario.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

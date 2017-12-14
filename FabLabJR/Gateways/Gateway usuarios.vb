@@ -1,16 +1,37 @@
-﻿Public Class GatewayUsuarios
+﻿Imports System.Data.SqlClient
+
+Public Class GatewayUsuarios
     Private conexion As SqlConnection
     Private comando As SqlCommand
 
-    Private Sub New(ByRef cadenaConexion As String)
+    Public Sub New(ByRef cadenaConexion As String)
         conexion = New SqlConnection(cadenaConexion)
         comando = New SqlCommand
+        comando.Connection = conexion
     End Sub
 
-    Public Function Insertar(nombre As String, apellidos As String, fecha_nacimiento As Date, email As String, direccion As String, organizacion As String, tipo As Integer, fecha_alta As Date)
+    Public Function Insertar(nombre As String, apellidos As String, fecha_nacimiento As Date, telefono As String, email As String, direccion As String, organizacion As String, tipo As Integer, fecha_alta As Date) As Integer
         Dim filas As Integer
-        Dim consulta As String = String.Format("INSERT INTO Usuarios(nombre, apellidos, fecha_nacimiento, email, direccion, organizacion, tipo, fecha_alta) VALUES ")
+        Dim consulta As String = String.Format("INSERT INTO Usuarios(nombre, apellidos, fecha_nacimiento, telefono, email, direccion, organizacion, tipo, fecha_alta) VALUES (@nombre, @apellidos, @fecha_nacimiento, @telefono, @email, @direccion, @organizacion, @tipo, @fecha_alta)")
+        comando.Parameters.Add("@nombre", SqlDbType.VarChar)
+        comando.Parameters.Add("@apellidos", SqlDbType.VarChar)
+        comando.Parameters.Add("@fecha_nacimiento", SqlDbType.Date)
+        comando.Parameters.Add("@telefono", SqlDbType.VarChar)
+        comando.Parameters.Add("@email", SqlDbType.VarChar)
+        comando.Parameters.Add("@direccion", SqlDbType.VarChar)
+        comando.Parameters.Add("@organizacion", SqlDbType.VarChar)
+        comando.Parameters.Add("@tipo", SqlDbType.Int)
+        comando.Parameters.Add("@fecha_alta", SqlDbType.Date)
 
+        comando.Parameters("@nombre").Value = nombre
+        comando.Parameters("@apellidos").Value = apellidos
+        comando.Parameters("@fecha_nacimiento").Value = fecha_nacimiento
+        comando.Parameters("@telefono").Value = telefono
+        comando.Parameters("@email").Value = email
+        comando.Parameters("@direccion").Value = direccion
+        comando.Parameters("@organizacion").Value = organizacion
+        comando.Parameters("@tipo").Value = tipo
+        comando.Parameters("@fecha_alta").Value = fecha_alta
         If nombre = "" Or nombre Is Nothing Then
             Throw New ArgumentException("El nombre no puede estar vacío")
         End If

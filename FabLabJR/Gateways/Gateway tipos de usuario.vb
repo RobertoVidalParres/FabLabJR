@@ -1,4 +1,5 @@
-﻿Public Class Gateway_tipos_de_usuario
+﻿Imports System.Data.SqlClient
+Public Class Gateway_tipos_de_usuario
     Dim conexion As SqlConnection
     Dim comando As New SqlCommand
 
@@ -83,7 +84,7 @@
     End Function
 
     Public Function SeleccionarTodos() As DataTable
-        Dim consulta As String = String.Format("SELECT * FROM TiposUsuario")
+        Dim consulta As String = String.Format("SELECT tipo FROM TiposUsuario")
         Dim resultado As New DataTable
         Dim lector As SqlDataReader
 

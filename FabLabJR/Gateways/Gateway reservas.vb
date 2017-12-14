@@ -1,4 +1,5 @@
-﻿Public Class Gateway_reservas
+﻿Imports System.Data.SqlClient
+Public Class Gateway_reservas
     Dim conexion As SqlConnection
     Dim comando As New SqlCommand
 

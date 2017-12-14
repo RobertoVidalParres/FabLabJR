@@ -29,6 +29,7 @@ Partial Class GestionMaquinas
         Me.ConsultarMaquinaButton = New System.Windows.Forms.Button()
         Me.MaquinasDataGridView = New System.Windows.Forms.DataGridView()
         Me.BuscarMaquinaButton = New System.Windows.Forms.Button()
+        Me.BuscarPorModeloLabel = New System.Windows.Forms.Label()
         CType(Me.MaquinasDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -92,11 +93,21 @@ Partial Class GestionMaquinas
         Me.BuscarMaquinaButton.Text = "Buscar"
         Me.BuscarMaquinaButton.UseVisualStyleBackColor = True
         '
+        'BuscarPorModeloLabel
+        '
+        Me.BuscarPorModeloLabel.AutoSize = True
+        Me.BuscarPorModeloLabel.Location = New System.Drawing.Point(26, 13)
+        Me.BuscarPorModeloLabel.Name = "BuscarPorModeloLabel"
+        Me.BuscarPorModeloLabel.Size = New System.Drawing.Size(98, 13)
+        Me.BuscarPorModeloLabel.TabIndex = 13
+        Me.BuscarPorModeloLabel.Text = "Buscar por modelo:"
+        '
         'GestionMaquinas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(544, 358)
+        Me.Controls.Add(Me.BuscarPorModeloLabel)
         Me.Controls.Add(Me.BuscarMaquinaButton)
         Me.Controls.Add(Me.NuevaMaquinaButton)
         Me.Controls.Add(Me.BuscadorTextbox)
@@ -119,4 +130,5 @@ Partial Class GestionMaquinas
     Friend WithEvents ConsultarMaquinaButton As Button
     Friend WithEvents MaquinasDataGridView As DataGridView
     Friend WithEvents BuscarMaquinaButton As Button
+    Friend WithEvents BuscarPorModeloLabel As Label
 End Class

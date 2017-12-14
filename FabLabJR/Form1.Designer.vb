@@ -29,6 +29,9 @@ Partial Class Form1
         Me.MaquinasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.VentanaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AyudaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AcercaDeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NuevaMaquinaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.GestionMaquinaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -65,6 +68,7 @@ Partial Class Form1
         '
         'MaquinasToolStripMenuItem
         '
+        Me.MaquinasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevaMaquinaToolStripMenuItem, Me.GestionMaquinaToolStripMenuItem})
         Me.MaquinasToolStripMenuItem.Name = "MaquinasToolStripMenuItem"
         Me.MaquinasToolStripMenuItem.Size = New System.Drawing.Size(71, 20)
         Me.MaquinasToolStripMenuItem.Text = "Máquinas"
@@ -77,9 +81,28 @@ Partial Class Form1
         '
         'AyudaToolStripMenuItem
         '
+        Me.AyudaToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AcercaDeToolStripMenuItem})
         Me.AyudaToolStripMenuItem.Name = "AyudaToolStripMenuItem"
         Me.AyudaToolStripMenuItem.Size = New System.Drawing.Size(53, 20)
         Me.AyudaToolStripMenuItem.Text = "Ayuda"
+        '
+        'AcercaDeToolStripMenuItem
+        '
+        Me.AcercaDeToolStripMenuItem.Name = "AcercaDeToolStripMenuItem"
+        Me.AcercaDeToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AcercaDeToolStripMenuItem.Text = "Acerca de"
+        '
+        'NuevaMaquinaToolStripMenuItem
+        '
+        Me.NuevaMaquinaToolStripMenuItem.Name = "NuevaMaquinaToolStripMenuItem"
+        Me.NuevaMaquinaToolStripMenuItem.Size = New System.Drawing.Size(185, 22)
+        Me.NuevaMaquinaToolStripMenuItem.Text = "Nueva Máquina"
+        '
+        'GestionMaquinaToolStripMenuItem
+        '
+        Me.GestionMaquinaToolStripMenuItem.Name = "GestionMaquinaToolStripMenuItem"
+        Me.GestionMaquinaToolStripMenuItem.Size = New System.Drawing.Size(185, 22)
+        Me.GestionMaquinaToolStripMenuItem.Text = "Gestión de Máquinas"
         '
         'Form1
         '
@@ -107,4 +130,7 @@ Partial Class Form1
     Friend WithEvents MaquinasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents VentanaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AyudaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AcercaDeToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents NuevaMaquinaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents GestionMaquinaToolStripMenuItem As ToolStripMenuItem
 End Class

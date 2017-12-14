@@ -26,6 +26,7 @@ Module UsuariosDatos
         Return tabla
     End Function
 
+    'Metodo que llama al gateway Usuarios y devuelve un datatable segun el texto del buscador
     Public Function ObtenerTablaGestionUsuarioPorNombre(nombre As String) As DataTable
         Dim gateway As GatewayUsuarios = New GatewayUsuarios(My.Settings.cadenaDeConexion)
 

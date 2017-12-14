@@ -36,7 +36,10 @@ Partial Class Form1
         Me.GestionUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OrganizarVentanasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MinimizarTodasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UsuariosToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.MaquinaToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.MenuStrip1.SuspendLayout()
+        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -105,6 +108,7 @@ Partial Class Form1
         '
         'StatusStrip1
         '
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UsuariosToolStripStatusLabel, Me.MaquinaToolStripStatusLabel})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 447)
         Me.StatusStrip1.Name = "StatusStrip1"
         Me.StatusStrip1.Size = New System.Drawing.Size(918, 22)
@@ -135,6 +139,18 @@ Partial Class Form1
         Me.MinimizarTodasToolStripMenuItem.Size = New System.Drawing.Size(260, 22)
         Me.MinimizarTodasToolStripMenuItem.Text = "MinimizarTodasToolStripMenuItem"
         '
+        'UsuariosToolStripStatusLabel
+        '
+        Me.UsuariosToolStripStatusLabel.Name = "UsuariosToolStripStatusLabel"
+        Me.UsuariosToolStripStatusLabel.Size = New System.Drawing.Size(58, 17)
+        Me.UsuariosToolStripStatusLabel.Text = "Usuarios: "
+        '
+        'MaquinaToolStripStatusLabel
+        '
+        Me.MaquinaToolStripStatusLabel.Name = "MaquinaToolStripStatusLabel"
+        Me.MaquinaToolStripStatusLabel.Size = New System.Drawing.Size(57, 17)
+        Me.MaquinaToolStripStatusLabel.Text = "Maquina:"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -149,6 +165,8 @@ Partial Class Form1
         Me.Text = "Form1"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -168,4 +186,6 @@ Partial Class Form1
     Friend WithEvents GestionUsuarioToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OrganizarVentanasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MinimizarTodasToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UsuariosToolStripStatusLabel As ToolStripStatusLabel
+    Friend WithEvents MaquinaToolStripStatusLabel As ToolStripStatusLabel
 End Class

@@ -1,4 +1,5 @@
 ﻿Public Class FormTratarMaquina
+    'Parametros para recibir la maquina del Form GestionMaquina
     Dim id As Integer
     Dim modelo As String
     Dim precioHora As Double
@@ -9,7 +10,9 @@
     Dim caracteristicas As String
     Dim meLLama As String
 
+    'Metodo Load para realizar operacion cuando inicie el Form
     Private Sub FormTratarMaquina_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'If que segun desde que boton haya sido llamado el form ejercutar los diferentes metodos
         If (meLLama = "Consultar") Then
             RellenarDatos()
             DeshabilitarControles()
@@ -17,6 +20,7 @@
             Dim lista As List(Of String)
             lista = GestionarMaquina.ObtenerTiposDeMaquina()
 
+            'For Each para llenar el ComboBox con los diferentes tipos de maquina que exista en la base de datos
             For Each item As String In lista
                 TipoMaquinaComboBox.Items.Add(item)
             Next
@@ -26,10 +30,12 @@
         End If
     End Sub
 
+    'Metodo para saber desde que boton ha sido llamado el Form
     Public Sub QuienMeLLama(texto As String)
         meLLama = texto
     End Sub
 
+    'Metodo para recibir los datos de una maquina
     Public Sub RecibirMaquina(id As Integer, modelo As String, precioHora As Double, fechaCompra As Date, telefonoSAT As String, tipo As Integer, descripcion As String, caracteristicas As String)
         Me.id = id
         Me.modelo = modelo
@@ -41,6 +47,7 @@
         Me.caracteristicas = caracteristicas
     End Sub
 
+    'Metodo que deshabilita los controles del Form en este caso para cuando se realiza la consulta de una maquina
     Private Sub DeshabilitarControles()
         ImagenesMaquinaFlowLayoutPanel.Enabled = False
         CaracteristicasMaquinaTextBox.Enabled = False
@@ -53,6 +60,7 @@
         ModeloMaquinaTextBox.Enabled = False
     End Sub
 
+    'Metodo que rellena los controles con los datos de la maquina que se va a Actualizar
     Private Sub RellenarDatos()
         CaracteristicasMaquinaTextBox.Text = caracteristicas
         DescripcionMaquinaTextBox.Text = descripcion
@@ -63,6 +71,7 @@
         ModeloMaquinaTextBox.Text = modelo
     End Sub
 
+    'Metodo para recoger los datos de los controles para insertar una maquina
     Private Sub RecolectarDatos()
         caracteristicas = CaracteristicasMaquinaTextBox.Text.Trim()
         descripcion = DescripcionMaquinaTextBox.Text
@@ -73,10 +82,12 @@
         modelo = ModeloMaquinaTextBox.Text.Trim()
     End Sub
 
+    'Metodo para cuando se hace click en cancelar
     Private Sub CancelarMaquinaButton_Click(sender As Object, e As EventArgs) Handles CancelarMaquinaButton.Click
         Me.Close()
     End Sub
 
+    'Metodo para cuando se hace click en aceptar y segun el modo en el que estemos realizar las diferentes operaciones
     Private Sub AceptarMaquinaButton_Click(sender As Object, e As EventArgs) Handles AceptarMaquinaButton.Click
         If (meLLama = "Consultar") Then
             Me.Close()

@@ -85,6 +85,7 @@ Partial Class FormTratarMaquina
         'TelefonoSatMaquinaMaskedTextBox
         '
         Me.TelefonoSatMaquinaMaskedTextBox.Location = New System.Drawing.Point(126, 66)
+        Me.TelefonoSatMaquinaMaskedTextBox.Mask = "(999)000-0000"
         Me.TelefonoSatMaquinaMaskedTextBox.Name = "TelefonoSatMaquinaMaskedTextBox"
         Me.TelefonoSatMaquinaMaskedTextBox.Size = New System.Drawing.Size(100, 20)
         Me.TelefonoSatMaquinaMaskedTextBox.TabIndex = 28

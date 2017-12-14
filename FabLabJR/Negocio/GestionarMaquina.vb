@@ -1,26 +1,61 @@
 ﻿Imports System.Data.SqlClient
 Module GestionarMaquina
+
+    ''' <summary>
+    ''' Inserta un nueva maquina en la base de datos
+    ''' </summary>
+    ''' <param name="modelo">modelo de la maquina</param>
+    ''' <param name="precioHora">precio por hora</param>
+    ''' <param name="fechaCompra">fecha de compra de la maquina</param>
+    ''' <param name="telefonoSAT">telefono del departamento tecnico de la maquina</param>
+    ''' <param name="tipo">tipo de la maquina</param>
+    ''' <param name="descripcion">descripcion de la maquina</param>
+    ''' <param name="caracteristicas">caracteristicas de la maquina</param>
     Public Sub Insertar(modelo As String, precioHora As Double, fechaCompra As Date, telefonoSAT As String, tipo As Integer, descripcion As String, caracteristicas As String)
         'Creacion del gateway de Maquina
-        Dim gateway As New Gateway_Maquina
+        Dim gateway As Gateway_Maquina = New Gateway_Maquina
         'Llamada al metodo Insertar del Gateway
         gateway.Insertar(modelo, precioHora, fechaCompra, telefonoSAT, tipo, descripcion, caracteristicas)
     End Sub
 
+    ''' <summary>
+    ''' Actualizar una maquina en la base de datos
+    ''' </summary>
+    ''' <param name="modelo">modelo de la maquina</param>
+    ''' <param name="precioHora">precio por hora</param>
+    ''' <param name="fechaCompra">fecha de compra de la maquina</param>
+    ''' <param name="telefonoSAT">telefono del departamento tecnico de la maquina</param>
+    ''' <param name="tipo">tipo de la maquina</param>
+    ''' <param name="descripcion">descripcion de la maquina</param>
+    ''' <param name="caracteristicas">caracteristicas de la maquina</param>
     Public Sub ActualizarMaquina(id As Integer, modelo As String, precioHora As Double, fechaCompra As Date, telefonoSAT As String, tipo As Integer, descripcion As String, caracteristicas As String)
         'Creacion del gateway de Maquina
-        Dim gateway As New Gateway_Maquina
+        Dim gateway As Gateway_Maquina = New Gateway_Maquina
         'LLamada al metodo Actualizar del Gateway
         gateway.ActualizarMaquina(id, modelo, precioHora, fechaCompra, telefonoSAT, tipo, descripcion, caracteristicas)
     End Sub
 
+    ''' <summary>
+    ''' Eliminar una maquina de la base de datos
+    ''' </summary>
+    ''' <param name="id">id de la maquina</param>
     Public Sub EliminarMaquina(id As Integer)
         'Creacion del gateway de Maquina
-        Dim gateway As New Gateway_Maquina
+        Dim gateway As Gateway_Maquina = New Gateway_Maquina
         'LLamada al metodo Eliminar del Gateway
         gateway.EliminarMaquina(id)
     End Sub
 
+    ''' <summary>
+    ''' Comprueba que los datos son correctos
+    ''' </summary>
+    ''' <param name="modelo">modelo de la maquina</param>
+    ''' <param name="precioHora">precio por hora</param>
+    ''' <param name="fechaCompra">fecha de compra de la maquina</param>
+    ''' <param name="telefonoSAT">telefono del departamento tecnico de la maquina</param>
+    ''' <param name="tipo">tipo de la maquina</param>
+    ''' <param name="descripcion">descripcion de la maquina</param>
+    ''' <param name="caracteristicas">caracteristicas de la maquina</param>
     Public Function ComprobarDatos(modelo As String, precioHora As Double, fechaCompra As Date, telefonoSAT As String, tipo As Integer, descripcion As String, caracteristicas As String) As Boolean
         'Variable booleana para confirmar que los datos son correctos
         Dim resultado As Boolean
@@ -45,7 +80,7 @@ Module GestionarMaquina
         End If
 
         'Creacion del gateway de Maquina
-        Dim gateway As Gateway_Maquina
+        Dim gateway As Gateway_Maquina = New Gateway_Maquina
         'Variables creadas para la comprobacion que no existe una maquina con el mismo modelo y misma fecha de compra
         Dim tabla As SqlDataReader
         Dim modelos As String
@@ -71,19 +106,44 @@ Module GestionarMaquina
         Return resultado
     End Function
 
+
+    ''' <summary>
+    ''' Obtiene los tipos de maquina de la base de datos
+    ''' </summary>
     Public Function ObtenerTiposDeMaquina() As List(Of String)
-        Dim tipos As List(Of String)
-        Dim gateway As Gateway_Tipo_de_Maquina
-        Dim tabla As SqlDataReader
+        Dim tipos As List(Of String) = New List(Of String)
+        Dim gateway As New Gateway_Tipo_de_Maquina
+        Dim tabla As DataTable
 
         tabla = gateway.SelectTiposMaquina()
 
-        If (tabla.HasRows) Then
-            Do While tabla.Read()
-                tipos.Add(tabla.Item("tipo").ToString)
-            Loop
-        End If
+        For index = 0 To tabla.Rows.Count - 1
+            tipos.Add(tabla.Rows(index).Item("tipo").ToString)
+        Next
+
 
         Return tipos
+    End Function
+
+    ''' <summary>
+    ''' Obtiene la tabla para cuando la Gestion de maquina se inicia
+    ''' </summary>
+    Public Function ObtenerTablaGestionMaquina() As DataTable
+        Dim gateway As Gateway_Maquina = New Gateway_Maquina
+        Dim tabla As DataTable = New DataTable
+
+        tabla = gateway.SelectMaquinasParaGestionMaquinas()
+
+        Return tabla
+    End Function
+
+    ''' <summary>
+    ''' Obtiene la tabla para cuando la Gestion de maquina por modelo 
+    ''' </summary>
+    ''' <param name="modelo">modelo de la maquina</param>
+    Public Function ObtenerTablaGestionMaquinaPorModelo(modelo As String) As DataTable
+        Dim gateway As Gateway_Maquina = New Gateway_Maquina
+
+        Return gateway.SelectMaquinasPorModelo(modelo)
     End Function
 End Module

@@ -81,6 +81,7 @@ Partial Class FormGestionUsuarios
         Me.TablaGestionUsuarioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.TablaGestionUsuarioDataGridView.Location = New System.Drawing.Point(33, 104)
         Me.TablaGestionUsuarioDataGridView.Name = "TablaGestionUsuarioDataGridView"
+        Me.TablaGestionUsuarioDataGridView.ReadOnly = True
         Me.TablaGestionUsuarioDataGridView.Size = New System.Drawing.Size(728, 281)
         Me.TablaGestionUsuarioDataGridView.TabIndex = 5
         '

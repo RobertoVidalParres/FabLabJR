@@ -76,8 +76,8 @@
     Private Sub RecolectarDatos()
         caracteristicas = CaracteristicasMaquinaTextBox.Text.Trim()
         descripcion = DescripcionMaquinaTextBox.Text
-        fechaCompra = Date.Parse(FechaCompraMaquinaDateTimePicker.Text.Trim())
-        tipo = Integer.Parse(TipoMaquinaComboBox.Text.Trim())
+        fechaCompra = Date.Parse(FechaCompraMaquinaDateTimePicker.Value.ToString)
+        tipo = Integer.Parse(TipoMaquinaComboBox.SelectedIndex.ToString)
         precioHora = Double.Parse(PrecioHoraMaquinaTextBox.Text.Trim())
         telefonoSAT = TelefonoSatMaquinaMaskedTextBox.Text.Trim()
         modelo = ModeloMaquinaTextBox.Text.Trim()

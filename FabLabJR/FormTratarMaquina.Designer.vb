@@ -81,6 +81,7 @@ Partial Class FormTratarMaquina
         '
         'FechaCompraMaquinaDateTimePicker
         '
+        Me.FechaCompraMaquinaDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.FechaCompraMaquinaDateTimePicker.Location = New System.Drawing.Point(563, 35)
         Me.FechaCompraMaquinaDateTimePicker.Name = "FechaCompraMaquinaDateTimePicker"
         Me.FechaCompraMaquinaDateTimePicker.Size = New System.Drawing.Size(198, 20)

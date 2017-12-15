@@ -41,11 +41,11 @@ Partial Class Form1
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.NuevoUsuarioToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.EliminarUsuarioToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.UsuariosToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.MaquinaToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
@@ -166,7 +166,7 @@ Partial Class Form1
         Me.NuevoUsuarioToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.NuevoUsuarioToolStripButton.Name = "NuevoUsuarioToolStripButton"
         Me.NuevoUsuarioToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.NuevoUsuarioToolStripButton.Text = "ToolStripButton1"
+        Me.NuevoUsuarioToolStripButton.Text = "Nuevo usuario"
         '
         'EliminarUsuarioToolStripButton
         '
@@ -175,7 +175,25 @@ Partial Class Form1
         Me.EliminarUsuarioToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.EliminarUsuarioToolStripButton.Name = "EliminarUsuarioToolStripButton"
         Me.EliminarUsuarioToolStripButton.Size = New System.Drawing.Size(23, 22)
-        Me.EliminarUsuarioToolStripButton.Text = "ToolStripButton1"
+        Me.EliminarUsuarioToolStripButton.Text = "Gestionar usuarios"
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton1.Text = "Nueva maquina"
+        '
+        'ToolStripButton2
+        '
+        Me.ToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton2.Image = CType(resources.GetObject("ToolStripButton2.Image"), System.Drawing.Image)
+        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton2.Name = "ToolStripButton2"
+        Me.ToolStripButton2.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton2.Text = "Gestionar maquinas"
         '
         'StatusStrip1
         '
@@ -198,24 +216,6 @@ Partial Class Form1
         Me.MaquinaToolStripStatusLabel.Size = New System.Drawing.Size(57, 17)
         Me.MaquinaToolStripStatusLabel.Text = "Maquina:"
         '
-        'ToolStripButton1
-        '
-        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton1.Text = "ToolStripButton1"
-        '
-        'ToolStripButton2
-        '
-        Me.ToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton2.Image = CType(resources.GetObject("ToolStripButton2.Image"), System.Drawing.Image)
-        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton2.Name = "ToolStripButton2"
-        Me.ToolStripButton2.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton2.Text = "ToolStripButton2"
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -229,6 +229,7 @@ Partial Class Form1
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form1"
         Me.Text = "FabLab - VentanaPrincipal"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ToolStrip1.ResumeLayout(False)

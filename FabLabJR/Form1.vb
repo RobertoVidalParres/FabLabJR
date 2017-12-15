@@ -22,6 +22,7 @@
     Private Sub GestionUsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GestionUsuarioToolStripMenuItem.Click, EliminarUsuarioToolStripButton.Click
         Dim documento As FormGestionUsuarios = New FormGestionUsuarios
         documento.MdiParent = Me
+        documento.Text = "Gestion usuarios"
         documento.Show()
     End Sub
 

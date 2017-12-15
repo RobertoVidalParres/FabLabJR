@@ -35,7 +35,7 @@ Partial Class TratarUsuario
         Me.FotoLabel = New System.Windows.Forms.Label()
         Me.ObservacionesLabel = New System.Windows.Forms.Label()
         Me.pictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.obersacionesTextBox = New System.Windows.Forms.TextBox()
+        Me.observacionesTextBox = New System.Windows.Forms.TextBox()
         Me.direccionpostalTextBox = New System.Windows.Forms.TextBox()
         Me.DirPostalLabel = New System.Windows.Forms.Label()
         Me.FechaNacLabel = New System.Windows.Forms.Label()
@@ -152,13 +152,13 @@ Partial Class TratarUsuario
         Me.pictureBox1.TabIndex = 48
         Me.pictureBox1.TabStop = False
         '
-        'obersacionesTextBox
+        'observacionesTextBox
         '
-        Me.obersacionesTextBox.Location = New System.Drawing.Point(377, 270)
-        Me.obersacionesTextBox.Multiline = True
-        Me.obersacionesTextBox.Name = "obersacionesTextBox"
-        Me.obersacionesTextBox.Size = New System.Drawing.Size(314, 211)
-        Me.obersacionesTextBox.TabIndex = 44
+        Me.observacionesTextBox.Location = New System.Drawing.Point(377, 270)
+        Me.observacionesTextBox.Multiline = True
+        Me.observacionesTextBox.Name = "observacionesTextBox"
+        Me.observacionesTextBox.Size = New System.Drawing.Size(314, 211)
+        Me.observacionesTextBox.TabIndex = 44
         '
         'direccionpostalTextBox
         '
@@ -298,7 +298,7 @@ Partial Class TratarUsuario
         Me.Controls.Add(Me.FotoLabel)
         Me.Controls.Add(Me.ObservacionesLabel)
         Me.Controls.Add(Me.pictureBox1)
-        Me.Controls.Add(Me.obersacionesTextBox)
+        Me.Controls.Add(Me.observacionesTextBox)
         Me.Controls.Add(Me.direccionpostalTextBox)
         Me.Controls.Add(Me.DirPostalLabel)
         Me.Controls.Add(Me.FechaNacLabel)
@@ -315,7 +315,7 @@ Partial Class TratarUsuario
         Me.Controls.Add(Me.NombreLabel)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "TratarUsuario"
-        Me.Text = "NuevoUsuario"
+        Me.Text = "Tratar usuario"
         CType(Me.AñadirPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmailErrorProvider, System.ComponentModel.ISupportInitialize).EndInit()
@@ -335,7 +335,7 @@ Partial Class TratarUsuario
     Friend WithEvents FotoLabel As Label
     Friend WithEvents ObservacionesLabel As Label
     Friend WithEvents pictureBox1 As PictureBox
-    Friend WithEvents obersacionesTextBox As TextBox
+    Friend WithEvents observacionesTextBox As TextBox
     Friend WithEvents direccionpostalTextBox As TextBox
     Friend WithEvents DirPostalLabel As Label
     Friend WithEvents FechaNacLabel As Label

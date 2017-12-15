@@ -79,6 +79,8 @@ Partial Class FormGestionUsuarios
         '
         'TablaGestionUsuarioDataGridView
         '
+        Me.TablaGestionUsuarioDataGridView.AllowUserToAddRows = False
+        Me.TablaGestionUsuarioDataGridView.AllowUserToDeleteRows = False
         Me.TablaGestionUsuarioDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.TablaGestionUsuarioDataGridView.Location = New System.Drawing.Point(33, 104)
         Me.TablaGestionUsuarioDataGridView.Name = "TablaGestionUsuarioDataGridView"

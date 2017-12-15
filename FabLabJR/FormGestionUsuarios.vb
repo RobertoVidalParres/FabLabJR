@@ -8,6 +8,7 @@
     Dim direccionPostal As String
     Dim organizacion As String
     Dim tipo As String
+    Dim observaciones As String
 
     'Metodo para que cuando carge el formulario aparezca la tabla rellena con los usuarios de la base de datos
     Private Sub FormGestionUsuarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -27,7 +28,7 @@
 
         ObtenerUsuarioDeTabla()
 
-        formNuevoUsuario.RecibirUsuario(id, nombre, apellidos, fechaNacimiento, telefono, email, direccionPostal, organizacion, tipo)
+        formNuevoUsuario.RecibirUsuario(id, nombre, apellidos, fechaNacimiento, telefono, email, direccionPostal, organizacion, tipo, observaciones)
         formNuevoUsuario.Show()
     End Sub
 
@@ -42,6 +43,7 @@
         direccionPostal = TablaGestionUsuarioDataGridView.SelectedRows(0).Cells(6).Value.ToString
         organizacion = TablaGestionUsuarioDataGridView.SelectedRows(0).Cells(7).Value.ToString
         tipo = TablaGestionUsuarioDataGridView.SelectedRows(0).Cells(8).Value.ToString
+        observaciones = TablaGestionUsuarioDataGridView.SelectedRows(0).Cells(10).Value.ToString
     End Sub
 
     'Implementacion del evento click en Editar
@@ -52,7 +54,7 @@
 
         ObtenerUsuarioDeTabla()
 
-        formNuevoUsuario.RecibirUsuario(id, nombre, apellidos, fechaNacimiento, telefono, email, direccionPostal, organizacion, tipo)
+        formNuevoUsuario.RecibirUsuario(id, nombre, apellidos, fechaNacimiento, telefono, email, direccionPostal, organizacion, tipo, observaciones)
         formNuevoUsuario.Show()
     End Sub
 

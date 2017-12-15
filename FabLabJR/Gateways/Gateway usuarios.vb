@@ -10,9 +10,9 @@ Public Class GatewayUsuarios
         comando.Connection = conexion
     End Sub
 
-    Public Function Insertar(nombre As String, apellidos As String, fecha_nacimiento As Date, telefono As String, email As String, direccion As String, organizacion As String, tipo As Integer, fecha_alta As Date) As Integer
+    Public Function Insertar(nombre As String, apellidos As String, fecha_nacimiento As Date, telefono As String, email As String, direccion As String, organizacion As String, tipo As Integer, fecha_alta As Date, observaciones As String) As Integer
         Dim filas As Integer
-        Dim consulta As String = String.Format("INSERT INTO Usuarios(nombre, apellidos, fecha_nacimiento, telefono, email, direccion, organizacion, tipo, fecha_alta) VALUES (@nombre, @apellidos, @fecha_nacimiento, @telefono, @email, @direccion, @organizacion, @tipo, @fecha_alta)")
+        Dim consulta As String = String.Format("INSERT INTO Usuarios(nombre, apellidos, fecha_nacimiento, telefono, email, direccion, organizacion, tipo, fecha_alta, observaciones) VALUES (@nombre, @apellidos, @fecha_nacimiento, @telefono, @email, @direccion, @organizacion, @tipo, @fecha_alta, @observaciones)")
         comando.Parameters.Add("@nombre", SqlDbType.VarChar)
         comando.Parameters.Add("@apellidos", SqlDbType.VarChar)
         comando.Parameters.Add("@fecha_nacimiento", SqlDbType.Date)
@@ -22,6 +22,7 @@ Public Class GatewayUsuarios
         comando.Parameters.Add("@organizacion", SqlDbType.VarChar)
         comando.Parameters.Add("@tipo", SqlDbType.Int)
         comando.Parameters.Add("@fecha_alta", SqlDbType.Date)
+        comando.Parameters.Add("@observaciones", SqlDbType.Text)
 
         comando.Parameters("@nombre").Value = nombre
         comando.Parameters("@apellidos").Value = apellidos
@@ -32,6 +33,7 @@ Public Class GatewayUsuarios
         comando.Parameters("@organizacion").Value = organizacion
         comando.Parameters("@tipo").Value = tipo
         comando.Parameters("@fecha_alta").Value = fecha_alta
+        comando.Parameters("@observaciones").Value = observaciones
         If nombre = "" Or nombre Is Nothing Then
             Throw New ArgumentException("El nombre no puede estar vacío")
         End If
@@ -51,9 +53,9 @@ Public Class GatewayUsuarios
         Return filas
     End Function
 
-    Public Function Actualizar(id As Integer, nombre As String, apellidos As String, fecha_nacimiento As Date, email As String, direccion As String, organizacion As String, tipo As Integer, fecha_alta As Date) As Integer
+    Public Function Actualizar(id As Integer, nombre As String, apellidos As String, fecha_nacimiento As Date, email As String, direccion As String, organizacion As String, tipo As Integer, fecha_alta As Date, observaciones As String) As Integer
         Dim filas As Integer
-        Dim consulta As String = String.Format("UPDATE Telefonos SET nombre='{0}',apellidos='{1}',fecha_nacimiento='{2}',email='{3}',direccion='{4}',organizacion='{5}',tipo='{6}',fecha_alta='{7}' WHERE id={4})", nombre, apellidos, fecha_nacimiento, email, direccion, organizacion, tipo, fecha_alta)
+        Dim consulta As String = String.Format("UPDATE Usuario SET nombre='{0}',apellidos='{1}',fecha_nacimiento='{2}', telefono='{3}',email='{4}',direccion='{5}',organizacion='{6}',tipo='{7}',fecha_alta='{8}',observaciones='{9}' WHERE id={4})", nombre, apellidos, fecha_nacimiento, email, direccion, organizacion, tipo, fecha_alta, observaciones)
 
         If id = 0 Then
             Throw New ArgumentException("El identificador no puede ser 0")

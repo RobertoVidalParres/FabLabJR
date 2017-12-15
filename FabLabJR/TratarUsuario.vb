@@ -16,6 +16,7 @@ Public Class TratarUsuario
     Dim direccionPostal As String
     Dim organizacion As String
     Dim tipo As String
+    Dim observaciones As String
 
     'Constructor que recibirá el tipo de accion a realizar que usara el load del formulario
     Sub New(tipoAccion As String)
@@ -69,6 +70,7 @@ Public Class TratarUsuario
         direccionpostalTextBox.Text = direccionPostal
         organizacionTextBox.Text = organizacion
         tipoComboBox.SelectedValue = tipo
+        observacionesTextBox.Text = observaciones
     End Sub
 
     'Deshabilita todos los campos, cosa que necesitaremos a la hora de consultar los datos del usuario
@@ -81,12 +83,17 @@ Public Class TratarUsuario
         direccionpostalTextBox.Enabled = False
         organizacionTextBox.Enabled = False
         tipoComboBox.Enabled = False
+        observacionesTextBox.Enabled = False
     End Sub
 
     'Este control que solo se muestra si le damos al icono de "+" nos permitira añadir en la base de datos un nuevo tipo de usuario
     Private Sub AñadirTipoUsuarioButton_Click(sender As Object, e As EventArgs) Handles AñadirTipoUsuarioButton.Click
-        UsuariosDatos.InsertarTipoUsuario(AñadirTipoUsuarioTextBox.Text)
-        MessageBox.Show("Nuevo tipo de usuario registrado con éxito")
+        If tipoComboBox.SelectedItem.ToString().Trim() = "Profesional" Or tipoComboBox.SelectedItem.ToString().Trim() = "Investigador" Then
+            MessageBox.Show("Debes añadir la organizacion")
+        Else
+            UsuariosDatos.InsertarTipoUsuario(AñadirTipoUsuarioTextBox.Text)
+            MessageBox.Show("Nuevo tipo de usuario registrado con éxito")
+        End If
     End Sub
 
     'Boton que permite insertar un nuevo registro de usuario o edicion a nuestra base de datos.
@@ -94,7 +101,7 @@ Public Class TratarUsuario
         If telefonoTextBox.Text.Equals("") And emailTexBox.Text.Equals("") Then
             MessageBox.Show("Debes aportar almenos una forma de contacto")
         Else
-            UsuariosDatos.InsertarUsuario(nombreTextBox.Text, apellidosTextBox.Text, FechaNacimientoDateTimePicker.Value, telefonoTextBox.Text, emailTexBox.Text, direccionpostalTextBox.Text, organizacionTextBox.Text, tipoComboBox.SelectedIndex + 1)
+            UsuariosDatos.InsertarUsuario(nombreTextBox.Text, apellidosTextBox.Text, FechaNacimientoDateTimePicker.Value, telefonoTextBox.Text, emailTexBox.Text, direccionpostalTextBox.Text, organizacionTextBox.Text, tipoComboBox.SelectedIndex + 1, observacionesTextBox.Text)
             MessageBox.Show("Nuevo usuario registrado con éxito")
         End If
     End Sub
@@ -105,13 +112,12 @@ Public Class TratarUsuario
         If rgx.IsMatch(emailTexBox.Text) Then
             EmailErrorProvider.SetError(emailTexBox, "")
         Else
-            e.Cancel = True
             EmailErrorProvider.SetError(emailTexBox, "Formato incorrecto")
         End If
     End Sub
 
     'Este metodo nos permite recoger los datos del usuario seleccionado en el dataGridView del formulario de gestion de maquinas para trabajor con ellos aqui
-    Public Sub RecibirUsuario(id As Integer, nombre As String, apellidos As String, fechaNacimiento As Date, telefono As String, email As String, direccionPostal As String, organizacion As String, tipo As String)
+    Public Sub RecibirUsuario(id As Integer, nombre As String, apellidos As String, fechaNacimiento As Date, telefono As String, email As String, direccionPostal As String, organizacion As String, tipo As String, observaciones As String)
         Me.id = id
         Me.nombre = nombre
         Me.apellidos = apellidos
@@ -121,6 +127,7 @@ Public Class TratarUsuario
         Me.direccionPostal = direccionPostal
         Me.organizacion = organizacion
         Me.tipo = tipo
+        Me.observaciones = observaciones
     End Sub
 
     Private Sub cancelarButton_Click(sender As Object, e As EventArgs) Handles cancelarButton.Click

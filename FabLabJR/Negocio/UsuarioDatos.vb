@@ -20,9 +20,9 @@ Module UsuariosDatos
         gateWayTipoUsuarios.Insertar(nuevoTipoUsuario)
     End Sub
 
-    Public Sub InsertarUsuario(ByVal nombre As String, ByVal apellidos As String, ByVal fechaNacimiento As Date, ByVal telefono As String, ByVal email As String, ByVal direccionPostal As String, ByVal organizacion As String, ByVal tipo As Integer)
+    Public Sub InsertarUsuario(ByVal nombre As String, ByVal apellidos As String, ByVal fechaNacimiento As Date, ByVal telefono As String, ByVal email As String, ByVal direccionPostal As String, ByVal organizacion As String, ByVal tipo As Integer, ByVal observaciones As String)
         Dim gateWayUsuarios As New GatewayUsuarios(My.Settings.cadenaDeConexion)
-        gateWayUsuarios.Insertar(nombre, apellidos, fechaNacimiento, telefono, email, direccionPostal, organizacion, tipo, Date.Now)
+        gateWayUsuarios.Insertar(nombre, apellidos, fechaNacimiento, telefono, email, direccionPostal, organizacion, tipo, Date.Now, observaciones)
     End Sub
 
     'Metodo que llama al gateway Usuarios y devuelve un datatable para el GridView del formulario Gestion Usuarios

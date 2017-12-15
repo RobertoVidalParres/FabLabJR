@@ -16,7 +16,7 @@
         If (meLLama = "Consultar") Then
             RellenarDatos()
             DeshabilitarControles()
-            CargarImagenes()
+            'CargarImagenes()
         ElseIf (meLLama = "Insertar") Then
             Dim lista As List(Of String)
             lista = GestionarMaquina.ObtenerTiposDeMaquina()

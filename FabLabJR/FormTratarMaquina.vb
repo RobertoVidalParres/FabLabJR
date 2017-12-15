@@ -106,4 +106,25 @@
     Private Sub TipoMaquinaPictureBox_Click(sender As Object, e As EventArgs) Handles TipoMaquinaPictureBox.Click
         GestionarMaquina.AñadirTipoMaquina(TipoMaquinaComboBox.Text.Trim())
     End Sub
+
+    Private Sub ExaminarImagenesMaquinaButton_Click(sender As Object, e As EventArgs) Handles ExaminarImagenesMaquinaButton.Click
+
+        Dim pictureBox As New PictureBox
+
+        If (OpenFileDialog1.ShowDialog() = DialogResult.OK) Then
+
+            pictureBox.Image = Image.FromFile(OpenFileDialog1.FileName)
+            pictureBox.SizeMode = PictureBoxSizeMode.Zoom
+
+            Me.ImagenesMaquinaFlowLayoutPanel.Controls.Add(pictureBox)
+
+            FileCopy(OpenFileDialog1.FileName, My.Settings.rutaImagenesMaquinas)
+            My.Computer.FileSystem.RenameFile(My.Settings.rutaImagenesMaquinas & OpenFileDialog1.FileName, ModeloMaquinaTextBox.Text.Trim() & FechaCompraMaquinaDateTimePicker.Text.Trim())
+
+        Else
+
+            MessageBox.Show("No has seleccionado ninguna imagen")
+
+        End If
+    End Sub
 End Class

@@ -16,6 +16,7 @@
         If (meLLama = "Consultar") Then
             RellenarDatos()
             DeshabilitarControles()
+            CargarImagenes()
         ElseIf (meLLama = "Insertar") Then
             Dim lista As List(Of String)
             lista = GestionarMaquina.ObtenerTiposDeMaquina()
@@ -127,6 +128,21 @@
 
             MessageBox.Show("No has seleccionado ninguna imagen")
 
+        End If
+    End Sub
+
+    'Metodo para cargar las imagenes de las maquina al consultar
+    Private Sub CargarImagenes()
+        Dim imagenes As String() = System.IO.Directory.GetFiles(My.Settings.rutaImagenesMaquinas, ModeloMaquinaTextBox.Text.Trim() & FechaCompraMaquinaDateTimePicker.Text.Trim() & "*")
+
+        If (Not IsNothing(imagenes)) Then
+            For index = 0 To imagenes.Count - 1
+                Dim picturebox As New PictureBox()
+                picturebox.Height = 60
+                picturebox.Width = 60
+                picturebox.SizeMode = PictureBoxSizeMode.StretchImage
+                Me.ImagenesMaquinaFlowLayoutPanel.Controls.Add(picturebox)
+            Next
         End If
     End Sub
 End Class

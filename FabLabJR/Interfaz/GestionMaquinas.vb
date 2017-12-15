@@ -65,14 +65,14 @@
 
     'Metodo para obtener los datos del datagridview para pasarselo a las funciones de consultar y editar maquina
     Private Sub ObtenerMaquinaDeTabla()
-        id = Integer.Parse(MaquinasDataGridView.SelectedRows(0).Cells(1).Value.ToString)
-        modelo = MaquinasDataGridView.SelectedRows(0).Cells(2).Value.ToString
-        precioHora = Double.Parse(MaquinasDataGridView.SelectedRows(0).Cells(3).Value.ToString)
-        fechaCompra = Date.Parse(MaquinasDataGridView.SelectedRows(0).Cells(4).Value.ToString)
-        telefonoSAT = MaquinasDataGridView.SelectedRows(0).Cells(5).Value.ToString
-        tipo = Integer.Parse(MaquinasDataGridView.SelectedRows(0).Cells(6).Value.ToString)
-        descripcion = MaquinasDataGridView.SelectedRows(0).Cells(7).Value.ToString
-        caracteristicas = MaquinasDataGridView.SelectedRows(0).Cells(8).Value.ToString
+        id = Integer.Parse(MaquinasDataGridView.SelectedRows(0).Cells(0).Value.ToString)
+        modelo = MaquinasDataGridView.SelectedRows(0).Cells(1).Value.ToString
+        precioHora = Double.Parse(MaquinasDataGridView.SelectedRows(0).Cells(2).Value.ToString)
+        fechaCompra = Date.Parse(MaquinasDataGridView.SelectedRows(0).Cells(3).Value.ToString)
+        telefonoSAT = MaquinasDataGridView.SelectedRows(0).Cells(4).Value.ToString
+        tipo = Integer.Parse(MaquinasDataGridView.SelectedRows(0).Cells(5).Value.ToString)
+        descripcion = MaquinasDataGridView.SelectedRows(0).Cells(6).Value.ToString
+        caracteristicas = MaquinasDataGridView.SelectedRows(0).Cells(7).Value.ToString
     End Sub
 
 End Class

@@ -32,4 +32,8 @@ Module UsuariosDatos
 
         Return gateway.SeleccionarNombre(nombre)
     End Function
+
+    Public Function ConsultarUsuario(id As Integer) As DataTable
+
+    End Function
 End Module

@@ -9,5 +9,6 @@
         TablaGestionUsuarioDataGridView.DataSource = UsuariosDatos.ObtenerTablaGestionUsuarioPorNombre(BuscadorGestionUsuarioTextBox.Text.Trim())
     End Sub
 
-
+    Private Sub ConsultaGestionUsuarioButton_Click(sender As Object, e As EventArgs) Handles ConsultaGestionUsuarioButton.Click
+    End Sub
 End Class

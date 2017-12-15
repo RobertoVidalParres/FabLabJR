@@ -119,10 +119,12 @@ Public Class GatewayUsuarios
         Return resultado
     End Function
 
-    Public Function SeleccionarNombre(nombre As String) As DataTable
+    Public Function SeleccionarNombre(nombre As String) As BindingSource
         Dim consulta As String = String.Format("SELECT * FROM Usuarios WHERE nombre='{0}'", nombre)
-        Dim resultado As New DataTable
-        Dim lector As SqlDataReader
+        Dim adapter As New SqlDataAdapter(consulta, conexion)
+        Dim commandBuilder As New SqlCommandBuilder(adapter)
+        Dim dataSet As New DataSet
+        Dim resultado As BindingSource
 
         If nombre = "" Or nombre Is Nothing Then
             Throw New ArgumentException("El nombre no puede estar vacío")
@@ -130,9 +132,8 @@ Public Class GatewayUsuarios
 
         Try
             conexion.Open()
-            comando.CommandText = consulta
-            lector = comando.ExecuteReader()
-            resultado.Load(lector)
+            adapter.Fill(dataSet, "Usuarios")
+            resultado = New BindingSource(dataSet, "Usuarios")
         Catch ex As Exception
             Throw New Exception(ex.Message, ex)
         Finally

@@ -36,10 +36,16 @@ Module UsuariosDatos
     End Function
 
     'Metodo que llama al gateway Usuarios y devuelve un datatable segun el texto del buscador
-    Public Function ObtenerTablaGestionUsuarioPorNombre(nombre As String) As DataTable
+    Public Function ObtenerTablaGestionUsuarioPorNombre(nombre As String) As BindingSource
         Dim gateway As GatewayUsuarios = New GatewayUsuarios(My.Settings.cadenaDeConexion)
 
-        Return gateway.SeleccionarNombre(nombre)
+        Dim enlace As New BindingSource
+        enlace = gateway.SeleccionarNombre(nombre)
+
+        enlace.Filter = "nombre like '*" & nombre & "*'"
+
+        Return enlace
+
     End Function
 
     Public Function ObtenerUsuarioPorId(id As Integer) As DataTable

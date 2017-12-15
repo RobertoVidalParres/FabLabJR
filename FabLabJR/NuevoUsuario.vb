@@ -33,8 +33,6 @@ Public Class NuevoUsuario
             DeshabilitarControles()
         ElseIf tipoAccion = "Editar" Then
             RellenarDatos()
-        Else
-
         End If
     End Sub
 

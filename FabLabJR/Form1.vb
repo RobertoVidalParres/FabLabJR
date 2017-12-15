@@ -10,7 +10,7 @@
     End Sub
 
     'LLamada al form Nueva Maquina
-    Private Sub NuevaMaquinaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevaMaquinaToolStripMenuItem.Click
+    Private Sub NuevaMaquinaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevaMaquinaToolStripMenuItem.Click, ToolStripButton1.Click
         Dim documento As FormTratarMaquina = New FormTratarMaquina
         documento.MdiParent = Me
         documento.Text = "Nueva Maquina"
@@ -19,7 +19,7 @@
     End Sub
 
     'LLamada al form Gestion Usuarios
-    Private Sub GestionUsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GestionUsuarioToolStripMenuItem.Click
+    Private Sub GestionUsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GestionUsuarioToolStripMenuItem.Click, EliminarUsuarioToolStripButton.Click
         Dim documento As FormGestionUsuarios = New FormGestionUsuarios
         documento.MdiParent = Me
         documento.Show()
@@ -52,5 +52,19 @@
     'Metodo para ordenar las ventas de forma cascada
     Private Sub OrganizarCascadaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OrganizarCascadaToolStripMenuItem.Click
         Me.LayoutMdi(MdiLayout.Cascade)
+    End Sub
+
+    Private Sub NuevoUsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevoUsuarioToolStripMenuItem.Click, NuevoUsuarioToolStripButton.Click
+        Dim nuevoUsuario As New NuevoUsuario("")
+        nuevoUsuario.MdiParent = Me
+        nuevoUsuario.Text = "Nuevo usuario"
+        nuevoUsuario.Show()
+    End Sub
+
+    Private Sub GestionMaquinaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GestionMaquinaToolStripMenuItem.Click, ToolStripButton2.Click
+        Dim gestionMaquina As New GestionMaquinas
+        gestionMaquina.MdiParent = Me
+        gestionMaquina.Text = "Gestion maquina"
+        gestionMaquina.Show()
     End Sub
 End Class

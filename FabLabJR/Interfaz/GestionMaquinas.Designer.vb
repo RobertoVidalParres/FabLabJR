@@ -22,6 +22,7 @@ Partial Class GestionMaquinas
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(GestionMaquinas))
         Me.NuevaMaquinaButton = New System.Windows.Forms.Button()
         Me.BuscadorTextbox = New System.Windows.Forms.TextBox()
         Me.EliminarMaquinaButton = New System.Windows.Forms.Button()
@@ -115,6 +116,7 @@ Partial Class GestionMaquinas
         Me.Controls.Add(Me.EditarMaquinaButton)
         Me.Controls.Add(Me.ConsultarMaquinaButton)
         Me.Controls.Add(Me.MaquinasDataGridView)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "GestionMaquinas"
         Me.Text = "GestionMaquinas"
         CType(Me.MaquinasDataGridView, System.ComponentModel.ISupportInitialize).EndInit()

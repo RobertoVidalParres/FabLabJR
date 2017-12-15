@@ -22,6 +22,7 @@ Partial Class FormGestionUsuarios
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormGestionUsuarios))
         Me.BuscadorGestionUsuarioTextBox = New System.Windows.Forms.TextBox()
         Me.NuevoUsuarioGestionUsuarioButton = New System.Windows.Forms.Button()
         Me.ConsultaGestionUsuarioButton = New System.Windows.Forms.Button()
@@ -116,6 +117,7 @@ Partial Class FormGestionUsuarios
         Me.Controls.Add(Me.ConsultaGestionUsuarioButton)
         Me.Controls.Add(Me.NuevoUsuarioGestionUsuarioButton)
         Me.Controls.Add(Me.BuscadorGestionUsuarioTextBox)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FormGestionUsuarios"
         Me.Text = "FormGestionUsuarios"
         CType(Me.TablaGestionUsuarioDataGridView, System.ComponentModel.ISupportInitialize).EndInit()

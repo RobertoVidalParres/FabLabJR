@@ -34,15 +34,15 @@ Public Class Gateway_Maquina
 
         'Comprobacion de datos nulos
         If modelo = "" Or modelo Is Nothing Then
-            Throw New ArgumentException("El modelo no puede estar vacio")
+            MessageBox.Show("El modelo no puede estar vacio")
         End If
 
         If Not IsDate(fechaCompra) Or IsNothing(fechaCompra) Then
-            Throw New ArgumentException("La fecha de compra no puede estar vacio")
+            MessageBox.Show("La fecha de compra no puede estar vacio")
         End If
 
         If Not IsNumeric(tipo) Or IsNothing(tipo) Then
-            Throw New ArgumentException("El tipo no puede estar vacio")
+            MessageBox.Show("El tipo no puede estar vacio")
         End If
 
         'paso del parametro
@@ -59,7 +59,7 @@ Public Class Gateway_Maquina
             conexion.Open()
             filas_afectadas = comando.ExecuteNonQuery()
         Catch ex As Exception
-            Throw New Exception(ex.Message, ex)
+            MessageBox.Show(ex.Message)
         Finally
             If (conexion IsNot Nothing) Then
                 conexion.Close()
@@ -94,7 +94,7 @@ Public Class Gateway_Maquina
             Return resultado
 
         Catch ex As Exception
-            Throw New Exception(ex.Message, ex)
+            MessageBox.Show(ex.Message)
         Finally
             If (conexion IsNot Nothing) Then
                 conexion.Close()
@@ -128,7 +128,7 @@ Public Class Gateway_Maquina
             Return resultado
 
         Catch ex As Exception
-            Throw New Exception(ex.Message, ex)
+            MessageBox.Show(ex.Message)
         Finally
             If (conexion IsNot Nothing) Then
                 conexion.Close()
@@ -172,7 +172,7 @@ Public Class Gateway_Maquina
             Return resultado
 
         Catch ex As Exception
-            Throw New Exception(ex.Message, ex)
+            MessageBox.Show(ex.Message)
         Finally
             If (conexion IsNot Nothing) Then
                 conexion.Close()
@@ -230,7 +230,7 @@ Public Class Gateway_Maquina
             conexion.Open()
             filas_afectadas = comando.ExecuteNonQuery()
         Catch ex As Exception
-            Throw New Exception(ex.Message, ex)
+            MessageBox.Show(ex.Message)
         Finally
             If (conexion IsNot Nothing) Then
                 conexion.Close()
@@ -263,7 +263,7 @@ Public Class Gateway_Maquina
             conexion.Open()
             filas_afectadas = comando.ExecuteNonQuery()
         Catch ex As Exception
-            Throw New Exception(ex.Message, ex)
+            MessageBox.Show(ex.Message)
         Finally
             If (conexion IsNot Nothing) Then
                 conexion.Close()

@@ -100,7 +100,6 @@ Public Class Gateway_Maquina
                 conexion.Close()
             End If
         End Try
-
     End Function
 
     'Metodo para la seleccion de todas las maquinas
@@ -148,12 +147,6 @@ Public Class Gateway_Maquina
 
         'Indicacion del tipo de parametro
         comando.Parameters.Add("@modelo", SqlDbType.VarChar)
-
-        'Comprobacion de datos nulos
-        If modelo = "" Or modelo Is Nothing Then
-            Throw New ArgumentException("El modelo no puede estar vacio")
-        End If
-
 
         'paso del parametro
         comando.Parameters("@modelo").Value = modelo

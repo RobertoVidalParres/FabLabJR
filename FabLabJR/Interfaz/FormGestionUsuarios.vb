@@ -1,4 +1,5 @@
-﻿Public Class FormGestionUsuarios
+﻿'Form que muestra en un datagridview un datatable de Usuarios con todos sus campos. Te permite ir al form de tratar maquina con la accion que le indiques
+Public Class FormGestionUsuarios
     Dim id As Integer
     Dim nombre As String
     Dim apellidos As String
@@ -17,7 +18,12 @@
 
     'Metodo para cargar la base de datos con la busqueda por nombre
     Private Sub BuscarGestionUsuarioButton_Click(sender As Object, e As EventArgs) Handles BuscarGestionUsuarioButton.Click
-        TablaGestionUsuarioDataGridView.DataSource = UsuariosDatos.ObtenerTablaGestionUsuarioPorNombre(BuscadorGestionUsuarioTextBox.Text.Trim())
+        If BuscarGestionUsuarioButton.Text = "" Or BuscarGestionUsuarioButton.Text Is Nothing Then
+            MessageBox.Show("El nombre no puede estar vacio")
+        Else
+            TablaGestionUsuarioDataGridView.DataSource = UsuariosDatos.ObtenerTablaGestionUsuarioPorNombre(BuscadorGestionUsuarioTextBox.Text.Trim())
+        End If
+
     End Sub
 
     'Implementacion del evento click en Consultar
@@ -75,5 +81,15 @@
         formNuevoUsuario.MdiParent = Me.MdiParent
         formNuevoUsuario.Text = "Nuevo Usuario"
         formNuevoUsuario.Show()
+    End Sub
+
+    'Imeplementacion del evento click en Reservas usuario
+    Private Sub ReservasButton_Click(sender As Object, e As EventArgs) Handles ReservasButton.Click
+        id = Integer.Parse(TablaGestionUsuarioDataGridView.SelectedRows(0).Cells(0).Value.ToString)
+        Dim reservaUsuario As New ReservasUsuariovb(id)
+        reservaUsuario.MdiParent = Me.MdiParent
+        reservaUsuario.Text = "Reservas usuario"
+
+        reservaUsuario.Show()
     End Sub
 End Class

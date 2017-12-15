@@ -1,5 +1,15 @@
 ﻿Imports System.Data.SqlClient
 Module UsuariosDatos
+    Dim id As Integer
+    Dim nombre As String
+    Dim apellidos As String
+    Dim fechaNacimiento As Date
+    Dim telefono As String
+    Dim email As String
+    Dim direccionPostal As String
+    Dim organizacion As String
+    Dim tipo As String
+    Dim observaciones As String
     Public Function ObtenerTiposDeUsuario() As List(Of String)
         Dim tipos As List(Of String) = New List(Of String)
         Dim gateway As New Gateway_tipos_de_usuario
@@ -48,14 +58,22 @@ Module UsuariosDatos
 
     End Function
 
+    'Metodo que llama al gateway Usuarios y devuelve un datatable segun la id
     Public Function ObtenerUsuarioPorId(id As Integer) As DataTable
         Dim gateway As GatewayUsuarios = New GatewayUsuarios(My.Settings.cadenaDeConexion)
 
         Return gateway.SeleccionarPorId(id)
     End Function
 
+    'Metodo que llama al gateway Usuarios y elimina un usuario segun la id
     Public Sub EliminarUsuarioPorId(id As Integer)
         Dim gateway As GatewayUsuarios = New GatewayUsuarios(My.Settings.cadenaDeConexion)
         gateway.Eliminar(id)
     End Sub
+
+    ''Metodo que llama al gateway Usuarios y devuelve un datatable con la reserva del usuario seleccionado en el datagridview
+    Public Function ObtenerReservaPorUsuario(usuario As Integer) As DataTable
+        Dim gateway As Gateway_reservas = New Gateway_reservas()
+        Return gateway.SeleccionarPorUsuario(usuario)
+    End Function
 End Module

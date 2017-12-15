@@ -57,9 +57,9 @@ Namespace My
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Fablab;Integrated Security=Tru"& _ 
-            "e;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent"& _ 
-            "=ReadWrite;MultiSubnetFailover=False")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=FabLabJR;Integrated Security=T"& _ 
+            "rue;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationInte"& _ 
+            "nt=ReadWrite;MultiSubnetFailover=False")>  _
         Public ReadOnly Property cadenaDeConexion() As String
             Get
                 Return CType(Me("cadenaDeConexion"),String)
@@ -75,6 +75,18 @@ Namespace My
             End Get
             Set
                 Me("rutaImagenesMaquinas") = value
+            End Set
+        End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("C:\Users\Rober\Desktop\ImagenUsuario\")>  _
+        Public Property rutaImagenUsuario() As String
+            Get
+                Return CType(Me("rutaImagenUsuario"),String)
+            End Get
+            Set
+                Me("rutaImagenUsuario") = value
             End Set
         End Property
     End Class

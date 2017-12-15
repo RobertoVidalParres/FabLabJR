@@ -1,4 +1,5 @@
-﻿Public Class FormTratarMaquina
+﻿'Form que permite crear nuevo usuario, editarlo y consultarlo
+Public Class FormTratarMaquina
     'Parametros para recibir la maquina del Form GestionMaquina
     Dim id As Integer
     Dim modelo As String
@@ -125,9 +126,7 @@
             My.Computer.FileSystem.RenameFile(My.Settings.rutaImagenesMaquinas & OpenFileDialog1.FileName, ModeloMaquinaTextBox.Text.Trim() & FechaCompraMaquinaDateTimePicker.Text.Trim() & ".jpg")
 
         Else
-
             MessageBox.Show("No has seleccionado ninguna imagen")
-
         End If
     End Sub
 
@@ -142,6 +141,7 @@
                     picturebox.Height = 60
                     picturebox.Width = 60
                     picturebox.SizeMode = PictureBoxSizeMode.StretchImage
+                    picturebox.Image = Image.FromFile(imagenes(index))
                     Me.ImagenesMaquinaFlowLayoutPanel.Controls.Add(picturebox)
                 Next
             End If

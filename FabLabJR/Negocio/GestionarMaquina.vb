@@ -167,4 +167,15 @@ Module GestionarMaquina
 
         Return numeroMaquinas
     End Function
+
+    Public Function ObtenerNumeroDeUsuariosBaseDeDatos() As Integer
+        Dim tabla As DataTable = New DataTable
+        Dim numeroMaquinas As Integer = 0
+
+        For index = 0 To tabla.Rows.Count - 1
+            numeroMaquinas = numeroMaquinas + 1
+        Next
+
+        Return numeroMaquinas
+    End Function
 End Module

@@ -1,12 +1,17 @@
 ﻿Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim numeroMaquinas As Integer
+        Dim numeroUsuarios As Integer
         Dim textoMaquinasSatusStrip As String
+        Dim textoUsuariosStatusStrip As String
 
         numeroMaquinas = GestionarMaquina.ObtenerNumeroDeMaquinaBaseDeDatos
-        textoMaquinasSatusStrip = MaquinaToolStripStatusLabel.Text.Trim() & numeroMaquinas.ToString
+        numeroUsuarios = UsuariosDatos.ObtenerTablaGestionUsuario().Rows.Count
+        textoMaquinasSatusStrip = UsuariosToolStripStatusLabel.Text.Trim() & numeroMaquinas.ToString
+        textoUsuariosStatusStrip = MaquinaToolStripStatusLabel.Text.Trim() & numeroUsuarios.ToString
 
         MaquinaToolStripStatusLabel.Text = textoMaquinasSatusStrip
+        UsuariosToolStripStatusLabel.Text = textoUsuariosStatusStrip
     End Sub
 
     'LLamada al form Nueva Maquina
@@ -55,6 +60,7 @@
         Me.LayoutMdi(MdiLayout.Cascade)
     End Sub
 
+    'Llamada al form de nuevo usuario al hacer click en el item del menu "Nuevo usuario"
     Private Sub NuevoUsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevoUsuarioToolStripMenuItem.Click, NuevoUsuarioToolStripButton.Click
         Dim nuevoUsuario As New TratarUsuario("")
         nuevoUsuario.MdiParent = Me
@@ -62,6 +68,7 @@
         nuevoUsuario.Show()
     End Sub
 
+    'Llamada al form de gestion de maquinas al hacer click en el item del menu "Gestion de Maquinas"
     Private Sub GestionMaquinaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GestionMaquinaToolStripMenuItem.Click, ToolStripButton2.Click
         Dim gestionMaquina As New GestionMaquinas
         gestionMaquina.MdiParent = Me

@@ -1,4 +1,5 @@
-﻿Public Class GestionMaquinas
+﻿'Form que muestra un datagridview con todas las maquinas y sus respectivos campos
+Public Class GestionMaquinas
     'Variables para el paso de valores de la maquina de la tabla
     Dim id As Integer
     Dim modelo As String
@@ -14,7 +15,13 @@
     End Sub
 
     Private Sub BuscarMaquinaButton_Click(sender As Object, e As EventArgs) Handles BuscarMaquinaButton.Click
-        MaquinasDataGridView.DataSource = GestionarMaquina.ObtenerTablaGestionMaquinaPorModelo(BuscadorTextbox.Text.Trim())
+        'Condicion que comprueba si el buscador de maquinas esta vacio al hacer click en buscar
+        If BuscadorTextbox.Text = "" Or BuscadorTextbox.Text Is Nothing Then
+            MessageBox.Show("El modelo no puede estar vacio")
+        Else
+            MaquinasDataGridView.DataSource = GestionarMaquina.ObtenerTablaGestionMaquinaPorModelo(BuscadorTextbox.Text.Trim())
+        End If
+
     End Sub
 
     'Implementacion del evento click en Nueva Maquina

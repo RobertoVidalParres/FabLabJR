@@ -34,7 +34,7 @@ Partial Class TratarUsuario
         Me.examinarButton = New System.Windows.Forms.Button()
         Me.FotoLabel = New System.Windows.Forms.Label()
         Me.ObservacionesLabel = New System.Windows.Forms.Label()
-        Me.pictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.FotoUsuariopictureBox = New System.Windows.Forms.PictureBox()
         Me.observacionesTextBox = New System.Windows.Forms.TextBox()
         Me.direccionpostalTextBox = New System.Windows.Forms.TextBox()
         Me.DirPostalLabel = New System.Windows.Forms.Label()
@@ -53,7 +53,7 @@ Partial Class TratarUsuario
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.EmailErrorProvider = New System.Windows.Forms.ErrorProvider(Me.components)
         CType(Me.AñadirPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.FotoUsuariopictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmailErrorProvider, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -101,6 +101,8 @@ Partial Class TratarUsuario
         '
         'AñadirPictureBox
         '
+        Me.AñadirPictureBox.ErrorImage = CType(resources.GetObject("AñadirPictureBox.ErrorImage"), System.Drawing.Image)
+        Me.AñadirPictureBox.Image = CType(resources.GetObject("AñadirPictureBox.Image"), System.Drawing.Image)
         Me.AñadirPictureBox.Location = New System.Drawing.Point(430, 163)
         Me.AñadirPictureBox.Name = "AñadirPictureBox"
         Me.AñadirPictureBox.Size = New System.Drawing.Size(33, 30)
@@ -143,14 +145,14 @@ Partial Class TratarUsuario
         Me.ObservacionesLabel.TabIndex = 49
         Me.ObservacionesLabel.Text = "Observaciones"
         '
-        'pictureBox1
+        'FotoUsuariopictureBox
         '
-        Me.pictureBox1.Location = New System.Drawing.Point(12, 270)
-        Me.pictureBox1.Name = "pictureBox1"
-        Me.pictureBox1.Size = New System.Drawing.Size(328, 211)
-        Me.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pictureBox1.TabIndex = 48
-        Me.pictureBox1.TabStop = False
+        Me.FotoUsuariopictureBox.Location = New System.Drawing.Point(12, 270)
+        Me.FotoUsuariopictureBox.Name = "FotoUsuariopictureBox"
+        Me.FotoUsuariopictureBox.Size = New System.Drawing.Size(328, 211)
+        Me.FotoUsuariopictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.FotoUsuariopictureBox.TabIndex = 48
+        Me.FotoUsuariopictureBox.TabStop = False
         '
         'observacionesTextBox
         '
@@ -297,7 +299,7 @@ Partial Class TratarUsuario
         Me.Controls.Add(Me.examinarButton)
         Me.Controls.Add(Me.FotoLabel)
         Me.Controls.Add(Me.ObservacionesLabel)
-        Me.Controls.Add(Me.pictureBox1)
+        Me.Controls.Add(Me.FotoUsuariopictureBox)
         Me.Controls.Add(Me.observacionesTextBox)
         Me.Controls.Add(Me.direccionpostalTextBox)
         Me.Controls.Add(Me.DirPostalLabel)
@@ -317,7 +319,7 @@ Partial Class TratarUsuario
         Me.Name = "TratarUsuario"
         Me.Text = "Tratar usuario"
         CType(Me.AñadirPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.FotoUsuariopictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmailErrorProvider, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -334,7 +336,7 @@ Partial Class TratarUsuario
     Friend WithEvents examinarButton As Button
     Friend WithEvents FotoLabel As Label
     Friend WithEvents ObservacionesLabel As Label
-    Friend WithEvents pictureBox1 As PictureBox
+    Friend WithEvents FotoUsuariopictureBox As PictureBox
     Friend WithEvents observacionesTextBox As TextBox
     Friend WithEvents direccionpostalTextBox As TextBox
     Friend WithEvents DirPostalLabel As Label

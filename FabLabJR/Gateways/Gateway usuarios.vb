@@ -34,9 +34,6 @@ Public Class GatewayUsuarios
         comando.Parameters("@tipo").Value = tipo
         comando.Parameters("@fecha_alta").Value = fecha_alta
         comando.Parameters("@observaciones").Value = observaciones
-        If nombre = "" Or nombre Is Nothing Then
-            Throw New ArgumentException("El nombre no puede estar vacío")
-        End If
 
         Try
             conexion.Open()
@@ -128,10 +125,6 @@ Public Class GatewayUsuarios
         Dim dataSet As New DataSet
         Dim resultado As BindingSource
 
-        If nombre = "" Or nombre Is Nothing Then
-            Throw New ArgumentException("El nombre no puede estar vacío")
-        End If
-
         Try
             conexion.Open()
             adapter.Fill(dataSet, "Usuarios")
@@ -166,5 +159,35 @@ Public Class GatewayUsuarios
         End Try
 
         Return resultado
+    End Function
+
+    Public Function SelectMaquinasParaGestionMaquinas() As DataTable
+        Dim consulta As String
+
+        'Consulta para la seleccion de todas las maquinas
+        consulta = "SELECT id,modelo,tipo,fecha_compra FROM Maquinas"
+        comando.CommandText = consulta
+
+        'Comparacion de las fechas de la base de datos con la introducida
+
+        'Ejecutamos la consulta
+        Try
+            conexion.Open()
+
+            Dim lector As SqlDataReader = comando.ExecuteReader
+
+            Dim resultado As New DataTable
+
+            resultado.Load(lector)
+
+            Return resultado
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            If (conexion IsNot Nothing) Then
+                conexion.Close()
+            End If
+        End Try
     End Function
 End Class

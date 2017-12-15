@@ -95,8 +95,8 @@ Public Class Gateway_reservas
         Return resultado
     End Function
 
-    Public Function SeleccionarFecha(fecha As Date) As DataTable
-        Dim consulta As String = String.Format("SELECT * FROM Telefonos WHERE fecha='{0}'", fecha)
+    Public Function SeleccionarPorUsuario(usuario As Integer) As DataTable
+        Dim consulta As String = String.Format("SELECT * FROM Reservas WHERE usuario = '{0}'", usuario)
         Dim resultado As New DataTable
         Dim lector As SqlDataReader
 

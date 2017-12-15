@@ -31,6 +31,7 @@ Partial Class FormGestionUsuarios
         Me.TablaGestionUsuarioDataGridView = New System.Windows.Forms.DataGridView()
         Me.BuscarGestionUsuarioLabel = New System.Windows.Forms.Label()
         Me.BuscarGestionUsuarioButton = New System.Windows.Forms.Button()
+        Me.ReservasButton = New System.Windows.Forms.Button()
         CType(Me.TablaGestionUsuarioDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -106,11 +107,21 @@ Partial Class FormGestionUsuarios
         Me.BuscarGestionUsuarioButton.Text = "Buscar"
         Me.BuscarGestionUsuarioButton.UseVisualStyleBackColor = True
         '
+        'ReservasButton
+        '
+        Me.ReservasButton.Location = New System.Drawing.Point(380, 408)
+        Me.ReservasButton.Name = "ReservasButton"
+        Me.ReservasButton.Size = New System.Drawing.Size(75, 23)
+        Me.ReservasButton.TabIndex = 8
+        Me.ReservasButton.Text = "Ver reservas"
+        Me.ReservasButton.UseVisualStyleBackColor = True
+        '
         'FormGestionUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(795, 475)
+        Me.Controls.Add(Me.ReservasButton)
         Me.Controls.Add(Me.BuscarGestionUsuarioButton)
         Me.Controls.Add(Me.BuscarGestionUsuarioLabel)
         Me.Controls.Add(Me.TablaGestionUsuarioDataGridView)
@@ -136,4 +147,5 @@ Partial Class FormGestionUsuarios
     Friend WithEvents TablaGestionUsuarioDataGridView As DataGridView
     Friend WithEvents BuscarGestionUsuarioLabel As Label
     Friend WithEvents BuscarGestionUsuarioButton As Button
+    Friend WithEvents ReservasButton As Button
 End Class

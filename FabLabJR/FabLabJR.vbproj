@@ -47,7 +47,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>icono fb.ico</ApplicationIcon>
+    <ApplicationIcon>Imagenes\icono fb.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -77,35 +77,35 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AcerdaDeForm.Designer.vb">
+    <Compile Include="Interfaz\AcerdaDeForm.Designer.vb">
       <DependentUpon>AcerdaDeForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="AcerdaDeForm.vb">
+    <Compile Include="Interfaz\AcerdaDeForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Bienvenido.designer.vb">
+    <Compile Include="Interfaz\Bienvenido.designer.vb">
       <DependentUpon>Bienvenido.vb</DependentUpon>
     </Compile>
-    <Compile Include="Bienvenido.vb">
+    <Compile Include="Interfaz\Bienvenido.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.vb">
+    <Compile Include="Interfaz\PrincipalForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Interfaz\PrincipalForm.Designer.vb">
+      <DependentUpon>PrincipalForm.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormGestionUsuarios.Designer.vb">
+    <Compile Include="Interfaz\FormGestionUsuarios.Designer.vb">
       <DependentUpon>FormGestionUsuarios.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormGestionUsuarios.vb">
+    <Compile Include="Interfaz\FormGestionUsuarios.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormTratarMaquina.Designer.vb">
+    <Compile Include="Interfaz\FormTratarMaquina.Designer.vb">
       <DependentUpon>FormTratarMaquina.vb</DependentUpon>
     </Compile>
-    <Compile Include="FormTratarMaquina.vb">
+    <Compile Include="Interfaz\FormTratarMaquina.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Gateways\Gateway Maquina.vb" />
@@ -136,27 +136,33 @@
     </Compile>
     <Compile Include="Negocio\GestionarMaquina.vb" />
     <Compile Include="Negocio\UsuarioDatos.vb" />
-    <Compile Include="TratarUsuario.Designer.vb">
+    <Compile Include="Interfaz\ReservasUsuariovb.Designer.vb">
+      <DependentUpon>ReservasUsuariovb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\ReservasUsuariovb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz\TratarUsuario.Designer.vb">
       <DependentUpon>TratarUsuario.vb</DependentUpon>
     </Compile>
-    <Compile Include="TratarUsuario.vb">
+    <Compile Include="Interfaz\TratarUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AcerdaDeForm.resx">
+    <EmbeddedResource Include="Interfaz\AcerdaDeForm.resx">
       <DependentUpon>AcerdaDeForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Bienvenido.resx">
+    <EmbeddedResource Include="Interfaz\Bienvenido.resx">
       <DependentUpon>Bienvenido.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="Interfaz\PrincipalForm.resx">
+      <DependentUpon>PrincipalForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormGestionUsuarios.resx">
+    <EmbeddedResource Include="Interfaz\FormGestionUsuarios.resx">
       <DependentUpon>FormGestionUsuarios.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormTratarMaquina.resx">
+    <EmbeddedResource Include="Interfaz\FormTratarMaquina.resx">
       <DependentUpon>FormTratarMaquina.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaz\GestionMaquinas.resx">
@@ -168,7 +174,10 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="TratarUsuario.resx">
+    <EmbeddedResource Include="Interfaz\ReservasUsuariovb.resx">
+      <DependentUpon>ReservasUsuariovb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz\TratarUsuario.resx">
       <DependentUpon>TratarUsuario.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
@@ -191,7 +200,7 @@
     <None Include="Imagenes\plus-TratarMaquina.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="icono fb.ico" />
+    <Content Include="Imagenes\icono fb.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

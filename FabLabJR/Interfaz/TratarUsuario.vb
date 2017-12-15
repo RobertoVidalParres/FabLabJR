@@ -1,6 +1,6 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Text.RegularExpressions
-
+'Clase del windows form que te muestra la tabla de usuarios y te permite editar, consultar y eliminar usuarios.
 Public Class TratarUsuario
 
     Public conexion As SqlConnection
@@ -32,6 +32,7 @@ Public Class TratarUsuario
         If tipoAccion = "Consultar" Then
             RellenarDatos()
             DeshabilitarControles()
+            CargarImagen()
         ElseIf tipoAccion = "Editar" Then
             RellenarDatos()
         End If
@@ -40,10 +41,29 @@ Public Class TratarUsuario
     'Te abre un dialogo para seleccionar una imagen
     Private Sub ExaminarButton_Click(sender As Object, e As EventArgs) Handles examinarButton.Click
         If OpenFileDialog1.ShowDialog() = DialogResult.OK Then
-            pictureBox1.Image = Image.FromFile(OpenFileDialog1.FileName)
+            FotoUsuariopictureBox.Height = 60
+            FotoUsuariopictureBox.Width = 60
+            FotoUsuariopictureBox.SizeMode = PictureBoxSizeMode.StretchImage
+            FotoUsuariopictureBox.Image = Image.FromFile(OpenFileDialog1.FileName)
+            FileCopy(OpenFileDialog1.FileName, My.Settings.rutaImagenUsuario)
+            My.Computer.FileSystem.RenameFile(My.Settings.rutaImagenUsuario & OpenFileDialog1.FileName, id & nombreTextBox.Text.Trim() & ".jpg")
         Else
             MessageBox.Show("No has seleccionado ninguna imagen")
         End If
+    End Sub
+
+    'Carga la imagen del usuario almacenada
+    Private Sub CargarImagen()
+        Try
+            FotoUsuariopictureBox.Height = 60
+            FotoUsuariopictureBox.Width = 60
+            FotoUsuariopictureBox.SizeMode = PictureBoxSizeMode.StretchImage
+            FotoUsuariopictureBox.Image = Image.FromFile(My.Settings.rutaImagenesMaquinas & "\" & id & nombreTextBox.Text.Trim() & "*")
+
+        Catch ex As IO.DirectoryNotFoundException
+            MessageBox.Show("El directorio de imagenes no existe por lo que no se cargara la foto")
+        End Try
+
     End Sub
 
     'Al desplegar el comboBox apereceran los distintos tipos de usuario
@@ -98,20 +118,25 @@ Public Class TratarUsuario
 
     'Boton que permite insertar un nuevo registro de usuario o edicion a nuestra base de datos.
     Private Sub aceptarButton_Click(sender As Object, e As EventArgs) Handles aceptarButton.Click
-        If telefonoTextBox.Text.Equals("") And emailTexBox.Text.Equals("") Then
-            MessageBox.Show("Debes aportar almenos una forma de contacto")
+        If nombreTextBox.Text = "" Or nombreTextBox.Text Is Nothing Then
+            MessageBox.Show("Rellena el nombre del usuario")
         Else
-            UsuariosDatos.InsertarUsuario(nombreTextBox.Text, apellidosTextBox.Text, FechaNacimientoDateTimePicker.Value, telefonoTextBox.Text, emailTexBox.Text, direccionpostalTextBox.Text, organizacionTextBox.Text, tipoComboBox.SelectedIndex + 1, observacionesTextBox.Text)
-            MessageBox.Show("Nuevo usuario registrado con éxito")
+            If telefonoTextBox.Text.Equals("") And emailTexBox.Text.Equals("") Then
+                MessageBox.Show("Debes aportar almenos una forma de contacto")
+            Else
+                UsuariosDatos.InsertarUsuario(nombreTextBox.Text, apellidosTextBox.Text, FechaNacimientoDateTimePicker.Value, telefonoTextBox.Text, emailTexBox.Text, direccionpostalTextBox.Text, organizacionTextBox.Text, tipoComboBox.SelectedIndex + 1, observacionesTextBox.Text)
+                MessageBox.Show("Nuevo usuario registrado con éxito")
+            End If
         End If
     End Sub
 
     'Controla que el formato del correo electronico sea el correcto
     Private Sub emailTexBox_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles emailTexBox.Validating
-        Dim rgx As New Regex("\w*\d*@\w\w$")
+        Dim rgx As New Regex("^[_a-z0-9-]+(.[a-z0-9-]+)@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$")
         If rgx.IsMatch(emailTexBox.Text) Then
             EmailErrorProvider.SetError(emailTexBox, "")
         Else
+            e.Cancel = True
             EmailErrorProvider.SetError(emailTexBox, "Formato incorrecto")
         End If
     End Sub
@@ -130,6 +155,7 @@ Public Class TratarUsuario
         Me.observaciones = observaciones
     End Sub
 
+    'Al darle al boton cancelar se cierra el formulario
     Private Sub cancelarButton_Click(sender As Object, e As EventArgs) Handles cancelarButton.Click
         Me.Close()
     End Sub

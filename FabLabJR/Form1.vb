@@ -1,4 +1,14 @@
 ﻿Public Class Form1
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim numeroMaquinas As Integer
+        Dim textoMaquinasSatusStrip As String
+
+        numeroMaquinas = GestionarMaquina.ObtenerNumeroDeMaquinaBaseDeDatos
+        textoMaquinasSatusStrip = MaquinaToolStripStatusLabel.Text.Trim() & numeroMaquinas.ToString
+
+        MaquinaToolStripStatusLabel.Text = textoMaquinasSatusStrip
+    End Sub
+
     'LLamada al form Nueva Maquina
     Private Sub NuevaMaquinaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevaMaquinaToolStripMenuItem.Click
         Dim documento As FormTratarMaquina = New FormTratarMaquina

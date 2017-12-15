@@ -103,10 +103,11 @@ Public Class NuevoUsuario
 
     'Controla que el formato del correo electronico sea el correcto
     Private Sub emailTexBox_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles emailTexBox.Validating
-        Dim rgx As New Regex("\w*\d*@\w.\w$")
+        Dim rgx As New Regex("\w*\d*@\w\w$")
         If rgx.IsMatch(emailTexBox.Text) Then
             EmailErrorProvider.SetError(emailTexBox, "")
         Else
+            e.Cancel = True
             EmailErrorProvider.SetError(emailTexBox, "Formato incorrecto")
         End If
     End Sub
@@ -122,5 +123,9 @@ Public Class NuevoUsuario
         Me.direccionPostal = direccionPostal
         Me.organizacion = organizacion
         Me.tipo = tipo
+    End Sub
+
+    Private Sub cancelarButton_Click(sender As Object, e As EventArgs) Handles cancelarButton.Click
+        Me.Close()
     End Sub
 End Class

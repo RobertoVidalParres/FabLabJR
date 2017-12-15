@@ -103,10 +103,12 @@
         End If
     End Sub
 
+    'Metodo para añadir tipo de maquina a la base de datos
     Private Sub TipoMaquinaPictureBox_Click(sender As Object, e As EventArgs) Handles TipoMaquinaPictureBox.Click
         GestionarMaquina.AñadirTipoMaquina(TipoMaquinaComboBox.Text.Trim())
     End Sub
 
+    'Metodo para añadir imagenes de maquinas
     Private Sub ExaminarImagenesMaquinaButton_Click(sender As Object, e As EventArgs) Handles ExaminarImagenesMaquinaButton.Click
 
         Dim pictureBox As New PictureBox
@@ -119,7 +121,7 @@
             Me.ImagenesMaquinaFlowLayoutPanel.Controls.Add(pictureBox)
 
             FileCopy(OpenFileDialog1.FileName, My.Settings.rutaImagenesMaquinas)
-            My.Computer.FileSystem.RenameFile(My.Settings.rutaImagenesMaquinas & OpenFileDialog1.FileName, ModeloMaquinaTextBox.Text.Trim() & FechaCompraMaquinaDateTimePicker.Text.Trim())
+            My.Computer.FileSystem.RenameFile(My.Settings.rutaImagenesMaquinas & OpenFileDialog1.FileName, ModeloMaquinaTextBox.Text.Trim() & FechaCompraMaquinaDateTimePicker.Text.Trim() & ".jpg")
 
         Else
 

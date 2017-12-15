@@ -159,4 +159,13 @@ Public Class TratarUsuario
     Private Sub cancelarButton_Click(sender As Object, e As EventArgs) Handles cancelarButton.Click
         Me.Close()
     End Sub
+
+    Private Sub tipoComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles tipoComboBox.SelectedIndexChanged
+        If tipoComboBox.SelectedValue.ToString = "Profesional" And organizacionTextBox.Text = "" Then
+            MessageBox.Show("Debes rellenar el campo de organizacion")
+        ElseIf tipoComboBox.SelectedValue.ToString = "Investigador" And organizacionTextBox.Text = "" Then
+            MessageBox.Show("Debes rellenar el campo de organizacion")
+        End If
+
+    End Sub
 End Class

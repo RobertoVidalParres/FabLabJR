@@ -52,9 +52,11 @@ Partial Class TratarUsuario
         Me.NombreLabel = New System.Windows.Forms.Label()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.EmailErrorProvider = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.ErrorProvider2 = New System.Windows.Forms.ErrorProvider(Me.components)
         CType(Me.AñadirPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FotoUsuariopictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmailErrorProvider, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'AñadirTipoUsuarioButton
@@ -284,6 +286,10 @@ Partial Class TratarUsuario
         '
         Me.EmailErrorProvider.ContainerControl = Me
         '
+        'ErrorProvider2
+        '
+        Me.ErrorProvider2.ContainerControl = Me
+        '
         'TratarUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -321,6 +327,7 @@ Partial Class TratarUsuario
         CType(Me.AñadirPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FotoUsuariopictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmailErrorProvider, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -354,4 +361,5 @@ Partial Class TratarUsuario
     Friend WithEvents NombreLabel As Label
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents EmailErrorProvider As ErrorProvider
+    Friend WithEvents ErrorProvider2 As ErrorProvider
 End Class

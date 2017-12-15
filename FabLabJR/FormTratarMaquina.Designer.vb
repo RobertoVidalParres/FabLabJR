@@ -22,6 +22,7 @@ Partial Class FormTratarMaquina
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormTratarMaquina))
         Me.ImagenesMaquinaFlowLayoutPanel = New System.Windows.Forms.FlowLayoutPanel()
         Me.CaracteristicasMaquinaTextBox = New System.Windows.Forms.TextBox()
         Me.DescripcionMaquinaTextBox = New System.Windows.Forms.TextBox()
@@ -244,6 +245,7 @@ Partial Class FormTratarMaquina
         Me.Controls.Add(Me.PrecioHoraMaquinaLabel)
         Me.Controls.Add(Me.TelefonoSatMaquinaLabel)
         Me.Controls.Add(Me.ModeloMaquinaLabel)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "FormTratarMaquina"
         Me.Text = "FormTratarMaquina"
         CType(Me.TipoMaquinaPictureBox, System.ComponentModel.ISupportInitialize).EndInit()

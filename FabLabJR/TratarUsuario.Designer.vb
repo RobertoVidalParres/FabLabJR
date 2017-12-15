@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class NuevoUsuario
+Partial Class TratarUsuario
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
@@ -23,6 +23,7 @@ Partial Class NuevoUsuario
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(TratarUsuario))
         Me.AñadirTipoUsuarioButton = New System.Windows.Forms.Button()
         Me.AñadirTipoUsuarioTextBox = New System.Windows.Forms.TextBox()
         Me.FechaNacimientoDateTimePicker = New System.Windows.Forms.DateTimePicker()
@@ -281,7 +282,7 @@ Partial Class NuevoUsuario
         '
         Me.EmailErrorProvider.ContainerControl = Me
         '
-        'NuevoUsuario
+        'TratarUsuario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -312,7 +313,8 @@ Partial Class NuevoUsuario
         Me.Controls.Add(Me.OrganizacionLabel)
         Me.Controls.Add(Me.TelefonoLabel)
         Me.Controls.Add(Me.NombreLabel)
-        Me.Name = "NuevoUsuario"
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Name = "TratarUsuario"
         Me.Text = "NuevoUsuario"
         CType(Me.AñadirPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

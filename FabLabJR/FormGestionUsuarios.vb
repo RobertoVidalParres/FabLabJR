@@ -21,7 +21,7 @@
 
     'Implementacion del evento click en Consultar
     Private Sub ConsultaGestionUsuarioButton_Click(sender As Object, e As EventArgs) Handles ConsultaGestionUsuarioButton.Click
-        Dim formNuevoUsuario As New NuevoUsuario("Consultar")
+        Dim formNuevoUsuario As New TratarUsuario("Consultar")
         formNuevoUsuario.MdiParent = Me.MdiParent
         formNuevoUsuario.Text = "Consultar Usuario"
 
@@ -46,7 +46,7 @@
 
     'Implementacion del evento click en Editar
     Private Sub EditarGestionUsuarioButton_Click(sender As Object, e As EventArgs) Handles EditarGestionUsuarioButton.Click
-        Dim formNuevoUsuario As New NuevoUsuario("Editar")
+        Dim formNuevoUsuario As New TratarUsuario("Editar")
         formNuevoUsuario.MdiParent = Me.MdiParent
         formNuevoUsuario.Text = "Editar Usuario"
 
@@ -69,7 +69,7 @@
 
     'Implementacion del evento click en Nueva Maquina
     Private Sub NuevoUsuarioGestionUsuarioButton_Click(sender As Object, e As EventArgs) Handles NuevoUsuarioGestionUsuarioButton.Click
-        Dim formNuevoUsuario As New NuevoUsuario("Nuevo")
+        Dim formNuevoUsuario As New TratarUsuario("Nuevo")
         formNuevoUsuario.MdiParent = Me.MdiParent
         formNuevoUsuario.Text = "Nuevo Usuario"
         formNuevoUsuario.Show()

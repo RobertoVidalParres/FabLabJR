@@ -55,7 +55,7 @@
     End Sub
 
     Private Sub NuevoUsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevoUsuarioToolStripMenuItem.Click, NuevoUsuarioToolStripButton.Click
-        Dim nuevoUsuario As New NuevoUsuario("")
+        Dim nuevoUsuario As New TratarUsuario("")
         nuevoUsuario.MdiParent = Me
         nuevoUsuario.Text = "Nuevo usuario"
         nuevoUsuario.Show()

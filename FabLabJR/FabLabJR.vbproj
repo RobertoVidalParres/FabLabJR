@@ -136,10 +136,10 @@
     </Compile>
     <Compile Include="Negocio\GestionarMaquina.vb" />
     <Compile Include="Negocio\UsuarioDatos.vb" />
-    <Compile Include="NuevoUsuario.Designer.vb">
-      <DependentUpon>NuevoUsuario.vb</DependentUpon>
+    <Compile Include="TratarUsuario.Designer.vb">
+      <DependentUpon>TratarUsuario.vb</DependentUpon>
     </Compile>
-    <Compile Include="NuevoUsuario.vb">
+    <Compile Include="TratarUsuario.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -168,8 +168,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="NuevoUsuario.resx">
-      <DependentUpon>NuevoUsuario.vb</DependentUpon>
+    <EmbeddedResource Include="TratarUsuario.resx">
+      <DependentUpon>TratarUsuario.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

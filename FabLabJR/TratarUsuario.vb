@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Text.RegularExpressions
 
-Public Class NuevoUsuario
+Public Class TratarUsuario
 
     Public conexion As SqlConnection
     Public comandoTipoUsuario As SqlCommand

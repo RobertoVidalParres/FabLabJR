@@ -143,4 +143,25 @@ Public Class GatewayUsuarios
 
         Return resultado
     End Function
+
+    Public Function SeleccionarPorId(id As Integer) As DataTable
+        Dim consulta As String = String.Format("SELECT * FROM Usuarios WHERE id='{0}'", id)
+        Dim resultado As New DataTable
+        Dim lector As SqlDataReader
+
+        Try
+            conexion.Open()
+            comando.CommandText = consulta
+            lector = comando.ExecuteReader()
+            resultado.Load(lector)
+        Catch ex As Exception
+            Throw New Exception(ex.Message, ex)
+        Finally
+            If (conexion IsNot Nothing) Then
+                conexion.Close()
+            End If
+        End Try
+
+        Return resultado
+    End Function
 End Class

@@ -1,9 +1,18 @@
 ﻿Imports System.Data.SqlClient
 Module UsuariosDatos
-    Public Function ObtenerTiposUsuario() As DataTable
-        Dim gateWayTipoUsuarios As New Gateway_tipos_de_usuario()
+    Public Function ObtenerTiposDeUsuario() As List(Of String)
+        Dim tipos As List(Of String) = New List(Of String)
+        Dim gateway As New Gateway_tipos_de_usuario
+        Dim tabla As DataTable
 
-        Return gateWayTipoUsuarios.SeleccionarTodos()
+        tabla = gateway.SeleccionarTodos()
+
+        For index = 0 To tabla.Rows.Count - 1
+            tipos.Add(tabla.Rows(index).Item("tipo").ToString)
+        Next
+
+
+        Return tipos
     End Function
 
     Public Sub InsertarTipoUsuario(ByVal nuevoTipoUsuario As String)
@@ -33,7 +42,14 @@ Module UsuariosDatos
         Return gateway.SeleccionarNombre(nombre)
     End Function
 
-    Public Function ConsultarUsuario(id As Integer) As DataTable
+    Public Function ObtenerUsuarioPorId(id As Integer) As DataTable
+        Dim gateway As GatewayUsuarios = New GatewayUsuarios(My.Settings.cadenaDeConexion)
 
+        Return gateway.SeleccionarPorId(id)
     End Function
+
+    Public Sub EliminarUsuarioPorId(id As Integer)
+        Dim gateway As GatewayUsuarios = New GatewayUsuarios(My.Settings.cadenaDeConexion)
+        gateway.Eliminar(id)
+    End Sub
 End Module

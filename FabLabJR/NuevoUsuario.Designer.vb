@@ -25,7 +25,7 @@ Partial Class NuevoUsuario
         Me.components = New System.ComponentModel.Container()
         Me.AñadirTipoUsuarioButton = New System.Windows.Forms.Button()
         Me.AñadirTipoUsuarioTextBox = New System.Windows.Forms.TextBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.FechaNacimientoDateTimePicker = New System.Windows.Forms.DateTimePicker()
         Me.cancelarButton = New System.Windows.Forms.Button()
         Me.aceptarButton = New System.Windows.Forms.Button()
         Me.AñadirPictureBox = New System.Windows.Forms.PictureBox()
@@ -72,13 +72,13 @@ Partial Class NuevoUsuario
         Me.AñadirTipoUsuarioTextBox.Size = New System.Drawing.Size(100, 20)
         Me.AñadirTipoUsuarioTextBox.TabIndex = 42
         '
-        'DateTimePicker1
+        'FechaNacimientoDateTimePicker
         '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(591, 24)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(100, 20)
-        Me.DateTimePicker1.TabIndex = 33
+        Me.FechaNacimientoDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.FechaNacimientoDateTimePicker.Location = New System.Drawing.Point(591, 24)
+        Me.FechaNacimientoDateTimePicker.Name = "FechaNacimientoDateTimePicker"
+        Me.FechaNacimientoDateTimePicker.Size = New System.Drawing.Size(100, 20)
+        Me.FechaNacimientoDateTimePicker.TabIndex = 33
         '
         'cancelarButton
         '
@@ -288,7 +288,7 @@ Partial Class NuevoUsuario
         Me.ClientSize = New System.Drawing.Size(707, 535)
         Me.Controls.Add(Me.AñadirTipoUsuarioButton)
         Me.Controls.Add(Me.AñadirTipoUsuarioTextBox)
-        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.FechaNacimientoDateTimePicker)
         Me.Controls.Add(Me.cancelarButton)
         Me.Controls.Add(Me.aceptarButton)
         Me.Controls.Add(Me.AñadirPictureBox)
@@ -324,7 +324,7 @@ Partial Class NuevoUsuario
 
     Friend WithEvents AñadirTipoUsuarioButton As Button
     Friend WithEvents AñadirTipoUsuarioTextBox As TextBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents FechaNacimientoDateTimePicker As DateTimePicker
     Friend WithEvents cancelarButton As Button
     Friend WithEvents aceptarButton As Button
     Friend WithEvents AñadirPictureBox As PictureBox

@@ -9,5 +9,8 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Fablab;Integrated Security=True;Connect Timeout=15;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False</Value>
     </Setting>
+    <Setting Name="rutaImagenesMaquinas" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ImagenesMaquina\</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

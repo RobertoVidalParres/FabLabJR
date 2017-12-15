@@ -65,6 +65,18 @@ Namespace My
                 Return CType(Me("cadenaDeConexion"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("ImagenesMaquina\")>  _
+        Public Property rutaImagenesMaquinas() As String
+            Get
+                Return CType(Me("rutaImagenesMaquinas"),String)
+            End Get
+            Set
+                Me("rutaImagenesMaquinas") = value
+            End Set
+        End Property
     End Class
 End Namespace
 

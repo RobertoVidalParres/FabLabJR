@@ -16,6 +16,7 @@
         If (meLLama = "Consultar") Then
             RellenarDatos()
             DeshabilitarControles()
+            CargarImagenes()
         ElseIf (meLLama = "Insertar") Then
             Dim lista As List(Of String)
             lista = GestionarMaquina.ObtenerTiposDeMaquina()
@@ -103,7 +104,45 @@
         End If
     End Sub
 
+    'Metodo para añadir tipo de maquina a la base de datos
     Private Sub TipoMaquinaPictureBox_Click(sender As Object, e As EventArgs) Handles TipoMaquinaPictureBox.Click
         GestionarMaquina.AñadirTipoMaquina(TipoMaquinaComboBox.Text.Trim())
+    End Sub
+
+    'Metodo para añadir imagenes de maquinas
+    Private Sub ExaminarImagenesMaquinaButton_Click(sender As Object, e As EventArgs) Handles ExaminarImagenesMaquinaButton.Click
+
+        Dim pictureBox As New PictureBox
+
+        If (OpenFileDialog1.ShowDialog() = DialogResult.OK) Then
+
+            pictureBox.Image = Image.FromFile(OpenFileDialog1.FileName)
+            pictureBox.SizeMode = PictureBoxSizeMode.Zoom
+
+            Me.ImagenesMaquinaFlowLayoutPanel.Controls.Add(pictureBox)
+
+            FileCopy(OpenFileDialog1.FileName, My.Settings.rutaImagenesMaquinas)
+            My.Computer.FileSystem.RenameFile(My.Settings.rutaImagenesMaquinas & OpenFileDialog1.FileName, ModeloMaquinaTextBox.Text.Trim() & FechaCompraMaquinaDateTimePicker.Text.Trim() & ".jpg")
+
+        Else
+
+            MessageBox.Show("No has seleccionado ninguna imagen")
+
+        End If
+    End Sub
+
+    'Metodo para cargar las imagenes de las maquina al consultar
+    Private Sub CargarImagenes()
+        Dim imagenes As String() = System.IO.Directory.GetFiles(My.Settings.rutaImagenesMaquinas, ModeloMaquinaTextBox.Text.Trim() & FechaCompraMaquinaDateTimePicker.Text.Trim() & "*")
+
+        If (Not IsNothing(imagenes)) Then
+            For index = 0 To imagenes.Count - 1
+                Dim picturebox As New PictureBox()
+                picturebox.Height = 60
+                picturebox.Width = 60
+                picturebox.SizeMode = PictureBoxSizeMode.StretchImage
+                Me.ImagenesMaquinaFlowLayoutPanel.Controls.Add(picturebox)
+            Next
+        End If
     End Sub
 End Class

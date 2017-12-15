@@ -41,11 +41,14 @@ Partial Class FormTratarMaquina
         Me.AceptarMaquinaButton = New System.Windows.Forms.Button()
         Me.CancelarMaquinaButton = New System.Windows.Forms.Button()
         Me.TipoMaquinaPictureBox = New System.Windows.Forms.PictureBox()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.ExaminarImagenesMaquinaButton = New System.Windows.Forms.Button()
         CType(Me.TipoMaquinaPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'ImagenesMaquinaFlowLayoutPanel
         '
+        Me.ImagenesMaquinaFlowLayoutPanel.AutoScroll = True
         Me.ImagenesMaquinaFlowLayoutPanel.Location = New System.Drawing.Point(27, 280)
         Me.ImagenesMaquinaFlowLayoutPanel.Name = "ImagenesMaquinaFlowLayoutPanel"
         Me.ImagenesMaquinaFlowLayoutPanel.Size = New System.Drawing.Size(685, 100)
@@ -203,11 +206,25 @@ Partial Class FormTratarMaquina
         Me.TipoMaquinaPictureBox.TabIndex = 38
         Me.TipoMaquinaPictureBox.TabStop = False
         '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        'ExaminarImagenesMaquinaButton
+        '
+        Me.ExaminarImagenesMaquinaButton.Location = New System.Drawing.Point(102, 250)
+        Me.ExaminarImagenesMaquinaButton.Name = "ExaminarImagenesMaquinaButton"
+        Me.ExaminarImagenesMaquinaButton.Size = New System.Drawing.Size(75, 23)
+        Me.ExaminarImagenesMaquinaButton.TabIndex = 39
+        Me.ExaminarImagenesMaquinaButton.Text = "Examinar"
+        Me.ExaminarImagenesMaquinaButton.UseVisualStyleBackColor = True
+        '
         'FormTratarMaquina
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(841, 451)
+        Me.Controls.Add(Me.ExaminarImagenesMaquinaButton)
         Me.Controls.Add(Me.TipoMaquinaPictureBox)
         Me.Controls.Add(Me.CancelarMaquinaButton)
         Me.Controls.Add(Me.AceptarMaquinaButton)
@@ -254,4 +271,6 @@ Partial Class FormTratarMaquina
     Friend WithEvents AceptarMaquinaButton As Button
     Friend WithEvents CancelarMaquinaButton As Button
     Friend WithEvents TipoMaquinaPictureBox As PictureBox
+    Friend WithEvents OpenFileDialog1 As OpenFileDialog
+    Friend WithEvents ExaminarImagenesMaquinaButton As Button
 End Class

@@ -76,7 +76,7 @@ Public Class Gateway_Maquina
         Dim consulta As String
 
         'Consulta para la seleccion de todas las maquinas
-        consulta = "SELECT id,modelo,tipo,fecha_compra FROM Maquinas"
+        consulta = "SELECT id,modelo,tipo,fecha_compra,telefono_sat,tipo,descripcion,caracteristicas FROM Maquinas"
         comando.CommandText = consulta
 
         'Comparacion de las fechas de la base de datos con la introducida

@@ -39,7 +39,7 @@ Partial Class GestionMaquinas
         Me.NuevaMaquinaButton.Location = New System.Drawing.Point(410, 38)
         Me.NuevaMaquinaButton.Name = "NuevaMaquinaButton"
         Me.NuevaMaquinaButton.Size = New System.Drawing.Size(101, 23)
-        Me.NuevaMaquinaButton.TabIndex = 11
+        Me.NuevaMaquinaButton.TabIndex = 3
         Me.NuevaMaquinaButton.Text = "Nueva maquina"
         Me.NuevaMaquinaButton.UseVisualStyleBackColor = True
         '
@@ -48,14 +48,14 @@ Partial Class GestionMaquinas
         Me.BuscadorTextbox.Location = New System.Drawing.Point(29, 38)
         Me.BuscadorTextbox.Name = "BuscadorTextbox"
         Me.BuscadorTextbox.Size = New System.Drawing.Size(100, 20)
-        Me.BuscadorTextbox.TabIndex = 10
+        Me.BuscadorTextbox.TabIndex = 1
         '
         'EliminarMaquinaButton
         '
         Me.EliminarMaquinaButton.Location = New System.Drawing.Point(437, 319)
         Me.EliminarMaquinaButton.Name = "EliminarMaquinaButton"
         Me.EliminarMaquinaButton.Size = New System.Drawing.Size(75, 23)
-        Me.EliminarMaquinaButton.TabIndex = 9
+        Me.EliminarMaquinaButton.TabIndex = 6
         Me.EliminarMaquinaButton.Text = "Eliminar"
         Me.EliminarMaquinaButton.UseVisualStyleBackColor = True
         '
@@ -64,7 +64,7 @@ Partial Class GestionMaquinas
         Me.EditarMaquinaButton.Location = New System.Drawing.Point(355, 318)
         Me.EditarMaquinaButton.Name = "EditarMaquinaButton"
         Me.EditarMaquinaButton.Size = New System.Drawing.Size(75, 23)
-        Me.EditarMaquinaButton.TabIndex = 8
+        Me.EditarMaquinaButton.TabIndex = 5
         Me.EditarMaquinaButton.Text = "Editar"
         Me.EditarMaquinaButton.UseVisualStyleBackColor = True
         '
@@ -73,7 +73,7 @@ Partial Class GestionMaquinas
         Me.ConsultarMaquinaButton.Location = New System.Drawing.Point(273, 318)
         Me.ConsultarMaquinaButton.Name = "ConsultarMaquinaButton"
         Me.ConsultarMaquinaButton.Size = New System.Drawing.Size(75, 23)
-        Me.ConsultarMaquinaButton.TabIndex = 7
+        Me.ConsultarMaquinaButton.TabIndex = 4
         Me.ConsultarMaquinaButton.Text = "Consultar"
         Me.ConsultarMaquinaButton.UseVisualStyleBackColor = True
         '
@@ -93,7 +93,7 @@ Partial Class GestionMaquinas
         Me.BuscarMaquinaButton.Location = New System.Drawing.Point(135, 37)
         Me.BuscarMaquinaButton.Name = "BuscarMaquinaButton"
         Me.BuscarMaquinaButton.Size = New System.Drawing.Size(75, 23)
-        Me.BuscarMaquinaButton.TabIndex = 12
+        Me.BuscarMaquinaButton.TabIndex = 2
         Me.BuscarMaquinaButton.Text = "Buscar"
         Me.BuscarMaquinaButton.UseVisualStyleBackColor = True
         '

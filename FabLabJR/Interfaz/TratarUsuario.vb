@@ -58,7 +58,7 @@ Public Class TratarUsuario
             FotoUsuariopictureBox.Height = 60
             FotoUsuariopictureBox.Width = 60
             FotoUsuariopictureBox.SizeMode = PictureBoxSizeMode.StretchImage
-            FotoUsuariopictureBox.Image = Image.FromFile(My.Settings.rutaImagenesMaquinas & "\" & id & nombreTextBox.Text.Trim() & "*")
+            MessageBox.Show(My.Settings.rutaImagenesMaquinas & id & nombreTextBox.Text.Trim() & ".jpg")
 
         Catch ex As IO.DirectoryNotFoundException
             MessageBox.Show("El directorio de imagenes no existe por lo que no se cargara la foto")
